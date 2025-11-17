@@ -1,8 +1,31 @@
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
+import { AnimatedGroup } from "./ui/animated-group";
+
+const transitionVariants = {
+  item: {
+    hidden: {
+      opacity: 0,
+      filter: "blur(12px)",
+      y: 12,
+    },
+    visible: {
+      opacity: 1,
+      filter: "blur(0px)",
+      y: 0,
+      transition: {
+        type: "spring",
+        bounce: 0.3,
+        duration: 1.5,
+      },
+    },
+  },
+};
 
 export default function ContentSection() {
   return (
-    <section className="py-8 lg:py-16 bg-white">
+    <section className="py-8 lg:py-16 bg-zinc-800">
       <div className="mx-auto max-w-7xl space-y-8 px-6 md:space-y-16">
         <h2 className="relative z-10 max-w-xl text-4xl font-medium lg:text-5xl text-primary">
           Unites global innovation with local healthcare needs.
@@ -28,23 +51,23 @@ export default function ContentSection() {
           </div>
 
           <div className="relative space-y-4">
-            <p className="text-secondary">
+            <p className="text-muted-foreground">
               Avenir Pharma has grown to become more than just a pharmaceutical
               company.{" "}
-              <span className="text-accent font-bold">
+              <span className="text-accent-foreground font-bold">
                 It is built on a strong global ecosystem
               </span>{" "}
               — connecting trusted partners and quality healthcare.
             </p>
 
-            <p className="text-secondary">
+            <p className="text-muted-foreground">
               Since 2007, Avenir Pharma has expanded through strategic
               collaborations with leading manufacturers in France, Italy, and
               India — enabling the import, branding, marketing, and distribution
               of high-quality medicines, orthopedic appliances, and surgical
               instruments.
             </p>
-            <div className="pt-6 text-secondary">
+            <div className="pt-6 text-muted-foreground">
               <blockquote className="border-l-4 border-primary pl-4">
                 <p>
                   Partnering with Avenir Pharma has elevated our ability to
@@ -67,6 +90,29 @@ export default function ContentSection() {
                 </div>
               </blockquote>
             </div>
+
+            <AnimatedGroup variants={transitionVariants}>
+              <Link
+                href="#link"
+                className="hover:bg-background mt-6 lg:mt-16 dark:hover:border-primary bg-muted group  flex w-fit items-center gap-4  border  p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
+              >
+                <span className="text-foreground text-sm">
+                  Learn more
+                </span>
+                <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-primary"></span>
+
+                <div className="bg-background group-hover:bg-muted size-12 overflow-hidden  duration-500">
+                  <div className="flex w-24 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
+                    <span className="flex size-12">
+                      <ArrowRight className="m-auto size-6" />
+                    </span>
+                    <span className="flex size-12">
+                      <ArrowRight className="m-auto size-6" />
+                    </span>
+                  </div>
+                </div>
+              </Link>
+            </AnimatedGroup>
           </div>
         </div>
       </div>
