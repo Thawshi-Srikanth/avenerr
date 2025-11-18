@@ -1,4 +1,5 @@
 import ContentSection from "@/components/content-1";
+import CTA from "@/components/cta";
 import Features from "@/components/features-3";
 import FeaturesSection from "@/components/features-7";
 import HeroSection from "@/components/hero-section";
@@ -13,7 +14,8 @@ export default function Home() {
       <ContentSection />
       <Features />
       <FeaturesSection />
-      <TeamSection/>
+      <TeamSection />
+      <CTA />
     </div>
   );
 }
