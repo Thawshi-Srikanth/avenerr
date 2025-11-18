@@ -34,9 +34,17 @@ export default function Contact() {
                 Connect seamlessly with popular platforms and services to
                 enhance your workflow.
               </p>
-              <Button variant="outline" size="sm" asChild>
-                <Link href="#">Get Started</Link>
-              </Button>
+              <div className="relative w-full h-full">
+                <iframe
+                  title="map"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d63379.409909631715!2d79.880213!3d6.865045!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a5187bb0c23%3A0x106e6116d34eb8fb!2s14%20Anderson%20Rd%2C%20Dehiwala-Mount%20Lavinia%2010350%2C%20Sri%20Lanka!5e0!3m2!1sen!2sus!4v1763469232991!5m2!1sen!2sus"
+                  className="h-full w-full min-h-[250px] border"
+                  style={{ border: 0 }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
             </div>
           </div>
 
