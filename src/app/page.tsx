@@ -4,6 +4,7 @@ import Features from "@/components/features-3";
 import FeaturesSection from "@/components/features-7";
 import HeroSection from "@/components/hero-section";
 import LogoCloud from "@/components/logo-cloud";
+import StatsSection from "@/components/stats-two";
 import TeamSection from "@/components/team";
 
 export default function Home() {
@@ -14,6 +15,7 @@ export default function Home() {
       <ContentSection />
       <Features />
       <FeaturesSection />
+      <StatsSection />
       <TeamSection />
       <CTA />
     </div>
