@@ -4,13 +4,13 @@ const members = [
     {
         name: 'Liam Brown',
         role: 'Founder - CEO',
-        avatar: 'https://alt.tailus.io/images/team/member-one.webp',
+        avatar: '/images/team/1.jpg',
         link: '#',
     },
     {
         name: 'Elijah Jones',
         role: 'Co-Founder - CTO',
-        avatar: 'https://alt.tailus.io/images/team/member-two.webp',
+        avatar: '/images/team/2.jpg',
         link: '#',
     },
     {
