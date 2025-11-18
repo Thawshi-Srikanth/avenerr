@@ -1,3 +1,4 @@
+import Contact from "@/components/contact-2";
 import ContentSection from "@/components/content-1";
 import CTA from "@/components/cta";
 import Features from "@/components/features-3";
@@ -18,6 +19,7 @@ export default function Home() {
       <StatsSection />
       <TeamSection />
       <CTA />
+      <Contact />
     </div>
   );
 }
