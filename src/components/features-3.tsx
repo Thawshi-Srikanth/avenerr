@@ -1,7 +1,7 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Settings2, Sparkles, Zap } from "lucide-react";
-import { ReactNode } from "react";
 import Image from "next/image";
+import type { ReactNode } from "react";
+import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
 export default function Features() {
   return (

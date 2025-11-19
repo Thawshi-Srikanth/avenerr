@@ -1,6 +1,6 @@
+import Image from "next/image";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
-import Image from "next/image";
 
 export default function LogoCloud() {
   return (

@@ -1,8 +1,7 @@
-import Link from "next/link";
-
-import { TextEffect } from "@/components/ui/text-effect";
-import { AnimatedGroup } from "@/components/ui/animated-group";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
+import { AnimatedGroup } from "@/components/ui/animated-group";
+import { TextEffect } from "@/components/ui/text-effect";
 
 const transitionVariants = {
   item: {

@@ -1,9 +1,9 @@
 "use client";
-import { Logo } from "@/components/logo";
-import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail, Menu, SendHorizonal, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { Logo } from "@/components/logo";
+import { Button } from "@/components/ui/button";
 
 export default function CTA() {
   return (

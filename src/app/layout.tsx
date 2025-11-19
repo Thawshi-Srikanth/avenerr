@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sora, Geist_Mono } from "next/font/google";
+import { Geist_Mono, Sora } from "next/font/google";
 import "./globals.css";
 
 const soraSans = Sora({

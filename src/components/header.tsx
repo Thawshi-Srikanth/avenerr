@@ -1,11 +1,11 @@
 "use client";
 
-import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
 import Link from "next/link";
 import React from "react";
-import { Button } from "./ui/button";
+import { cn } from "@/lib/utils";
 import { Logo } from "./logo";
+import { Button } from "./ui/button";
 
 const menuItems = [
   { name: "Features", href: "#link" },
