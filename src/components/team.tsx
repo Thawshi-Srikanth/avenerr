@@ -35,9 +35,8 @@ export default function TeamSection() {
           </div>
           <div className="mt-6 sm:mt-0">
             <p>
-              During the working process, we perform regular fitting with the
-              client because he is the only person who can feel whether a new
-              suit fits or not.
+              Behind every product we deliver is a passionate team focused on
+              improving patient wellbeing.
             </p>
           </div>
         </div>
