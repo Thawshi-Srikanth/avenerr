@@ -2,8 +2,15 @@ import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { AnimatedGroup } from "./ui/animated-group";
+import { Transition, Variants } from "motion/react";
 
-const transitionVariants = {
+const springTransition: Transition = {
+  type: "spring" as const,
+  bounce: 0.3,
+  duration: 1.5,
+};
+
+const transitionVariants: { item: Variants } = {
   item: {
     hidden: {
       opacity: 0,
@@ -14,11 +21,7 @@ const transitionVariants = {
       opacity: 1,
       filter: "blur(0px)",
       y: 0,
-      transition: {
-        type: "spring",
-        bounce: 0.3,
-        duration: 1.5,
-      },
+      transition: springTransition,
     },
   },
 };
