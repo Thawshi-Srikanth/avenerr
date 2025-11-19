@@ -17,8 +17,9 @@ export default function CTA() {
                   Maintaining the Highest Global Standards
                 </h1>
                 <p className="mt-8">
-                  Error totam sit illum. Voluptas doloribus asperiores quaerat
-                  aperiam. Quidem harum omnis beatae ipsum soluta!
+                  Excelling in importing, branding, marketing, and distributing
+                  a range of pharmaceutical products to deliver quality
+                  healthcare island-wide.
                 </p>
 
                 <div>

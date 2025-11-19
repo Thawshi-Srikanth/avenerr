@@ -8,7 +8,15 @@ export const Logo = ({
   className?: string;
   uniColor?: boolean;
 }) => {
-  return <Image src={"/logo-av.png"} className="brightness-0 invert" alt="logo" width={150} height={30}/>;
+  return (
+    <Image
+      src={"/logo-av.png"}
+      className="brightness-0 invert"
+      alt="logo"
+      width={150}
+      height={30}
+    />
+  );
 };
 
 // export const Logo = ({ className, uniColor }: { className?: string; uniColor?: boolean }) => {

@@ -5,7 +5,7 @@ export default function FeaturesSection() {
   return (
     <section className="overflow-hidden py-16 md:py-32 bg-[url(/images/home-3.png)] bg-fixed bg-cover bg-center bg-no-repeat">
       <div className="mx-auto max-w-7xl space-y-8 border-t px-6 md:space-y-12">
-         <span className="text-caption -ml-6 -mt-3.5 block w-max bg-red-500 px-6 ">
+        <span className="text-caption -ml-6 -mt-3.5 block w-max bg-red-500 px-6 ">
           Why us
         </span>
         <div className="relative z-10 max-w-2xl">
