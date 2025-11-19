@@ -80,12 +80,12 @@ export default function ContentSection() {
                   <cite className="block font-medium">
                     Dr. Ravin Perera, Medical Director
                   </cite>
-                  <img
-                    className="h-5 w-fit dark:invert"
-                    src="/logos/avenir-logo.svg"
-                    alt="Avenir Pharma Logo"
-                    height="20"
-                    width="auto"
+                  <Image
+                    className="h-5 w-fit "
+                    src="/images/logo-cloud/triveni-formulation.png"
+                    alt="Triveni Formulation"
+                    height={20}
+                    width={100}
                   />
                 </div>
               </blockquote>
@@ -96,9 +96,7 @@ export default function ContentSection() {
                 href="#link"
                 className="hover:bg-background mt-6 lg:mt-16 dark:hover:border-primary bg-muted group  flex w-fit items-center gap-4  border  p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
               >
-                <span className="text-foreground text-sm">
-                  Learn more
-                </span>
+                <span className="text-foreground text-sm">Learn more</span>
                 <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-primary"></span>
 
                 <div className="bg-background group-hover:bg-muted size-12 overflow-hidden  duration-500">

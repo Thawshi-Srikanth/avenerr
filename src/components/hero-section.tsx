@@ -71,8 +71,9 @@ export default function HeroSection() {
                 as="p"
                 className=" mt-8 max-w-2xl text-balance text-lg text-white"
               >
-                We are a company based in Sri Lanka, established in 2007 with a
-                vision to deliver quality healthcare worldwide.
+                Excelling in importing, branding, marketing, and distributing a
+                range of pharmaceutical products to deliver quality healthcare
+                island-wide.
               </TextEffect>
 
               <AnimatedGroup variants={transitionVariants}>
