@@ -20,9 +20,11 @@
       "recommended": true,
       "suspicious": {
         "noUnknownAtRules": "off"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off"
       }
     },
-
     "domains": {
       "next": "recommended",
       "react": "recommended"
