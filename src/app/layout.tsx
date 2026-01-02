@@ -4,6 +4,7 @@ import "./globals.css";
 
 import FooterSection from "@/components/footer";
 import { HeroHeader } from "@/components/header";
+import CookieConsent from "@/components/cookie-consent";
 
 const soraSans = Sora({
   variable: "--font-sora-sans",
@@ -32,7 +33,8 @@ export default function RootLayout({
       >
         <HeroHeader />
         {children}
-         <FooterSection />
+        <FooterSection />
+        <CookieConsent />
       </body>
     </html>
   );
