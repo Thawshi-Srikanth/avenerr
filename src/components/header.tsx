@@ -41,7 +41,7 @@ const services = [
 
 const mainLinks = [
   { name: "About Us", href: "/about-us" },
-  { name: "Our Business", href: "/our-business" },
+  { name: "Company Overview", href: "/company-overview" },
   { name: "Contact Us", href: "/contact-us" },
 ];
 
