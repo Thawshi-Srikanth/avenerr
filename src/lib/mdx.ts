@@ -12,13 +12,13 @@ export interface MDXData {
   content: string;
 }
 
-export function getPostSlugs() {
-  return fs.readdirSync(contentDirectory);
+export function getPostSlugs(directory: string = "") {
+  return fs.readdirSync(path.join(contentDirectory, directory));
 }
 
-export function getPostBySlug(slug: string): MDXData {
+export function getPostBySlug(slug: string, directory: string = ""): MDXData {
   const realSlug = slug.replace(/\.mdx$/, "");
-  const fullPath = path.join(contentDirectory, `${realSlug}.mdx`);
+  const fullPath = path.join(contentDirectory, directory, `${realSlug}.mdx`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
@@ -29,11 +29,10 @@ export function getPostBySlug(slug: string): MDXData {
   };
 }
 
-export function getAllPosts(): MDXData[] {
-  const slugs = getPostSlugs();
+export function getAllPosts(directory: string = ""): MDXData[] {
+  const slugs = getPostSlugs(directory);
   const posts = slugs
-    .map((slug) => getPostBySlug(slug))
-    // sort posts by date in descending order
-    // .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+    .filter((slug) => slug.endsWith(".mdx"))
+    .map((slug) => getPostBySlug(slug, directory));
   return posts;
 }

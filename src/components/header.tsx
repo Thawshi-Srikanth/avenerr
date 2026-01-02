@@ -113,6 +113,94 @@ export const HeroHeader = () => {
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
+                  <NavigationMenuItem>
+                    <NavigationMenuTrigger className="bg-transparent">
+                      Our Business
+                    </NavigationMenuTrigger>
+                    <NavigationMenuContent>
+                      <ul className="grid gap-3 p-6 md:w-[600px] lg:w-[900px] lg:grid-cols-[250px_250px_1fr]">
+                        {/* Column 1: Intro & Pharma */}
+                        <li className="space-y-3">
+                          <div className="flex w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
+                            <div className="mb-2 text-lg font-medium">
+                              Divisions
+                            </div>
+                            <p className="text-sm leading-tight text-muted-foreground">
+                              Explore our specialized healthcare units.
+                            </p>
+                          </div>
+                          <ListItem
+                            href="/business/pharmaceutical"
+                            title="Pharmaceutical"
+                          >
+                            Diabetic, Cardio, Neuro & more.
+                          </ListItem>
+                        </li>
+
+                        {/* Column 2: Orthopedic & Trauma/Spine */}
+                        <li className="space-y-3">
+                          <div className="px-3 py-2 text-sm font-bold text-muted-foreground uppercase tracking-wider">
+                            Specialties
+                          </div>
+                          <ListItem
+                            href="/business/orthopedic-aids"
+                            title="Orthopedic Aids"
+                          >
+                            Braces, Supports & Rehab.
+                          </ListItem>
+                          <div className="my-2 border-t" />
+                          <div className="px-3 text-xs font-bold text-primary">
+                            SURGICALS
+                          </div>
+                          <ListItem
+                            href="/business/surgicals-trauma"
+                            title="Trauma"
+                          >
+                            Nails, Plates & Screws.
+                          </ListItem>
+                          <ListItem
+                            href="/business/surgicals-spine"
+                            title="Spine"
+                          >
+                            Cages & Fixation Systems.
+                          </ListItem>
+                        </li>
+
+                        {/* Column 3: Surgicals - Arthroplasty (Hierarchy Level 3) */}
+                        <li>
+                          <div className="px-3 py-2 text-sm font-bold text-muted-foreground uppercase tracking-wider">
+                            Arthroplasty
+                          </div>
+                          <ul className="grid gap-2">
+                            <ListItem
+                              href="/business/surgicals-knee"
+                              title="Knee"
+                            >
+                              Truliant, Optetrak & GPS.
+                            </ListItem>
+                            <ListItem
+                              href="/business/surgicals-shoulder"
+                              title="Shoulder"
+                            >
+                              Equinoxe Platform.
+                            </ListItem>
+                            <ListItem
+                              href="/business/surgicals-hip"
+                              title="Hip"
+                            >
+                              Total & Revision Systems.
+                            </ListItem>
+                            <ListItem
+                              href="/business/surgicals-tumour"
+                              title="Tumour Prosthesis"
+                            >
+                              Megaprosthesis Solutions.
+                            </ListItem>
+                          </ul>
+                        </li>
+                      </ul>
+                    </NavigationMenuContent>
+                  </NavigationMenuItem>
                   {mainLinks.map((link) => (
                     <NavigationMenuItem key={link.name}>
                       <Link href={link.href} legacyBehavior passHref>
