@@ -8,9 +8,10 @@ import { Logo } from "./logo";
 import { Button } from "./ui/button";
 
 const menuItems = [
-  { name: "Features", href: "#link" },
-  { name: "Solution", href: "#link" },
-  { name: "About", href: "#link" },
+  { name: "Information Systems", href: "/services/information-systems" },
+  { name: "Logistic and Operations", href: "/services/logistic-operations" },
+  { name: "Scientific Affairs", href: "/services/scientific-affairs" },
+  { name: "Training", href: "/services/training" },
 ];
 
 export const HeroHeader = () => {

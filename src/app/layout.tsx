@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import { Geist_Mono, Sora } from "next/font/google";
 import "./globals.css";
 
+import FooterSection from "@/components/footer";
+import { HeroHeader } from "@/components/header";
+
 const soraSans = Sora({
   variable: "--font-sora-sans",
   subsets: ["latin"],
@@ -27,7 +30,9 @@ export default function RootLayout({
       <body
         className={`${soraSans.variable} ${geistMono.variable} antialiased`}
       >
+        <HeroHeader />
         {children}
+         <FooterSection />
       </body>
     </html>
   );
