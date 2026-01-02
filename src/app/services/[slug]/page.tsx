@@ -74,7 +74,7 @@ function Sidebar({ currentSlug }: { currentSlug: string }) {
         </nav>
       </div>
 
-      <div className="rounded-xl bg-muted p-6">
+      <div className="bg-muted p-6">
         <h4 className="font-semibold mb-2">Need a custom solution?</h4>
         <p className="text-sm text-muted-foreground mb-4">
           Contact our team to discuss your specific requirements.
