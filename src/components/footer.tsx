@@ -8,31 +8,40 @@ import { cn } from "@/lib/utils";
 
 const links = [
   {
+    group: "Business Divisions",
+    items: [
+      {
+        title: "Pharmaceutical",
+        href: "/business/pharmaceutical",
+      },
+      {
+        title: "Orthopedic Aids",
+        href: "/business/orthopedic-aids",
+      },
+      {
+        title: "Surgicals",
+        href: "/business/surgicals",
+      },
+    ],
+  },
+  {
     group: "Services",
     items: [
       {
         title: "Information Systems",
-        href: "#",
+        href: "/services/information-systems",
       },
       {
         title: "Logistics & Operations",
-        href: "#",
+        href: "/services/logistic-operations",
       },
       {
         title: "Scientific Affairs",
-        href: "#",
+        href: "/services/scientific-affairs",
       },
       {
-        title: "Training & Education",
-        href: "#",
-      },
-      {
-        title: "Supply Chain Support",
-        href: "#",
-      },
-      {
-        title: "Regulatory Assistance",
-        href: "#",
+        title: "Training",
+        href: "/services/training",
       },
     ],
   },
@@ -40,28 +49,16 @@ const links = [
     group: "Company",
     items: [
       {
-        title: "Our Team",
-        href: "#",
+        title: "About Us",
+        href: "/about-us",
       },
       {
-        title: "Leadership",
-        href: "#",
-      },
-      {
-        title: "Global Partners",
-        href: "#",
-      },
-      {
-        title: "Impact & Vision",
-        href: "#",
+        title: "Company Overview",
+        href: "/company-overview",
       },
       {
         title: "Contact Us",
-        href: "#",
-      },
-      {
-        title: "Customer Support",
-        href: "#",
+        href: "/contact-us",
       },
     ],
   },
@@ -69,19 +66,15 @@ const links = [
     group: "Legal",
     items: [
       {
-        title: "Licensing & Certifications",
-        href: "#",
-      },
-      {
         title: "Privacy Policy",
         href: "#",
       },
       {
-        title: "Cookies Policy",
+        title: "Terms of Service",
         href: "#",
       },
       {
-        title: "Product Safety & Compliance",
+        title: "Cookie Policy",
         href: "#",
       },
     ],
