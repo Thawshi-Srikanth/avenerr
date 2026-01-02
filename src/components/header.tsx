@@ -42,7 +42,6 @@ const services = [
 const mainLinks = [
   { name: "About Us", href: "/about-us" },
   { name: "Company Overview", href: "/company-overview" },
-  { name: "Contact Us", href: "/contact-us" },
 ];
 
 export const HeroHeader = () => {
@@ -259,7 +258,7 @@ export const HeroHeader = () => {
                   )}
                 >
                   <Link href="/contact-us">
-                    <span>Get Started</span>
+                    <span>Contact Us</span>
                   </Link>
                 </Button>
               </div>
