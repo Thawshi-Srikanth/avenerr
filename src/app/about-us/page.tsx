@@ -18,10 +18,10 @@ export default function AboutUsPage() {
           src="/images/about-hero.png"
           alt="About Avenierr Pharma"
           fill
-          className="object-cover"
+          className="object-cover grayscale brightness-50"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-background via-background/40 to-transparent" />
         <div className="absolute bottom-0 left-0 w-full p-8 lg:p-16">
           <div className="max-w-7xl mx-auto">
             <h1 className="text-5xl lg:text-7xl font-bold tracking-tighter text-foreground mb-4">

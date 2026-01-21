@@ -25,15 +25,16 @@ export default async function BusinessDivisionPage({
     return (
       <div className="min-h-screen bg-background">
         {/* Hero Section */}
-        <div className="relative w-full h-[60vh] lg:h-[70vh] overflow-hidden">
+
+        <div className="relative w-full h-[50vh] overflow-hidden">
           <Image
             src={frontMatter.image || "/images/placeholder.jpg"}
             alt={frontMatter.title}
             fill
-            className="object-cover"
+            className="object-cover grayscale brightness-50"
             priority
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-background via-background/60 to-transparent" />
           <div className="absolute bottom-0 left-0 w-full p-8 lg:p-16">
             <div className="max-w-7xl mx-auto">
               <div className="inline-flex items-center gap-2 border border-white/20 px-3 py-1 mb-4 bg-black/20 backdrop-blur-md">
@@ -149,7 +150,7 @@ export default async function BusinessDivisionPage({
         </div>
       </div>
     );
-  } catch (error) {
+  } catch (_error) {
     notFound();
   }
 }

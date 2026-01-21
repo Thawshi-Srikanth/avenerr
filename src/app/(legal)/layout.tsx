@@ -1,5 +1,4 @@
 import LegalSidebar from "@/components/legal-sidebar";
-import React from "react";
 
 export default function LegalLayout({
   children,

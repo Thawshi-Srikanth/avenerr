@@ -1,4 +1,7 @@
 import Image from "next/image";
+import Link from "next/link";
+import { ArrowRight } from "lucide-react";
+import { managementTeam } from "@/lib/team-data";
 
 export default function CompanyOverviewPage() {
   const partners = [
@@ -24,51 +27,6 @@ export default function CompanyOverviewPage() {
     { name: "IndoNes", country: "Indonesia" },
   ];
 
-  const managementTeam = [
-    {
-      name: "Mr. C. Sathananthan",
-      role: "Managing Director",
-      bio: "Founder of Avenierr Pharma (Pvt) Ltd, serving as Managing Director since 2007. With industry experience dating back to 1995, he has risen from Medical Representative to territory and field management roles before establishing Avenierr.",
-      isMain: true,
-    },
-    {
-      name: "Mr. T. Saravanan",
-      role: "Director Marketing",
-      bio: "Initiated career at Dr. Reddy’s Laboratories. 19 years of experience in regional marketing and strategic partnership development.",
-    },
-    {
-      name: "Mr. Sanjaya Kurukulasooriya",
-      role: "Director Surgical",
-      bio: "Industry veteran since 1998. Joined Avenierr in 2009. Previously served at Harcourts Pharmacy and Dr. Reddy’s Laboratories.",
-    },
-    {
-      name: "Mr. R. Saravanan",
-      role: "Senior Marketing Manager",
-      bio: "Joined in 2022. Alumnus of London Business School & IIM Ahmedabad. 23 years experience with giants like Novartis, Abbott, and Torrent Pharmaceuticals. Responsible for building market-leading brands.",
-      isWide: true,
-    },
-    {
-      name: "Mr. J. L. V. Fernando",
-      role: "Manager – Finance",
-      bio: "Joined in 2018. Previously at Asha Agencies (1993-2017). Expert in financial strategy, control, and reporting. Finale at Institute of Chartered Accountants of SL.",
-    },
-    {
-      name: "Mr. Heroshana Perera",
-      role: "Head of Operations",
-      bio: "15+ years experience (Emerchemie NB, Hemas). MBA from ICFAI University India and BSc from University of Colombo.",
-    },
-    {
-      name: "Ms. Vindhya Wijesundara",
-      role: "Manager – Regulatory Affairs",
-      bio: "Previously at Ashland Associates, Chesco, and Asiri Hospital. Diploma in Pharmacy from University of Colombo.",
-    },
-    {
-      name: "Ms. S. Chithra",
-      role: "Senior HR",
-      bio: "First Class graduate from Northumbria University, UK. Focuses on company culture and employee well-being. Previously at Brandix and The HR Consortium.",
-    },
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -77,10 +35,10 @@ export default function CompanyOverviewPage() {
           src="/images/business-hero.png"
           alt="Company Overview"
           fill
-          className="object-cover"
+          className="object-cover grayscale brightness-50"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-background via-background/40 to-transparent" />
         <div className="absolute bottom-0 left-0 w-full p-8 lg:p-16">
           <div className="max-w-7xl mx-auto">
             <div className="inline-flex items-center gap-2 border px-3 py-1 mb-4 bg-background/50 backdrop-blur-md">
@@ -114,46 +72,36 @@ export default function CompanyOverviewPage() {
           </div>
 
           <div className="lg:w-3/4">
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-x-8 gap-y-12">
               {managementTeam.map((member, i) => (
-                <div
-                  key={i}
-                  className={`bg-background border p-8 hover:border-primary/50 transition-colors group ${
-                    member.isMain ? "md:col-span-2" : ""
-                  } ${member.isWide ? "md:col-span-2" : ""}`}
-                >
-                  <div
-                    className={`flex flex-col ${
-                      member.isMain ? "md:flex-row gap-8" : "gap-6"
-                    }`}
-                  >
-                    <div
-                      className={`relative shrink-0 overflow-hidden border bg-muted ${
-                        member.isMain ? "w-40 h-40" : "w-24 h-24"
-                      }`}
-                    >
-                      <Image
-                        src="/images/avatar-placeholder.png"
-                        alt={member.name}
-                        fill
-                        className="object-cover grayscale group-hover:grayscale-0 transition-all duration-500"
-                      />
-                    </div>
+                <div key={i} className="group flex flex-col gap-4">
+                  <div className="relative overflow-hidden rounded-xl bg-muted aspect-3/4 w-full">
+                    <Image
+                      src={member.image}
+                      alt={member.name}
+                      fill
+                      className="object-cover transition-transform duration-700 group-hover:scale-105"
+                    />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent opacity-60" />
+                  </div>
+
+                  <div className="flex flex-col items-start gap-2">
                     <div>
-                      <h3
-                        className={`font-bold mb-1 ${
-                          member.isMain ? "text-3xl" : "text-xl"
-                        }`}
-                      >
+                      <h3 className="text-2xl font-bold text-foreground">
                         {member.name}
                       </h3>
-                      <p className="text-primary text-xs font-bold uppercase tracking-wider mb-4">
+                      <p className="text-red-600 text-sm font-bold uppercase tracking-wider">
                         {member.role}
                       </p>
-                      <p className="text-sm text-muted-foreground leading-relaxed">
-                        {member.bio}
-                      </p>
                     </div>
+
+                    <Link
+                      href={`/company-overview/team/${member.slug}`}
+                      className="inline-flex items-center gap-2 text-sm font-medium hover:text-red-600 transition-colors mt-2 group/btn"
+                    >
+                      View Profile
+                      <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
+                    </Link>
                   </div>
                 </div>
               ))}
