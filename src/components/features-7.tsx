@@ -2,7 +2,7 @@ import { Cpu, Lock, Sparkles, Zap } from "lucide-react";
 
 export default function FeaturesSection() {
   return (
-    <section className="overflow-hidden py-16 md:py-32 bg-[url(/images/home-3.png)] bg-fixed bg-cover bg-center bg-no-repeat">
+    <section className="overflow-hidden py-16 md:py-32 bg-[linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(/images/ortho-feature-bg.png)] bg-fixed bg-cover bg-center bg-no-repeat">
       <div className="mx-auto max-w-7xl space-y-8 border-t px-6 md:space-y-12">
         <span className="text-caption -ml-6 -mt-3.5 block w-max bg-red-500 px-6 ">
           Why us

@@ -37,15 +37,15 @@ export default function ContentSection() {
           <div className="relative mb-6 sm:mb-0">
             <div className="bg-linear-to-b aspect-76/59  from-zinc-300 to-transparent p-px dark:from-zinc-700">
               <Image
-                src="/images/home-2.png"
-                className="hidden  dark:block"
+                src="/images/ortho-content.png"
+                className="hidden dark:block brightness-75 grayscale"
                 alt="payments illustration dark"
                 width={1000}
                 height={1000}
               />
               <Image
-                src="/images/home-2.png"
-                className=" shadow dark:hidden"
+                src="/images/ortho-content.png"
+                className=" shadow dark:hidden brightness-90 grayscale-[0.5]"
                 alt="payments illustration light"
                 width={1000}
                 height={1000}

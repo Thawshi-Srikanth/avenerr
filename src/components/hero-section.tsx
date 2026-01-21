@@ -28,7 +28,7 @@ const transitionVariants: { item: Variants } = {
 
 export default function HeroSection() {
   return (
-    <main className="overflow-hidden bg-accent h-svh bg-[url(/images/home-1.png)] bg-fixed bg-cover bg-center bg-no-repeat">
+    <main className="overflow-hidden bg-accent h-svh bg-[linear-gradient(rgba(0,0,0,0.85),rgba(0,0,0,0.85)),url(/images/ortho-hero.png)] bg-fixed bg-cover bg-center bg-no-repeat">
       <div
         aria-hidden
         className="absolute inset-0 isolate hidden opacity-65 contain-strict lg:block"
