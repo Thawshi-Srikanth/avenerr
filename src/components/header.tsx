@@ -1,8 +1,9 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useState } from "react";
+import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Logo } from "./logo";
 import { Button } from "./ui/button";
@@ -219,50 +220,147 @@ export const HeroHeader = () => {
             </div>
 
             {/* Mobile Navigation */}
-            <div className="bg-background in-data-[state=active]:block lg:in-data-[state=active]:flex mb-6 hidden w-full flex-wrap items-center justify-end space-y-8 border p-6 shadow-2xl shadow-zinc-300/20 md:flex-nowrap lg:m-0 lg:flex lg:w-fit lg:gap-6 lg:space-y-0 lg:border-transparent lg:bg-transparent lg:p-0 lg:shadow-none dark:shadow-none dark:lg:bg-transparent">
-              <div className="lg:hidden w-full">
-                <ul className="space-y-6 text-base">
-                  <li className="font-semibold text-primary">Services</li>
-                  <ul className="space-y-4 pl-4 border-l">
-                    {services.map((item, index) => (
-                      <li key={index}>
+            <AnimatePresence>
+              {menuState && (
+                <motion.div
+                  initial={{ x: "-100%" }}
+                  animate={{ x: 0 }}
+                  exit={{ x: "-100%" }}
+                  transition={{ type: "spring", bounce: 0, duration: 0.4 }}
+                  className="fixed inset-x-0 top-[60px] z-50 h-[calc(100vh-60px)] overflow-y-auto bg-zinc-950 border-t lg:hidden"
+                >
+                  <div className="flex flex-col p-6 space-y-6">
+                    <ul className="space-y-4 text-base">
+                      {/* Services Dropdown */}
+                      <MobileDropdown title="Services">
+                        <ul className="space-y-4 pl-4 border-l my-2">
+                          {services.map((item, index) => (
+                            <li key={index}>
+                              <Link
+                                href={item.href}
+                                className="text-muted-foreground hover:text-foreground block py-1"
+                                onClick={() => setMenuState(false)}
+                              >
+                                {item.title}
+                              </Link>
+                            </li>
+                          ))}
+                        </ul>
+                      </MobileDropdown>
+
+                      {/* Our Business Dropdown */}
+                      <MobileDropdown title="Our Business">
+                        <ul className="space-y-4 pl-4 border-l my-2">
+                          <li className="font-medium text-foreground py-1">
+                            Divisions
+                          </li>
+                          <li>
+                            <Link
+                              href="/business/pharmaceutical"
+                              className="text-muted-foreground hover:text-foreground block py-1"
+                              onClick={() => setMenuState(false)}
+                            >
+                              Pharmaceutical
+                            </Link>
+                          </li>
+
+                          <li className="font-medium text-foreground pt-2 py-1">
+                            Orthopedic Sub-Divisions
+                          </li>
+                          <li>
+                            <Link
+                              href="/business/orthopedic-aids"
+                              className="text-muted-foreground hover:text-foreground block py-1"
+                              onClick={() => setMenuState(false)}
+                            >
+                              Orthopedic Aids
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/business/surgicals-trauma"
+                              className="text-muted-foreground hover:text-foreground block py-1"
+                              onClick={() => setMenuState(false)}
+                            >
+                              Trauma
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/business/surgicals-spine"
+                              className="text-muted-foreground hover:text-foreground block py-1"
+                              onClick={() => setMenuState(false)}
+                            >
+                              Spine
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/business/surgicals-knee"
+                              className="text-muted-foreground hover:text-foreground block py-1"
+                              onClick={() => setMenuState(false)}
+                            >
+                              Knee
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/business/surgicals-shoulder"
+                              className="text-muted-foreground hover:text-foreground block py-1"
+                              onClick={() => setMenuState(false)}
+                            >
+                              Shoulder
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/business/surgicals-hip"
+                              className="text-muted-foreground hover:text-foreground block py-1"
+                              onClick={() => setMenuState(false)}
+                            >
+                              Hip
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="/business/surgicals-tumour"
+                              className="text-muted-foreground hover:text-foreground block py-1"
+                              onClick={() => setMenuState(false)}
+                            >
+                              Tumour Prosthesis
+                            </Link>
+                          </li>
+                        </ul>
+                      </MobileDropdown>
+
+                      {/* Main Links */}
+                      {mainLinks.map((item, index) => (
+                        <li key={index} className="border-b pb-4 last:border-0">
+                          <Link
+                            href={item.href}
+                            className="text-foreground font-medium block py-2"
+                            onClick={() => setMenuState(false)}
+                          >
+                            {item.name}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+
+                    <div className="pt-4">
+                      <Button asChild className="w-full">
                         <Link
-                          href={item.href}
-                          className="text-muted-foreground hover:text-accent-foreground block duration-150"
+                          href="/contact-us"
                           onClick={() => setMenuState(false)}
                         >
-                          {item.title}
+                          Contact Us
                         </Link>
-                      </li>
-                    ))}
-                  </ul>
-                  {mainLinks.map((item, index) => (
-                    <li key={index}>
-                      <Link
-                        href={item.href}
-                        className="text-foreground hover:text-primary block duration-150 font-medium"
-                        onClick={() => setMenuState(false)}
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
-                <Button
-                  asChild
-                  size="sm"
-                  className={cn(
-                    isScrolled ? "lg:inline-flex" : "lg:inline-flex",
-                  )}
-                >
-                  <Link href="/contact-us">
-                    <span>Contact Us</span>
-                  </Link>
-                </Button>
-              </div>
-            </div>
+                      </Button>
+                    </div>
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
         </div>
       </nav>
@@ -295,3 +393,43 @@ const ListItem = React.forwardRef<
   );
 });
 ListItem.displayName = "ListItem";
+const MobileDropdown = ({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="border-b border-zinc-800 last:border-0">
+      <Button
+        variant="ghost"
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex w-full items-center justify-between py-6 px-0 hover:bg-transparent text-lg font-semibold text-primary transition-colors hover:text-primary/80"
+      >
+        <span>{title}</span>
+        <ChevronDown
+          className={cn(
+            "h-4 w-4 transition-transform duration-200",
+            isOpen && "rotate-180",
+          )}
+        />
+      </Button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            {children}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
