@@ -14,19 +14,16 @@ export const metadata = {
 export default function ContactPage() {
   return (
     <div className="min-h-screen bg-background pt-20 lg:pt-28">
-      <div className="relative w-full h-[50vh] overflow-hidden">
+      {/* Hero Section */}
+      <div className="relative h-[40vh] w-full overflow-hidden bg-zinc-950 text-white">
         <Image
           src="/images/business-hero.png"
           alt="Background"
           fill
           className="object-cover grayscale brightness-50"
         />
-        <div className="absolute inset-0 bg-linear-to-t from-background via-background/60 to-transparent" />
-      </div>
-      {/* Hero Section */}
-      <div className="relative h-[40vh] w-full overflow-hidden bg-zinc-950 text-white">
         <div className="absolute inset-0 bg-[url('/images/contact-hero-pattern.png')] opacity-20" />
-        <div className="absolute inset-0 bg-gradient-to-t from-zinc-950/80 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-background via-background/60 to-transparent" />
         <div className="relative mx-auto flex h-full max-w-7xl flex-col justify-end px-6 pb-16">
           <div className="mb-4 inline-flex w-fit items-center gap-2 border border-white/20 px-3 py-1 font-mono text-xs uppercase tracking-widest text-zinc-400 backdrop-blur-md">
             <span>Get in Touch</span>
