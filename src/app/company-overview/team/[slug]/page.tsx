@@ -39,7 +39,7 @@ export default async function TeamMemberPage({
       <div className="max-w-7xl mx-auto px-6 -mt-32 relative pb-24 z-10">
         <Link
           href="/company-overview"
-          className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors mb-12 group"
+          className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors mb-12 group sticky top-[80px] z-20 w-fit bg-background/80 backdrop-blur-sm py-2 px-3 rounded-md lg:static lg:bg-transparent lg:p-0 lg:backdrop-blur-none lg:z-auto"
         >
           <MdArrowBack className="w-5 h-5 transition-transform group-hover:-translate-x-1" />
           Back to Leadership
@@ -47,7 +47,7 @@ export default async function TeamMemberPage({
 
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 items-start">
           {/* Left Column: Image & Contact */}
-          <div className="w-full lg:w-[320px] shrink-0 sticky top-32 flex flex-col gap-6">
+          <div className="w-full lg:w-[320px] shrink-0 lg:sticky lg:top-32 flex flex-col gap-6">
             <div className="relative aspect-3/4 w-full bg-card shadow-xl ring-1 ring-border p-2">
               <div className="relative w-full h-full grayscale hover:grayscale-0 transition-all duration-700 ease-in-out">
                 <Image
