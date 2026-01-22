@@ -118,16 +118,11 @@ export const HeroHeader = () => {
                       Our Business
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className="grid gap-3 p-6 md:w-[600px] lg:w-[900px] lg:grid-cols-[250px_250px_1fr]">
-                        {/* Column 1: Intro & Pharma */}
+                      <ul className="grid gap-3 p-6 md:w-[600px] lg:grid-cols-[200px_1fr]">
+                        {/* Column 1: Pharmaceutical */}
                         <li className="space-y-3">
-                          <div className="flex w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md">
-                            <div className="mb-2 text-lg font-medium">
-                              Divisions
-                            </div>
-                            <p className="text-sm leading-tight text-muted-foreground">
-                              Explore our specialized healthcare units.
-                            </p>
+                          <div className="px-3 py-2 text-sm font-bold text-primary uppercase tracking-wider">
+                            Pharmaceutical
                           </div>
                           <ListItem
                             href="/business/pharmaceutical"
@@ -137,66 +132,55 @@ export const HeroHeader = () => {
                           </ListItem>
                         </li>
 
-                        {/* Column 2: Orthopedic & Trauma/Spine */}
+                        {/* Column 3: Surgicals */}
                         <li className="space-y-3">
-                          <div className="px-3 py-2 text-sm font-bold text-muted-foreground uppercase tracking-wider">
-                            Specialties
-                          </div>
-                          <ListItem
-                            href="/business/orthopedic-aids"
-                            title="Orthopedic Aids"
-                          >
-                            Braces, Supports & Rehab.
-                          </ListItem>
-                          <div className="my-2 border-t" />
-                          <div className="px-3 text-xs font-bold text-primary">
+                          <div className="px-3 py-2 text-sm font-bold text-primary uppercase tracking-wider">
                             SURGICALS
                           </div>
-                          <ListItem
-                            href="/business/surgicals-trauma"
-                            title="Trauma"
-                          >
-                            Nails, Plates & Screws.
-                          </ListItem>
-                          <ListItem
-                            href="/business/surgicals-spine"
-                            title="Spine"
-                          >
-                            Cages & Fixation Systems.
-                          </ListItem>
-                        </li>
 
-                        {/* Column 3: Surgicals - Arthroplasty (Hierarchy Level 3) */}
-                        <li>
-                          <div className="px-3 py-2 text-sm font-bold text-muted-foreground uppercase tracking-wider">
-                            Arthroplasty
+                          <div className="grid grid-cols-2 gap-4">
+                            <div>
+                              <ListItem
+                                href="/business/surgicals-trauma"
+                                title="Trauma"
+                              >
+                                Nails, Plates & Screws.
+                              </ListItem>
+                              <ListItem
+                                href="/business/surgicals-spine"
+                                title="Spine"
+                              >
+                                Cages & Fixation Systems.
+                              </ListItem>
+                            </div>
+
+                            <div>
+                              <CollapsibleMenu title="Orthopedic Aids">
+                                <ul className="grid gap-1 pl-2 border-l ml-1">
+                                  <ListItem
+                                    href="/business/surgicals-knee"
+                                    title="Knee"
+                                  />
+                                  <ListItem
+                                    href="/business/surgicals-shoulder"
+                                    title="Shoulder"
+                                  />
+                                  <ListItem
+                                    href="/business/surgicals-shoulder"
+                                    title="Equinoxe Platform"
+                                  />
+                                  <ListItem
+                                    href="/business/surgicals-hip"
+                                    title="Hip"
+                                  />
+                                  <ListItem
+                                    href="/business/surgicals-tumour"
+                                    title="Tumour Prosthesis"
+                                  />
+                                </ul>
+                              </CollapsibleMenu>
+                            </div>
                           </div>
-                          <ul className="grid gap-2">
-                            <ListItem
-                              href="/business/surgicals-knee"
-                              title="Knee"
-                            >
-                              Truliant, Optetrak & GPS.
-                            </ListItem>
-                            <ListItem
-                              href="/business/surgicals-shoulder"
-                              title="Shoulder"
-                            >
-                              Equinoxe Platform.
-                            </ListItem>
-                            <ListItem
-                              href="/business/surgicals-hip"
-                              title="Hip"
-                            >
-                              Total & Revision Systems.
-                            </ListItem>
-                            <ListItem
-                              href="/business/surgicals-tumour"
-                              title="Tumour Prosthesis"
-                            >
-                              Megaprosthesis Solutions.
-                            </ListItem>
-                          </ul>
                         </li>
                       </ul>
                     </NavigationMenuContent>
@@ -252,9 +236,6 @@ export const HeroHeader = () => {
                       {/* Our Business Dropdown */}
                       <MobileDropdown title="Our Business">
                         <ul className="space-y-4 pl-4 border-l my-2">
-                          <li className="font-medium text-foreground py-1">
-                            Divisions
-                          </li>
                           <li>
                             <Link
                               href="/business/pharmaceutical"
@@ -265,18 +246,52 @@ export const HeroHeader = () => {
                             </Link>
                           </li>
 
-                          <li className="font-medium text-foreground pt-2 py-1">
-                            Orthopedic Sub-Divisions
+                          <li className="font-medium text-primary py-1 mt-2">
+                            SURGICALS
                           </li>
                           <li>
-                            <Link
-                              href="/business/orthopedic-aids"
-                              className="text-muted-foreground hover:text-foreground block py-1"
-                              onClick={() => setMenuState(false)}
-                            >
+                            <div className="pl-2 font-medium text-foreground py-1">
                               Orthopedic Aids
-                            </Link>
+                            </div>
+                            <div className="pl-4 space-y-2 border-l my-2">
+                              <Link
+                                href="/business/surgicals-knee"
+                                className="text-muted-foreground hover:text-foreground block py-1"
+                                onClick={() => setMenuState(false)}
+                              >
+                                Knee
+                              </Link>
+                              <Link
+                                href="/business/surgicals-shoulder"
+                                className="text-muted-foreground hover:text-foreground block py-1"
+                                onClick={() => setMenuState(false)}
+                              >
+                                Shoulder
+                              </Link>
+                              <Link
+                                href="/business/surgicals-shoulder"
+                                className="text-muted-foreground hover:text-foreground block py-1"
+                                onClick={() => setMenuState(false)}
+                              >
+                                Equinoxe Platform
+                              </Link>
+                              <Link
+                                href="/business/surgicals-hip"
+                                className="text-muted-foreground hover:text-foreground block py-1"
+                                onClick={() => setMenuState(false)}
+                              >
+                                Hip
+                              </Link>
+                              <Link
+                                href="/business/surgicals-tumour"
+                                className="text-muted-foreground hover:text-foreground block py-1"
+                                onClick={() => setMenuState(false)}
+                              >
+                                Tumour Prosthesis
+                              </Link>
+                            </div>
                           </li>
+
                           <li>
                             <Link
                               href="/business/surgicals-trauma"
@@ -293,42 +308,6 @@ export const HeroHeader = () => {
                               onClick={() => setMenuState(false)}
                             >
                               Spine
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/business/surgicals-knee"
-                              className="text-muted-foreground hover:text-foreground block py-1"
-                              onClick={() => setMenuState(false)}
-                            >
-                              Knee
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/business/surgicals-shoulder"
-                              className="text-muted-foreground hover:text-foreground block py-1"
-                              onClick={() => setMenuState(false)}
-                            >
-                              Shoulder
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/business/surgicals-hip"
-                              className="text-muted-foreground hover:text-foreground block py-1"
-                              onClick={() => setMenuState(false)}
-                            >
-                              Hip
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/business/surgicals-tumour"
-                              className="text-muted-foreground hover:text-foreground block py-1"
-                              onClick={() => setMenuState(false)}
-                            >
-                              Tumour Prosthesis
                             </Link>
                           </li>
                         </ul>
@@ -394,6 +373,50 @@ const ListItem = React.forwardRef<
   );
 });
 ListItem.displayName = "ListItem";
+
+const CollapsibleMenu = ({
+  title,
+  children,
+  defaultOpen = false,
+}: {
+  title: string;
+  children: React.ReactNode;
+  defaultOpen?: boolean;
+}) => {
+  const [isOpen, setIsOpen] = useState(defaultOpen);
+
+  return (
+    <div className="w-full">
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex w-full items-center justify-between py-2 text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground"
+      >
+        <span>{title}</span>
+        <ChevronDown
+          className={cn(
+            "h-4 w-4 transition-transform duration-200",
+            isOpen && "rotate-180",
+          )}
+        />
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            <div className="pt-1 pb-2">{children}</div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
 const MobileDropdown = ({
   title,
   children,
@@ -407,6 +430,7 @@ const MobileDropdown = ({
     <div className="border-b border-zinc-800 last:border-0">
       <Button
         variant="ghost"
+        type="button"
         onClick={() => setIsOpen(!isOpen)}
         className="flex w-full items-center justify-between py-6 px-0 hover:bg-transparent text-lg font-semibold text-primary transition-colors hover:text-primary/80"
       >
