@@ -61,7 +61,7 @@ export default function CompanyOverviewPage() {
         <section className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative">
           <div className="lg:w-1/4 shrink-0">
             <div className="sticky top-32">
-              <h2 className="text-4xl font-bold tracking-tight mb-4 text-red-600">
+              <h2 className="text-4xl font-bold tracking-tight mb-4 text-primary">
                 Vision & Mission
               </h2>
               <p className="text-muted-foreground text-lg">
@@ -101,7 +101,7 @@ export default function CompanyOverviewPage() {
         <section className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative border-t pt-32">
           <div className="lg:w-1/4 shrink-0">
             <div className="sticky top-32">
-              <h2 className="text-4xl font-bold tracking-tight mb-4 text-red-600">
+              <h2 className="text-4xl font-bold tracking-tight mb-4 text-primary">
                 Management Team
               </h2>
               <p className="text-muted-foreground text-lg">
@@ -130,14 +130,14 @@ export default function CompanyOverviewPage() {
                       <h3 className="text-2xl font-bold text-foreground">
                         {member.name}
                       </h3>
-                      <p className="text-red-600 text-sm font-bold uppercase tracking-wider">
+                      <p className="text-primary text-sm font-bold uppercase tracking-wider">
                         {member.role}
                       </p>
                     </div>
 
                     <Link
                       href={`/company-overview/team/${member.slug}`}
-                      className="inline-flex items-center gap-2 text-sm font-medium hover:text-red-600 transition-colors mt-2 group/btn"
+                      className="inline-flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors mt-2 group/btn"
                     >
                       View Profile
                       <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
@@ -153,7 +153,7 @@ export default function CompanyOverviewPage() {
         <section className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative border-t pt-32">
           <div className="lg:w-1/4 shrink-0">
             <div className="sticky top-32">
-              <h2 className="text-4xl font-bold tracking-tight mb-4 text-red-600">
+              <h2 className="text-4xl font-bold tracking-tight mb-4 text-primary">
                 Our Subsidiaries
               </h2>
               <p className="text-muted-foreground text-lg">
@@ -197,7 +197,7 @@ export default function CompanyOverviewPage() {
         <section className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative border-t pt-32">
           <div className="lg:w-1/4 shrink-0">
             <div className="sticky top-32">
-              <h2 className="text-4xl font-bold tracking-tight mb-4 text-red-600">
+              <h2 className="text-4xl font-bold tracking-tight mb-4 text-primary">
                 Our Partners
               </h2>
               <p className="text-muted-foreground text-lg">

@@ -1,13 +1,6 @@
 import Image from "next/image";
-import Section from "@/components/Section";
-import {
-  CheckCircle2,
-  Globe,
-  Heart,
-  ShieldCheck,
-  Star,
-  Users,
-} from "lucide-react";
+
+import { CheckCircle2, Heart, ShieldCheck, Star, Users } from "lucide-react";
 
 export default function AboutUsPage() {
   return (
@@ -36,21 +29,23 @@ export default function AboutUsPage() {
 
       <div className="max-w-7xl mx-auto px-6 py-16 lg:py-24 space-y-24">
         {/* Company Overview */}
-        <Section>
-          <div className="col-span-12 lg:col-span-4">
-            <h2 className="text-3xl font-bold tracking-tight mb-6">
-              Company Overview
-            </h2>
-            <div className="flex items-center gap-4 text-primary">
-              <span className="text-6xl font-bold">14+</span>
-              <span className="text-lg font-medium leading-tight">
-                Years in
-                <br />
-                Work
-              </span>
+        <section className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative">
+          <div className="lg:w-1/4 shrink-0">
+            <div className="sticky top-32">
+              <h2 className="text-4xl font-bold tracking-tight mb-6 text-primary">
+                Company Overview
+              </h2>
+              <div className="flex items-center gap-4 text-primary">
+                <span className="text-6xl font-bold">14+</span>
+                <span className="text-lg font-medium leading-tight">
+                  Years in
+                  <br />
+                  Work
+                </span>
+              </div>
             </div>
           </div>
-          <div className="col-span-12 lg:col-span-8 text-lg text-muted-foreground space-y-6 leading-relaxed">
+          <div className="lg:w-3/4 text-lg text-muted-foreground space-y-6 leading-relaxed">
             <p>
               Avenierr Pharma (Pvt) Ltd is a leading company based in Sri Lanka,
               established in 2007 with a vision to deliver quality healthcare
@@ -97,71 +92,51 @@ export default function AboutUsPage() {
               the customers.
             </p>
           </div>
-        </Section>
-
-        {/* Vision & Mission */}
-        <div className="grid md:grid-cols-2 gap-8">
-          <div className="bg-muted/50 p-8 border">
-            <Globe className="h-10 w-10 text-primary mb-6" />
-            <h3 className="text-2xl font-bold mb-4">Vision</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              To become the most sought-after pharmaceutical products supplier
-              in the Sri Lankan market by being the institution which provides
-              the largest range of quality products.
-            </p>
-          </div>
-          <div className="bg-muted/50 p-8 border">
-            <Star className="h-10 w-10 text-primary mb-6" />
-            <h3 className="text-2xl font-bold mb-4">Mission</h3>
-            <p className="text-muted-foreground leading-relaxed">
-              To become the market leader of the pharmaceutical industry segment
-              by providing quality drugs and ensuring superior performance
-              levels beyond the expectations of the customers and be distinctive
-              among other market players in terms of unmatched service
-              excellence and ethical behavior.
-            </p>
-          </div>
-        </div>
+        </section>
 
         {/* Values and Beliefs */}
-        <Section>
-          <div className="col-span-12 text-center mb-12">
-            <h2 className="text-3xl font-bold tracking-tight">
-              Values and Beliefs
-            </h2>
-            <p className="text-muted-foreground mt-4 max-w-2xl mx-auto">
-              The core principles that guide our every action.
-            </p>
+        <section className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative border-t pt-24">
+          <div className="lg:w-1/4 shrink-0">
+            <div className="sticky top-32">
+              <h2 className="text-4xl font-bold tracking-tight mb-4 text-primary">
+                Values and Beliefs
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                The core principles that guide our every action.
+              </p>
+            </div>
           </div>
 
-          <div className="col-span-12 grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <ValueCard
-              icon={<Users className="h-6 w-6 text-primary" />}
-              title="Collaboration"
-              description="We value the contribution of our employees, customers, regulators, medical professionals and industry, resulting in the success of the company."
-            />
-            <ValueCard
-              icon={<ShieldCheck className="h-6 w-6 text-primary" />}
-              title="Integrity & Trust"
-              description="We value high standards of integrity, trust, and equitability."
-            />
-            <ValueCard
-              icon={<CheckCircle2 className="h-6 w-6 text-primary" />}
-              title="Quality Standards"
-              description="We always strive to deliver highest quality products to our customers in conformity with the benchmark standards of the industry."
-            />
-            <ValueCard
-              icon={<Star className="h-6 w-6 text-primary" />}
-              title="Uniqueness"
-              description="We always aspire to be different and to create a unique identity ahead of the other companies in the market segment in terms of product, quality, commitment, reliability and pricing."
-            />
-            <ValueCard
-              icon={<Heart className="h-6 w-6 text-primary" />}
-              title="Wellbeing"
-              description="We care for the wellbeing and speedy recovery of the individuals that are suffering from various different illnesses by providing quality drugs."
-            />
+          <div className="lg:w-3/4">
+            <div className="grid sm:grid-cols-2 gap-8">
+              <ValueCard
+                icon={<Users className="h-6 w-6 text-primary" />}
+                title="Collaboration"
+                description="We believe in the power of collaboration and value the contributions of our employees, principals, customers, regulators, healthcare professionals, and industry partners. Through mutual respect and shared objectives, we foster strong relationships that drive sustainable growth and collective success."
+              />
+              <ValueCard
+                icon={<ShieldCheck className="h-6 w-6 text-primary" />}
+                title="Integrity & Trust"
+                description="Integrity and trust are fundamental to how we operate. We uphold transparency, fairness, and ethical conduct in all our interactions, ensuring accountability and credibility with regulators, partners, customers, and the communities we serve."
+              />
+              <ValueCard
+                icon={<CheckCircle2 className="h-6 w-6 text-primary" />}
+                title="Quality Standards"
+                description="Quality is embedded in every stage of our operations. We are committed to delivering products that meet the highest industry benchmarks and regulatory standards, ensuring safety, efficacy, and reliability in full compliance with applicable NMRA and Ministry of Health requirements."
+              />
+              <ValueCard
+                icon={<Star className="h-6 w-6 text-primary" />}
+                title="Uniqueness"
+                description="We strive to differentiate ourselves by building a distinctive identity in the pharmaceutical market. Through innovative product offerings, consistent quality, reliable service, competitive pricing, and unwavering commitment, we aim to stay ahead while adding meaningful value to the healthcare sector."
+              />
+              <ValueCard
+                icon={<Heart className="h-6 w-6 text-primary" />}
+                title="Wellbeing"
+                description="We are driven by a genuine concern for patient wellbeing. By ensuring access to quality-assured pharmaceuticals and healthcare products, we contribute to improved health outcomes and support the timely recovery of individuals affected by illness."
+              />
+            </div>
           </div>
-        </Section>
+        </section>
       </div>
     </div>
   );

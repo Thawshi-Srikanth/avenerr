@@ -12,7 +12,7 @@ export default function TeamSection() {
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative">
           <div className="lg:w-1/4 shrink-0">
             <div className="sticky top-32">
-              <div className="inline-flex items-center gap-2 border px-3 py-1 mb-6 bg-red-50 dark:bg-red-950/20 text-red-600 border-red-100 dark:border-red-900/50">
+              <div className="inline-flex items-center gap-2 border px-3 py-1 mb-6 bg-red-50 dark:bg-red-950/20 text-primary border-red-100 dark:border-red-900/50">
                 <span className="text-xs font-bold tracking-widest uppercase">
                   Leadership
                 </span>
@@ -27,7 +27,7 @@ export default function TeamSection() {
 
               <Link
                 href="/company-overview"
-                className="hidden lg:inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-foreground hover:text-red-600 transition-colors group/link"
+                className="hidden lg:inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-foreground hover:text-primary transition-colors group/link"
               >
                 View Full Team
                 <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />
@@ -54,14 +54,14 @@ export default function TeamSection() {
                       <h3 className="text-2xl font-bold text-foreground">
                         {member.name}
                       </h3>
-                      <p className="text-red-600 text-sm font-bold uppercase tracking-wider">
+                      <p className="text-primary text-sm font-bold uppercase tracking-wider">
                         {member.role}
                       </p>
                     </div>
 
                     <Link
                       href={`/company-overview/team/${member.slug}`}
-                      className="inline-flex items-center gap-2 text-sm font-medium hover:text-red-600 transition-colors mt-2 group/btn"
+                      className="inline-flex items-center gap-2 text-sm font-medium hover:text-primary transition-colors mt-2 group/btn"
                     >
                       View Profile
                       <ArrowRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-1" />
@@ -74,7 +74,7 @@ export default function TeamSection() {
             <div className="mt-12 lg:hidden">
               <Link
                 href="/company-overview"
-                className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-foreground hover:text-red-600 transition-colors group/link"
+                className="inline-flex items-center gap-2 text-sm font-bold uppercase tracking-widest text-foreground hover:text-primary transition-colors group/link"
               >
                 View Full Team
                 <ArrowRight className="w-4 h-4 transition-transform group-hover/link:translate-x-1" />

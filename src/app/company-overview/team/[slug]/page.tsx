@@ -81,10 +81,10 @@ export default async function TeamMemberPage({
                     href={member.socials.email}
                     className="flex items-center justify-between group py-2 border-t border-border"
                   >
-                    <span className="text-sm font-medium text-foreground group-hover:text-red-600 transition-colors">
+                    <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
                       Email
                     </span>
-                    <MdEmail className="w-5 h-5 text-muted-foreground group-hover:text-red-600 transition-colors" />
+                    <MdEmail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                   </Link>
                 )}
               </div>
@@ -97,13 +97,13 @@ export default async function TeamMemberPage({
               <h1 className="text-4xl lg:text-5xl font-bold tracking-tight text-foreground mb-4">
                 {member.name}
               </h1>
-              <p className="text-lg text-red-600 font-medium tracking-wide">
+              <p className="text-lg text-primary font-medium tracking-wide">
                 {member.role}
               </p>
             </div>
 
             <div className="prose prose-lg dark:prose-invert max-w-none prose-p:leading-8 prose-p:text-muted-foreground">
-              <p className="text-xl font-medium text-foreground leading-relaxed mb-8 border-l-4 border-red-600 pl-6 italic">
+              <p className="text-xl font-medium text-foreground leading-relaxed mb-8 border-l-4 border-primary pl-6 italic">
                 {mainQuote}
                 {!mainQuote.endsWith(".") ? "." : ""}
               </p>
