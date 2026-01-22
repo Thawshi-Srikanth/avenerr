@@ -146,6 +146,23 @@ export const businessCategories: BusinessCategory[] = [
         title: "Tumour Prosthesis",
         slug: "surgicals-tumour",
         description: "Limb salvage solutions.",
+        products: [
+          {
+            title: "Distal Femur Megaprosthesis",
+            image:
+              "/images/products/Tumour Prosthesis/Distal Femur Megaprosthesis.jpg",
+          },
+          {
+            title: "Proximal Femur Megaprosthesis",
+            image:
+              "/images/products/Tumour Prosthesis/Proximal Femur Megaprosthesis.jpg",
+          },
+          {
+            title: "Proximal Tibia Megaprosthesis",
+            image:
+              "/images/products/Tumour Prosthesis/Proximal Tibia Megaprosthesis.jpg",
+          },
+        ],
       },
     ],
   },

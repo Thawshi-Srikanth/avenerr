@@ -32,7 +32,7 @@ const links = [
         href: "/services/information-systems",
       },
       {
-        title: "Logistics & Operations",
+        title: "Logistic Operations",
         href: "/services/logistic-operations",
       },
       {
@@ -40,8 +40,12 @@ const links = [
         href: "/services/scientific-affairs",
       },
       {
-        title: "Training",
-        href: "/services/training",
+        title: "Training & People Development",
+        href: "/services/training-people-development",
+      },
+      {
+        title: "Regulatory & Quality Assurance",
+        href: "/services/regulatory-quality-assurance",
       },
     ],
   },

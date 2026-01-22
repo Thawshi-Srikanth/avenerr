@@ -1,13 +1,9 @@
 "use client";
 
+import { AnimatePresence, motion } from "motion/react";
 import { Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
-import { AnimatePresence, motion } from "motion/react";
-import { cn } from "@/lib/utils";
-import { Logo } from "./logo";
-import { Button } from "./ui/button";
-import { businessCategories } from "@/lib/business-data";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -17,6 +13,10 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { businessCategories } from "@/lib/business-data";
+import { cn } from "@/lib/utils";
+import { Logo } from "./logo";
+import { Button } from "./ui/button";
 
 const services = [
   {
@@ -25,7 +25,7 @@ const services = [
     description: "Robust, scalable technology solutions.",
   },
   {
-    title: "Logistic and Operations",
+    title: "Logistic Operations",
     href: "/services/logistic-operations",
     description: "Supply chain optimization and automation.",
   },
@@ -35,9 +35,14 @@ const services = [
     description: "Regulatory compliance and clinical support.",
   },
   {
-    title: "Training",
-    href: "/services/training",
+    title: "Training & People Development",
+    href: "/services/training-people-development",
     description: "Upskilling and leadership development.",
+  },
+  {
+    title: "Regulatory & Quality Assurance",
+    href: "/services/regulatory-quality-assurance",
+    description: "Ensuring compliance and quality.",
   },
 ];
 
@@ -66,9 +71,9 @@ export const HeroHeader = () => {
       >
         <div
           className={cn(
-            "mx-auto max-w-7xl px-6 transition-all duration-300 lg:px-12",
+            "mx-auto max-w-7xl bg-background/80 px-6 transition-all duration-300 lg:px-12",
             isScrolled &&
-              "bg-background/80 max-w-7xl border backdrop-blur-lg lg:px-5 support-[backdrop-filter]:bg-background/60",
+              " max-w-7xl border backdrop-blur-lg lg:px-5 support-[backdrop-filter]:bg-background/80",
           )}
         >
           <div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
@@ -220,6 +225,12 @@ export const HeroHeader = () => {
               </NavigationMenu>
             </div>
 
+            <div className="hidden lg:block">
+              <Button asChild>
+                <Link href="/contact-us">Contact Us</Link>
+              </Button>
+            </div>
+
             {/* Mobile Navigation */}
             <AnimatePresence>
               {menuState && (
@@ -252,79 +263,94 @@ export const HeroHeader = () => {
                       {/* Our Business Dropdown */}
                       <MobileDropdown title="Our Business">
                         <ul className="space-y-4 pl-4 border-l my-2">
+                          {/* Pharmaceutical */}
                           <li>
                             <Link
-                              href="/business/pharmaceutical"
+                              href={`/business/${businessCategories.find((c) => c.slug === "pharmaceutical")?.slug}`}
                               className="text-muted-foreground hover:text-foreground block py-1"
                               onClick={() => setMenuState(false)}
                             >
-                              Pharmaceutical
+                              {businessCategories.find(
+                                (c) => c.slug === "pharmaceutical",
+                              )?.title || "Pharmaceutical"}
                             </Link>
                           </li>
 
+                          {/* SURGICALS Section */}
                           <li className="font-medium text-primary py-1 mt-2">
                             SURGICALS
                           </li>
+
+                          {/* Arthroplasty Nested Dropdown */}
                           <li>
-                            <div className="pl-2 font-medium text-foreground py-1">
-                              Orthopedic Aids
-                            </div>
-                            <div className="pl-4 space-y-2 border-l my-2">
-                              <Link
-                                href="/business/surgicals-knee"
-                                className="text-muted-foreground hover:text-foreground block py-1"
-                                onClick={() => setMenuState(false)}
-                              >
-                                Knee
-                              </Link>
-                              <Link
-                                href="/business/surgicals-shoulder"
-                                className="text-muted-foreground hover:text-foreground block py-1"
-                                onClick={() => setMenuState(false)}
-                              >
-                                Shoulder
-                              </Link>
-                              <Link
-                                href="/business/surgicals-shoulder"
-                                className="text-muted-foreground hover:text-foreground block py-1"
-                                onClick={() => setMenuState(false)}
-                              >
-                                Equinoxe Platform
-                              </Link>
-                              <Link
-                                href="/business/surgicals-hip"
-                                className="text-muted-foreground hover:text-foreground block py-1"
-                                onClick={() => setMenuState(false)}
-                              >
-                                Hip
-                              </Link>
-                              <Link
-                                href="/business/surgicals-tumour"
-                                className="text-muted-foreground hover:text-foreground block py-1"
-                                onClick={() => setMenuState(false)}
-                              >
-                                Tumour Prosthesis
-                              </Link>
-                            </div>
+                            <NestedMobileDropdown title="Arthroplasty">
+                              <ul className="space-y-2 border-l pl-4 my-1">
+                                {businessCategories
+                                  .find((c) => c.slug === "arthroplasty")
+                                  ?.subCategories?.map((sub) => (
+                                    <li key={sub.slug}>
+                                      <Link
+                                        href={`/business/${sub.slug}`}
+                                        className="text-muted-foreground hover:text-foreground block py-1 text-sm"
+                                        onClick={() => setMenuState(false)}
+                                      >
+                                        {sub.title}
+                                      </Link>
+                                    </li>
+                                  ))}
+                              </ul>
+                            </NestedMobileDropdown>
                           </li>
 
+                          {/* Trauma */}
+                          {businessCategories
+                            .filter((c) => c.slug === "surgicals-trauma")
+                            .map((cat) => (
+                              <li key={cat.slug}>
+                                <Link
+                                  href={`/business/${cat.slug}`}
+                                  className="text-muted-foreground hover:text-foreground block py-1"
+                                  onClick={() => setMenuState(false)}
+                                >
+                                  {cat.title}
+                                </Link>
+                              </li>
+                            ))}
+
+                          {/* Spine */}
+                          {businessCategories
+                            .filter((c) => c.slug === "surgicals-spine")
+                            .map((cat) => (
+                              <li key={cat.slug}>
+                                <Link
+                                  href={`/business/${cat.slug}`}
+                                  className="text-muted-foreground hover:text-foreground block py-1"
+                                  onClick={() => setMenuState(false)}
+                                >
+                                  {cat.title}
+                                </Link>
+                              </li>
+                            ))}
+
+                          {/* Orthopedic Aids Nested Dropdown */}
                           <li>
-                            <Link
-                              href="/business/surgicals-trauma"
-                              className="text-muted-foreground hover:text-foreground block py-1"
-                              onClick={() => setMenuState(false)}
-                            >
-                              Trauma
-                            </Link>
-                          </li>
-                          <li>
-                            <Link
-                              href="/business/surgicals-spine"
-                              className="text-muted-foreground hover:text-foreground block py-1"
-                              onClick={() => setMenuState(false)}
-                            >
-                              Spine
-                            </Link>
+                            <NestedMobileDropdown title="Orthopedic Aids">
+                              <ul className="space-y-2 border-l pl-4 my-1">
+                                {businessCategories
+                                  .find((c) => c.slug === "orthopedic-aids")
+                                  ?.subCategories?.map((sub) => (
+                                    <li key={sub.slug}>
+                                      <Link
+                                        href={`/business/${sub.slug}`}
+                                        className="text-muted-foreground hover:text-foreground block py-1 text-sm"
+                                        onClick={() => setMenuState(false)}
+                                      >
+                                        {sub.title}
+                                      </Link>
+                                    </li>
+                                  ))}
+                              </ul>
+                            </NestedMobileDropdown>
                           </li>
                         </ul>
                       </MobileDropdown>
@@ -400,10 +426,19 @@ const FlyoutMenu = ({
   const [isHovered, setIsHovered] = useState(false);
 
   return (
+    // biome-ignore lint/a11y/useSemanticElements: Not a form fieldset
     <div
       className="relative w-full"
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
+      onFocus={() => setIsHovered(true)}
+      onBlur={(e) => {
+        if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+          setIsHovered(false);
+        }
+      }}
+      role="group"
+      aria-label={title}
     >
       <button
         type="button"
@@ -459,6 +494,47 @@ const MobileDropdown = ({
           )}
         />
       </Button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="overflow-hidden"
+          >
+            {children}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+};
+
+const NestedMobileDropdown = ({
+  title,
+  children,
+}: {
+  title: string;
+  children: React.ReactNode;
+}) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <div className="w-full">
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="flex w-full items-center justify-between py-1 text-muted-foreground hover:text-foreground transition-colors"
+      >
+        <span>{title}</span>
+        <ChevronDown
+          className={cn(
+            "h-4 w-4 transition-transform duration-200",
+            isOpen && "rotate-180",
+          )}
+        />
+      </button>
       <AnimatePresence>
         {isOpen && (
           <motion.div

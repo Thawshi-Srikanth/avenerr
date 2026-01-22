@@ -42,9 +42,16 @@ const components = {
 function Sidebar({ currentSlug }: { currentSlug: string }) {
   const services = [
     { name: "Information Systems", slug: "information-systems" },
-    { name: "Logistic and Operations", slug: "logistic-operations" },
+    { name: "Logistic Operations", slug: "logistic-operations" },
     { name: "Scientific Affairs", slug: "scientific-affairs" },
-    { name: "Training", slug: "training" },
+    {
+      name: "Training & People Development",
+      slug: "training-people-development",
+    },
+    {
+      name: "Regulatory & Quality Assurance",
+      slug: "regulatory-quality-assurance",
+    },
   ];
 
   return (

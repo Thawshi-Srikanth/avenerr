@@ -32,7 +32,7 @@ export default function CompanyOverviewPage() {
       {/* Hero Section */}
       <div className="relative w-full h-[60vh] lg:h-[70vh] overflow-hidden">
         <Image
-          src="/images/business-hero.png"
+          src="/images/group-pic.jpg"
           alt="Company Overview"
           fill
           className="object-cover grayscale brightness-50"

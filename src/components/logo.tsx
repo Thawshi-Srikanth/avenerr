@@ -5,7 +5,7 @@ export const Logo = () => {
   return (
     <Image
       src={"/logo-av.png"}
-      className="brightness-0 invert"
+      className=""
       alt="logo"
       width={150}
       height={30}
