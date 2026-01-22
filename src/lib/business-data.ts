@@ -53,6 +53,52 @@ export const businessCategories: BusinessCategory[] = [
     title: "Trauma",
     slug: "surgicals-trauma",
     description: "Nails, Plates & Screws.",
+    products: [
+      {
+        title: "4.5 & 6.5 cc",
+        image: "/images/products/Trauma/4.5 & 6.5 cc.jpg",
+      },
+      {
+        title: "ASLP System",
+        image: "/images/products/Trauma/aslp system.jpg",
+      },
+      {
+        title: "DVR 2.4 System",
+        image: "/images/products/Trauma/dvr 2.4 system.jpg",
+      },
+      {
+        title: "Elbow Plating System",
+        image: "/images/products/Trauma/elbow plating system.jpg",
+      },
+      {
+        title: "Headless Compression Screw",
+        image: "/images/products/Trauma/headless compression screw.jpg",
+      },
+      {
+        title: "LVM Plates",
+        image: "/images/products/Trauma/lvm plates.jpg",
+      },
+      {
+        title: "ML-Tibia Nail",
+        image: "/images/products/Trauma/ml-tibia nail.jpg",
+      },
+      {
+        title: "PFAN System",
+        image: "/images/products/Trauma/pfan-system.jpg",
+      },
+      {
+        title: "SL-Femur Nail",
+        image: "/images/products/Trauma/sl-femur nail.jpg",
+      },
+      {
+        title: "SL-Tibia Nail",
+        image: "/images/products/Trauma/sl-tibia nail.jpg",
+      },
+      {
+        title: "Valp – Distal Radius System",
+        image: "/images/products/Trauma/valp – distal radius system.jpg",
+      },
+    ],
   },
   {
     title: "Spine",
