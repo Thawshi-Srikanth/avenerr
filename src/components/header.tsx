@@ -7,6 +7,7 @@ import { AnimatePresence, motion } from "motion/react";
 import { cn } from "@/lib/utils";
 import { Logo } from "./logo";
 import { Button } from "./ui/button";
+import { businessCategories } from "@/lib/business-data";
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -122,13 +123,25 @@ export const HeroHeader = () => {
                         {/* Column 1: Pharmaceutical */}
                         <li className="space-y-3">
                           <div className="px-3 py-2 text-sm font-bold text-primary uppercase tracking-wider">
-                            Pharmaceutical
+                            {
+                              businessCategories.find(
+                                (c) => c.slug === "pharmaceutical",
+                              )?.title
+                            }
                           </div>
                           <ListItem
-                            href="/business/pharmaceutical"
-                            title="Pharmaceutical"
+                            href={`/business/${businessCategories.find((c) => c.slug === "pharmaceutical")?.slug}`}
+                            title={
+                              businessCategories.find(
+                                (c) => c.slug === "pharmaceutical",
+                              )?.title
+                            }
                           >
-                            Diabetic, Cardio, Neuro & more.
+                            {
+                              businessCategories.find(
+                                (c) => c.slug === "pharmaceutical",
+                              )?.description
+                            }
                           </ListItem>
                         </li>
 
@@ -140,43 +153,52 @@ export const HeroHeader = () => {
 
                           <div className="grid grid-cols-2 gap-4">
                             <div>
-                              <ListItem
-                                href="/business/surgicals-trauma"
-                                title="Trauma"
-                              >
-                                Nails, Plates & Screws.
-                              </ListItem>
-                              <ListItem
-                                href="/business/surgicals-spine"
-                                title="Spine"
-                              >
-                                Cages & Fixation Systems.
-                              </ListItem>
+                              {/* ARTHROPLASTY Section */}
+                              <CollapsibleMenu title="ARTHROPLASTY">
+                                <ul className="grid gap-1 pl-2 border-l ml-1">
+                                  {businessCategories
+                                    .find((c) => c.slug === "arthroplasty")
+                                    ?.subCategories?.map((sub) => (
+                                      <ListItem
+                                        key={sub.slug}
+                                        href={`/business/${sub.slug}`}
+                                        title={sub.title}
+                                      />
+                                    ))}
+                                </ul>
+                              </CollapsibleMenu>
+
+                              {/* Mapping other top-level categories under SURGICALS if needed, or specific ones */}
+                              {businessCategories
+                                .filter((c) =>
+                                  [
+                                    "surgicals-trauma",
+                                    "surgicals-spine",
+                                  ].includes(c.slug),
+                                )
+                                .map((cat) => (
+                                  <ListItem
+                                    key={cat.slug}
+                                    href={`/business/${cat.slug}`}
+                                    title={cat.title}
+                                  >
+                                    {cat.description}
+                                  </ListItem>
+                                ))}
                             </div>
 
                             <div>
                               <CollapsibleMenu title="Orthopedic Aids">
                                 <ul className="grid gap-1 pl-2 border-l ml-1">
-                                  <ListItem
-                                    href="/business/surgicals-knee"
-                                    title="Knee"
-                                  />
-                                  <ListItem
-                                    href="/business/surgicals-shoulder"
-                                    title="Shoulder"
-                                  />
-                                  <ListItem
-                                    href="/business/surgicals-shoulder"
-                                    title="Equinoxe Platform"
-                                  />
-                                  <ListItem
-                                    href="/business/surgicals-hip"
-                                    title="Hip"
-                                  />
-                                  <ListItem
-                                    href="/business/surgicals-tumour"
-                                    title="Tumour Prosthesis"
-                                  />
+                                  {businessCategories
+                                    .find((c) => c.slug === "orthopedic-aids")
+                                    ?.subCategories?.map((sub) => (
+                                      <ListItem
+                                        key={sub.slug}
+                                        href={`/business/${sub.slug}`}
+                                        title={sub.title}
+                                      />
+                                    ))}
                                 </ul>
                               </CollapsibleMenu>
                             </div>

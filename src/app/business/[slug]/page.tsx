@@ -5,12 +5,45 @@ import Image from "next/image";
 import ProductGrid from "@/components/ProductGrid";
 import React from "react";
 import { ArrowRight, CheckCircle2, Info } from "lucide-react";
+import { businessCategories, BusinessCategory } from "@/lib/business-data";
 
 export async function generateStaticParams() {
   const posts = getAllPosts("business");
-  return posts.map((post) => ({
+
+  // Also generate params for dynamic categories from business-data
+  const categorySlugs = businessCategories.flatMap((cat) => {
+    const slugs = [cat.slug];
+    if (cat.subCategories) {
+      slugs.push(...cat.subCategories.map((sub) => sub.slug));
+    }
+    return slugs;
+  });
+
+  const mdxParams = posts.map((post) => ({
     slug: post.slug,
   }));
+
+  const dataParams = categorySlugs.map((slug) => ({ slug }));
+
+  // Unique params
+  const allParams = [...mdxParams, ...dataParams];
+  const uniqueParams = Array.from(new Set(allParams.map((p) => p.slug))).map(
+    (slug) => ({ slug }),
+  );
+
+  return uniqueParams;
+}
+
+// Helper to find category data
+function findCategoryBySlug(slug: string): BusinessCategory | undefined {
+  for (const cat of businessCategories) {
+    if (cat.slug === slug) return cat;
+    if (cat.subCategories) {
+      const sub = cat.subCategories.find((s) => s.slug === slug);
+      if (sub) return sub;
+    }
+  }
+  return undefined;
 }
 
 export default async function BusinessDivisionPage({
@@ -19,6 +52,59 @@ export default async function BusinessDivisionPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+
+  // 1. Try to find in business-data
+  const categoryData = findCategoryBySlug(slug);
+
+  if (categoryData) {
+    // Render Data-Driven Page
+    return (
+      <div className="min-h-screen bg-background">
+        {/* Hero Section */}
+        <div className="relative w-full h-[50vh] overflow-hidden">
+          <Image
+            src={"/images/business-hero.png"} // Default hero or add to data
+            alt={categoryData.title}
+            fill
+            className="object-cover grayscale brightness-50"
+            priority
+          />
+          <div className="absolute inset-0 bg-linear-to-t from-background via-background/60 to-transparent" />
+          <div className="absolute bottom-0 left-0 w-full p-8 lg:p-16">
+            <div className="max-w-7xl mx-auto">
+              <div className="inline-flex items-center gap-2 border border-white/20 px-3 py-1 mb-4 bg-black/20 backdrop-blur-md">
+                <span className="text-xs font-bold tracking-widest uppercase text-white">
+                  Our Business
+                </span>
+              </div>
+              <h1 className="text-5xl lg:text-7xl font-bold tracking-tighter text-white mb-4">
+                {categoryData.title}
+              </h1>
+              <p className="text-xl lg:text-2xl text-white/90 max-w-2xl font-light">
+                {categoryData.description ||
+                  "Leading solutions in this category."}
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 py-16 lg:py-24">
+          {categoryData.products && categoryData.products.length > 0 ? (
+            <div>
+              <h2 className="text-2xl font-bold mb-6">Products</h2>
+              <ProductGrid products={categoryData.products} />
+            </div>
+          ) : (
+            <div className="py-12 text-center text-muted-foreground">
+              <p>Product listing coming soon.</p>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  }
+
+  // 2. Fallback to MDX
   try {
     const { frontMatter, content } = getPostBySlug(slug, "business");
 
