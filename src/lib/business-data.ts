@@ -26,6 +26,45 @@ export const businessCategories: BusinessCategory[] = [
         title: "Knee",
         slug: "surgicals-knee",
         description: "Knee replacement systems.",
+        products: [
+          {
+            title: "ExactechGPS Knee Applications",
+            image: "/images/products/Knee/ExactechGPS Knee Applications.jpg",
+          },
+          {
+            title: "InterSpace Trust the Science",
+            image: "/images/products/Knee/InterSpace Trust the Science.jpg",
+          },
+          {
+            title: "Optetrak Logic CC Revision System",
+            image:
+              "/images/products/Knee/Optetrak Logic CC Revision System.png",
+          },
+          {
+            title: "Optetrak Logic Primary System",
+            image: "/images/products/Knee/Optetrak Logic Primary System.png",
+          },
+          {
+            title: "Optetrak Revision System",
+            image: "/images/products/Knee/Optetrak revision System.png",
+          },
+          {
+            title: "Truliant Knee System",
+            image: "/images/products/Knee/Truliant Knee System.jpg",
+          },
+          {
+            title: "Truliant Porous Knee",
+            image: "/images/products/Knee/Truliant Porous Knee.png",
+          },
+          {
+            title: "Truliant Primary Knee",
+            image: "/images/products/Knee/Truliant Primary Knee.jpg",
+          },
+          {
+            title: "Truliant Revision Knee System",
+            image: "/images/products/Knee/Truliant Revision Knee System.png",
+          },
+        ],
       },
       {
         title: "Shoulder",
