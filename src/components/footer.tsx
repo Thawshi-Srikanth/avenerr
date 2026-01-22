@@ -68,6 +68,10 @@ const links = [
         title: "Our Partners",
         href: "/partners",
       },
+      {
+        title: "Careers",
+        href: "/careers",
+      },
     ],
   },
   {
