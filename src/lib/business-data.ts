@@ -104,6 +104,36 @@ export const businessCategories: BusinessCategory[] = [
     title: "Spine",
     slug: "surgicals-spine",
     description: "Cages & Fixation Systems.",
+    products: [
+      {
+        title: "ACC – Cervical Cage",
+        image: "/images/products/Spine/acc – cervical cage.png",
+      },
+      {
+        title: "ACC – Stand Alone Cage",
+        image: "/images/products/Spine/acc – stand alone cage.png",
+      },
+      {
+        title: "ACP – Cervical Plate",
+        image: "/images/products/Spine/acp – cervical plate.png",
+      },
+      {
+        title: "ALC – PLIF Lumber Cage",
+        image: "/images/products/Spine/alc – plif lumber cage.png",
+      },
+      {
+        title: "ALC – TLIF Lumber Cage",
+        image: "/images/products/Spine/alc – tlif lumber cage.png",
+      },
+      {
+        title: "MS – I Spinal Fixation System",
+        image: "/images/products/Spine/ms – i spinal fixation system.png",
+      },
+      {
+        title: "PCF – Lateral Mass Screw",
+        image: "/images/products/Spine/pcf – lateral mass screw.png",
+      },
+    ],
   },
   {
     title: "Orthopedic Aids",
