@@ -55,7 +55,7 @@ export default function ContentSection() {
 
           <div className="relative space-y-4">
             <p className="text-muted-foreground">
-              Avenierr Pharma has grown to become more than just a
+              Avenierr Pharma (Pvt) Ltd has grown to become more than just a
               pharmaceutical company.{" "}
               <span className="text-accent-foreground font-bold">
                 It is built on a strong global ecosystem
@@ -64,13 +64,25 @@ export default function ContentSection() {
             </p>
 
             <p className="text-muted-foreground">
-              Since 2007, Avenierr Pharma has expanded through strategic
-              collaborations with leading manufacturers in France, Italy, and
-              India — enabling the import, branding, marketing, and distribution
-              of high-quality medicines, orthopedic appliances, and surgical
+              Avenierr Pharma (Pvt) Ltd is a leading company based in Sri Lanka,
+              established in 2007 with a vision to deliver quality healthcare
+              worldwide. Despite its entry to the pharmaceutical industry as a
+              novice, Avenierr has been successful in building trusted global
+              partnerships with top-tier pharmaceutical companies located in
+              France, Italy and India. We excel in importing, branding,
+              marketing, and distributing a range of pharmaceutical products
+              such as medicines, orthopaedic appliances, and surgical
               instruments.
             </p>
-            <div className="pt-6 text-muted-foreground">
+            <p className="text-muted-foreground">
+              Under the visionary leadership of Managing Director, Mr. C.
+              Sathananthan and the untiring commitment of the staff members, we
+              aim on expanding accessibility to quality drugs at an affordable
+              price as a measure to create a positive impact in the Sri Lankan
+              pharmaceutical industry...
+            </p>
+
+            {/* <div className="pt-6 text-muted-foreground">
               <blockquote className="border-l-4 border-primary pl-4">
                 <p>
                   Partnering with Avenierr Pharma has elevated our ability to
@@ -92,11 +104,11 @@ export default function ContentSection() {
                   />
                 </div>
               </blockquote>
-            </div>
+            </div> */}
 
             <AnimatedGroup variants={transitionVariants}>
               <Link
-                href="#link"
+                href="/about-us"
                 className="hover:bg-background mt-6 lg:mt-16 dark:hover:border-primary bg-muted group  flex w-fit items-center gap-4  border  p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
               >
                 <span className="text-foreground text-sm">Learn more</span>

@@ -1,8 +1,25 @@
 import Image from "next/image";
 import Link from "next/link";
 import { partners } from "@/lib/partners-data";
+import { businessCategories } from "@/lib/business-data";
 
 export default function PartnersPage() {
+  // Get list of suppliers that have products
+  const suppliersWithProducts = new Set<string>();
+
+  const extractSuppliers = (categories: typeof businessCategories) => {
+    categories.forEach((cat) => {
+      cat.products?.forEach((p) => {
+        if (p.supplier) suppliersWithProducts.add(p.supplier);
+      });
+      if (cat.subCategories) {
+        extractSuppliers(cat.subCategories);
+      }
+    });
+  };
+
+  extractSuppliers(businessCategories);
+
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -55,16 +72,13 @@ export default function PartnersPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {partners.map((partner, i) => (
-                <Link
+                <div
                   key={i}
-                  href={partner.website}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group flex flex-col items-center justify-center p-8 transition-transform duration-300 hover:scale-105"
+                  className="group bg-background border px-6 py-8 flex flex-col items-center text-center gap-6 hover:border-primary transition-colors"
                 >
-                  <div className="relative w-full aspect-[3/2] transition-all duration-500 grayscale group-hover:grayscale-0 opacity-80 group-hover:opacity-100">
+                  <div className="relative h-20 w-40 opacity-80 group-hover:opacity-100 transition-all grayscale group-hover:grayscale-0">
                     <Image
                       src={partner.image}
                       alt={`${partner.name} Logo`}
@@ -72,7 +86,33 @@ export default function PartnersPage() {
                       className="object-contain"
                     />
                   </div>
-                </Link>
+
+                  <div>
+                    <h3 className="text-lg font-bold">{partner.name}</h3>
+                    <p className="text-sm text-muted-foreground uppercase tracking-wider">
+                      {partner.country}
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col w-full gap-3 mt-auto">
+                    {suppliersWithProducts.has(partner.name) && (
+                      <Link
+                        href={`/business?query=${encodeURIComponent(partner.name)}`}
+                        className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground text-sm font-medium h-9 px-4 rounded-md hover:bg-primary/90 transition-colors"
+                      >
+                        View Products
+                      </Link>
+                    )}
+                    <Link
+                      href={partner.website}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="w-full inline-flex items-center justify-center gap-2 bg-muted text-muted-foreground text-sm font-medium h-9 px-4 rounded-md hover:bg-muted/80 hover:text-foreground transition-colors"
+                    >
+                      Visit Website
+                    </Link>
+                  </div>
+                </div>
               ))}
             </div>
           </div>

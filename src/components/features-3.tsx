@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { ReactNode } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 
@@ -17,7 +18,7 @@ export default function Features() {
           </p>
         </div>
         <Card className="@min-4xl:max-w-full @min-4xl:grid-cols-3 @min-4xl:divide-x @min-4xl:divide-y-0 mx-auto mt-8 grid max-w-sm divide-y overflow-hidden shadow-zinc-950/5 *:text-center md:mt-16 rounded-none">
-          <div className="group shadow-zinc-950/5">
+          <div className="group shadow-zinc-950/5 flex flex-col h-full">
             <CardHeader className="pb-3">
               <CardDecorator>
                 <Image
@@ -31,15 +32,21 @@ export default function Features() {
               <h3 className="mt-6 font-medium">Pharmaceutical</h3>
             </CardHeader>
 
-            <CardContent>
-              <p className="text-sm">
+            <CardContent className="flex flex-col grow justify-between">
+              <p className="text-sm mb-6">
                 We specialize in importing and distributing a wide range of
                 pharmaceutical products to ensure quality healthcare solutions.
               </p>
+              <Link
+                href="/business/pharmaceutical"
+                className="inline-flex max-w-fit mx-auto items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
+              >
+                More Info
+              </Link>
             </CardContent>
           </div>
 
-          <div className="group shadow-zinc-950/5">
+          <div className="group shadow-zinc-950/5 flex flex-col h-full">
             <CardHeader className="pb-3">
               <CardDecorator>
                 <Image
@@ -53,16 +60,22 @@ export default function Features() {
               <h3 className="mt-6 font-medium">Surgical Instruments</h3>
             </CardHeader>
 
-            <CardContent>
-              <p className="mt-3 text-sm">
+            <CardContent className="flex flex-col grow justify-between">
+              <p className="mt-3 text-sm mb-6">
                 We provide a comprehensive range of high-quality surgical
                 instruments, ensuring precision and reliability for medical
                 professionals.
               </p>
+              <Link
+                href="/business?query=Surgicals"
+                className="inline-flex max-w-fit mx-auto items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
+              >
+                More Info
+              </Link>
             </CardContent>
           </div>
 
-          <div className="group shadow-zinc-950/5">
+          <div className="group shadow-zinc-950/5 flex flex-col h-full">
             <CardHeader className="pb-3">
               <CardDecorator>
                 <Image
@@ -76,11 +89,17 @@ export default function Features() {
               <h3 className="mt-6 font-medium">Orthopedic Aids</h3>
             </CardHeader>
 
-            <CardContent>
-              <p className="mt-3 text-sm">
+            <CardContent className="flex flex-col grow justify-between">
+              <p className="mt-3 text-sm mb-6">
                 Our orthopedic aids are designed to provide support and enhance
                 mobility, catering to the diverse needs of patients.
               </p>
+              <Link
+                href="/business?query=Orthopedic Aids"
+                className="inline-flex max-w-fit mx-auto items-center justify-center rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 border border-input bg-background hover:bg-accent hover:text-accent-foreground h-9 px-4 py-2"
+              >
+                More Info
+              </Link>
             </CardContent>
           </div>
         </Card>
