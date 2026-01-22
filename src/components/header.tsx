@@ -94,7 +94,7 @@ export const HeroHeader = () => {
 
             {/* Desktop Navigation */}
             <div className="absolute inset-0 m-auto hidden size-fit lg:block">
-              <NavigationMenu>
+              <NavigationMenu viewport={false}>
                 <NavigationMenuList>
                   <NavigationMenuItem>
                     <NavigationMenuTrigger className="bg-transparent">
@@ -119,90 +119,84 @@ export const HeroHeader = () => {
                       Our Business
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className="grid gap-3 p-6 md:w-[600px] lg:grid-cols-[200px_1fr]">
-                        {/* Column 1: Pharmaceutical */}
-                        <li className="space-y-3">
-                          <div className="px-3 py-2 text-sm font-bold text-primary uppercase tracking-wider">
-                            {
-                              businessCategories.find(
-                                (c) => c.slug === "pharmaceutical",
-                              )?.title
-                            }
-                          </div>
+                      <ul className="w-[280px] p-2">
+                        {/* Pharmaceutical */}
+                        <li>
                           <ListItem
                             href={`/business/${businessCategories.find((c) => c.slug === "pharmaceutical")?.slug}`}
                             title={
                               businessCategories.find(
                                 (c) => c.slug === "pharmaceutical",
-                              )?.title
+                              )?.title || "Pharmaceutical"
                             }
+                            className="hover:bg-accent group"
                           >
-                            {
-                              businessCategories.find(
-                                (c) => c.slug === "pharmaceutical",
-                              )?.description
-                            }
+                            <span className="text-muted-foreground group-hover:text-accent-foreground">
+                              {
+                                businessCategories.find(
+                                  (c) => c.slug === "pharmaceutical",
+                                )?.description
+                              }
+                            </span>
                           </ListItem>
                         </li>
 
-                        {/* Column 3: Surgicals */}
-                        <li className="space-y-3">
-                          <div className="px-3 py-2 text-sm font-bold text-primary uppercase tracking-wider">
-                            SURGICALS
-                          </div>
+                        <div className="h-px bg-border my-1 mx-2" />
 
-                          <div className="grid grid-cols-2 gap-4">
-                            <div>
-                              {/* ARTHROPLASTY Section */}
-                              <CollapsibleMenu title="ARTHROPLASTY">
-                                <ul className="grid gap-1 pl-2 border-l ml-1">
-                                  {businessCategories
-                                    .find((c) => c.slug === "arthroplasty")
-                                    ?.subCategories?.map((sub) => (
-                                      <ListItem
-                                        key={sub.slug}
-                                        href={`/business/${sub.slug}`}
-                                        title={sub.title}
-                                      />
-                                    ))}
-                                </ul>
-                              </CollapsibleMenu>
-
-                              {/* Mapping other top-level categories under SURGICALS if needed, or specific ones */}
+                        {/* SURGICALS Group */}
+                        <li>
+                          <FlyoutMenu title="SURGICALS">
+                            {/* Sub-Category: Arthroplasty */}
+                            <FlyoutMenu title="Arthroplasty">
                               {businessCategories
-                                .filter((c) =>
-                                  [
-                                    "surgicals-trauma",
-                                    "surgicals-spine",
-                                  ].includes(c.slug),
-                                )
-                                .map((cat) => (
+                                .find((c) => c.slug === "arthroplasty")
+                                ?.subCategories?.map((sub) => (
                                   <ListItem
-                                    key={cat.slug}
-                                    href={`/business/${cat.slug}`}
-                                    title={cat.title}
-                                  >
-                                    {cat.description}
-                                  </ListItem>
+                                    key={sub.slug}
+                                    href={`/business/${sub.slug}`}
+                                    title={sub.title}
+                                    className="py-2"
+                                  />
+                                ))}
+                            </FlyoutMenu>
+
+                            {/* Other Surgicals (Trauma, Spine) */}
+                            {businessCategories
+                              .filter((c) =>
+                                [
+                                  "surgicals-trauma",
+                                  "surgicals-spine",
+                                ].includes(c.slug),
+                              )
+                              .map((cat) => (
+                                <ListItem
+                                  key={cat.slug}
+                                  href={`/business/${cat.slug}`}
+                                  title={cat.title}
+                                  className="py-2"
+                                />
+                              ))}
+                          </FlyoutMenu>
+                        </li>
+
+                        <div className="h-px bg-border my-1 mx-2" />
+
+                        {/* Orthopedic Aids Group */}
+                        <li>
+                          <FlyoutMenu title="Orthopedic Aids">
+                            <div className="max-h-[400px] overflow-y-auto custom-scrollbar pr-1">
+                              {businessCategories
+                                .find((c) => c.slug === "orthopedic-aids")
+                                ?.subCategories?.map((sub) => (
+                                  <ListItem
+                                    key={sub.slug}
+                                    href={`/business/${sub.slug}`}
+                                    title={sub.title}
+                                    className="py-2"
+                                  />
                                 ))}
                             </div>
-
-                            <div>
-                              <CollapsibleMenu title="Orthopedic Aids">
-                                <ul className="grid gap-1 pl-2 border-l ml-1">
-                                  {businessCategories
-                                    .find((c) => c.slug === "orthopedic-aids")
-                                    ?.subCategories?.map((sub) => (
-                                      <ListItem
-                                        key={sub.slug}
-                                        href={`/business/${sub.slug}`}
-                                        title={sub.title}
-                                      />
-                                    ))}
-                                </ul>
-                              </CollapsibleMenu>
-                            </div>
-                          </div>
+                          </FlyoutMenu>
                         </li>
                       </ul>
                     </NavigationMenuContent>
@@ -396,42 +390,43 @@ const ListItem = React.forwardRef<
 });
 ListItem.displayName = "ListItem";
 
-const CollapsibleMenu = ({
+const FlyoutMenu = ({
   title,
   children,
-  defaultOpen = false,
 }: {
   title: string;
   children: React.ReactNode;
-  defaultOpen?: boolean;
 }) => {
-  const [isOpen, setIsOpen] = useState(defaultOpen);
+  const [isHovered, setIsHovered] = useState(false);
 
   return (
-    <div className="w-full">
+    <div
+      className="relative w-full"
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <button
         type="button"
-        onClick={() => setIsOpen(!isOpen)}
-        className="flex w-full items-center justify-between py-2 text-sm font-semibold text-muted-foreground transition-colors hover:text-foreground"
+        className={cn(
+          "flex w-full items-center justify-between py-2 px-3 text-sm font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground outline-none",
+          isHovered && "bg-accent/50 text-accent-foreground",
+        )}
       >
         <span>{title}</span>
-        <ChevronDown
-          className={cn(
-            "h-4 w-4 transition-transform duration-200",
-            isOpen && "rotate-180",
-          )}
-        />
+        <ChevronDown className="h-4 w-4 -rotate-90 text-muted-foreground" />
       </button>
+
+      {/* Flyout Content */}
       <AnimatePresence>
-        {isOpen && (
+        {isHovered && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{ height: "auto", opacity: 1 }}
-            exit={{ height: 0, opacity: 0 }}
-            transition={{ duration: 0.2 }}
-            className="overflow-hidden"
+            initial={{ opacity: 0, x: -5 }}
+            animate={{ opacity: 1, x: 0 }}
+            exit={{ opacity: 0, x: -5 }}
+            transition={{ duration: 0.1 }}
+            className="absolute left-full top-0 ml-0.5 min-w-[280px] rounded-md border bg-popover text-popover-foreground shadow-md z-50"
           >
-            <div className="pt-1 pb-2">{children}</div>
+            <div className="p-2 space-y-1">{children}</div>
           </motion.div>
         )}
       </AnimatePresence>
