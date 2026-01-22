@@ -49,6 +49,7 @@ const services = [
 const mainLinks = [
   { name: "About Us", href: "/about-us" },
   { name: "Company Overview", href: "/company-overview" },
+  { name: "Our Partners", href: "/partners" },
 ];
 
 export const HeroHeader = () => {

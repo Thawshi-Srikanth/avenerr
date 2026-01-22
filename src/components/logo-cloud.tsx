@@ -1,6 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 import { InfiniteSlider } from "@/components/ui/infinite-slider";
 import { ProgressiveBlur } from "@/components/ui/progressive-blur";
+import { partners } from "@/lib/partners-data";
 
 export default function LogoCloud() {
   return (
@@ -11,81 +13,25 @@ export default function LogoCloud() {
             <p className="text-end text-sm">Partnering with top brands</p>
           </div>
           <div className="relative py-6 md:w-[calc(100%-11rem)]">
-            <InfiniteSlider speedOnHover={20} speed={40} gap={112}>
-              <div className="flex">
-                <Image
-                  className="mx-auto h-5 w-fit"
-                  src="/images/logo-cloud/triveni-formulation.png"
-                  alt="Triveni Formulation"
-                  height={20}
-                  width={100}
-                />
-              </div>
-
-              <div className="flex">
-                <Image
-                  className="mx-auto h-5 w-fit"
-                  src="/images/logo-cloud/triveni-formulation.png"
-                  alt="Triveni Formulation"
-                  height={20}
-                  width={100}
-                />
-              </div>
-              <div className="flex">
-                <Image
-                  className="mx-auto h-5 w-fit"
-                  src="/images/logo-cloud/triveni-formulation.png"
-                  alt="Triveni Formulation"
-                  height={20}
-                  width={100}
-                />
-              </div>
-              <div className="flex">
-                <Image
-                  className="mx-auto h-5 w-fit"
-                  src="/images/logo-cloud/triveni-formulation.png"
-                  alt="Triveni Formulation"
-                  height={20}
-                  width={100}
-                />
-              </div>
-              <div className="flex">
-                <Image
-                  className="mx-auto h-5 w-fit"
-                  src="/images/logo-cloud/triveni-formulation.png"
-                  alt="Triveni Formulation"
-                  height={20}
-                  width={100}
-                />
-              </div>
-              <div className="flex">
-                <Image
-                  className="mx-auto h-5 w-fit"
-                  src="/images/logo-cloud/triveni-formulation.png"
-                  alt="Triveni Formulation"
-                  height={20}
-                  width={100}
-                />
-              </div>
-              <div className="flex">
-                <Image
-                  className="mx-auto h-5 w-fit"
-                  src="/images/logo-cloud/triveni-formulation.png"
-                  alt="Triveni Formulation"
-                  height={20}
-                  width={100}
-                />
-              </div>
-
-              <div className="flex">
-                <Image
-                  className="mx-auto h-5 w-fit"
-                  src="/images/logo-cloud/triveni-formulation.png"
-                  alt="Triveni Formulation"
-                  height={20}
-                  width={100}
-                />
-              </div>
+            <InfiniteSlider speedOnHover={20} speed={40} gap={60}>
+              {partners.map((partner, i) => (
+                <Link
+                  key={i}
+                  href={partner.website}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center justify-center"
+                >
+                  <div className="relative h-16 w-32 opacity-70 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                    <Image
+                      src={partner.image}
+                      alt={partner.name}
+                      fill
+                      className="object-contain"
+                    />
+                  </div>
+                </Link>
+              ))}
             </InfiniteSlider>
 
             <div className="bg-linear-to-r from-background absolute inset-y-0 left-0 w-20"></div>

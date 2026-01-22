@@ -64,6 +64,10 @@ const links = [
         title: "Contact Us",
         href: "/contact-us",
       },
+      {
+        title: "Our Partners",
+        href: "/partners",
+      },
     ],
   },
   {

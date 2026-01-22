@@ -4,29 +4,6 @@ import { ArrowRight } from "lucide-react";
 import { managementTeam } from "@/lib/team-data";
 
 export default function CompanyOverviewPage() {
-  const partners = [
-    { name: "EuroPharma", country: "France" },
-    { name: "MedItalia", country: "Italy" },
-    { name: "IndoLife Sciences", country: "India" },
-    { name: "Global Medics", country: "USA" },
-    { name: "SwissHealth", country: "Switzerland" },
-    { name: "Nordic Pharma", country: "Sweden" },
-    { name: "AusBiotech", country: "Australia" },
-    { name: "Nippon Medical", country: "Japan" },
-    { name: "CanHealth", country: "Canada" },
-    { name: "UK BioLabs", country: "UK" },
-    { name: "GermaCare", country: "Germany" },
-    { name: "SinoPharm", country: "China" },
-    { name: "RusMed", country: "Russia" },
-    { name: "BrazPharma", country: "Brazil" },
-    { name: "S.A. Health", country: "South Africa" },
-    { name: "K-Bio", country: "South Korea" },
-    { name: "TurkMed", country: "Turkey" },
-    { name: "MexiHealth", country: "Mexico" },
-    { name: "ArgBio", country: "Argentina" },
-    { name: "IndoNes", country: "Indonesia" },
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
@@ -189,63 +166,6 @@ export default function CompanyOverviewPage() {
                   )}
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 3: Partners */}
-        <section className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative border-t pt-32">
-          <div className="lg:w-1/4 shrink-0">
-            <div className="sticky top-32">
-              <h2 className="text-4xl font-bold tracking-tight mb-4 text-primary">
-                Our Partners
-              </h2>
-              <p className="text-muted-foreground text-lg">
-                Collaborating with global leaders to ensure supply chain
-                excellence.
-              </p>
-            </div>
-          </div>
-
-          <div className="lg:w-3/4">
-            <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-12">
-              <p>
-                Management of the supply chain is very critical to ensure the
-                availability of the stocks in the market. This process commences
-                from the time of procurement and ends after the supply of
-                products to the customers. The company has assigned the duties
-                of the total supply chain to the relevant officers who are
-                accountable for the smooth function of their respective
-                processes.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-              {partners.map((partner, i) => (
-                <div
-                  key={i}
-                  className="group relative bg-background border p-6 hover:border-primary transition-colors cursor-default min-h-[160px] flex flex-col justify-between"
-                >
-                  <div className="self-end">
-                    <span className="text-[10px] font-bold uppercase tracking-tighter text-muted-foreground group-hover:text-primary transition-colors border px-2 py-0.5 bg-background z-10 relative">
-                      {partner.country}
-                    </span>
-                  </div>
-                  <div className="flex flex-col items-start gap-4">
-                    <div className="relative w-10 h-10 opacity-70 group-hover:opacity-100 transition-opacity">
-                      <Image
-                        src="/images/partner-placeholder.png"
-                        alt="Partner Logo"
-                        fill
-                        className="object-contain"
-                      />
-                    </div>
-                    <p className="font-bold text-sm leading-tight">
-                      {partner.name}
-                    </p>
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </section>
