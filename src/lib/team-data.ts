@@ -3,7 +3,7 @@ export const managementTeam = [
     name: "Mr. C. Sathananthan",
     slug: "c-sathananthan",
     role: "Managing Director, Founder",
-    bio: "With a career in the pharmaceutical industry spanning over three decades, Mr. C. Sathananthan embodies leadership, vision, and dedication. Starting his journey in 1995 as a Medical Representative, he steadily advanced through territory and field management roles, gaining invaluable industry insights along the way. In 2007, he founded Avenierr Pharma (Pvt) Ltd, steering it to become a trusted name in the sector. As Managing Director, Mr. Sathananthan continues to drive innovation, excellence, and growth, blending hands-on experience with a forward-looking strategic vision.",
+    bio: "With a career in the pharmaceutical industry spanning over three decades, Mr. C. Sathananthan embodies leadership, vision, and dedication.  In 2007, he founded Avenierr Pharma (Pvt) Ltd, steering it to become a trusted name in the sector. As Managing Director, Mr. Sathananthan continues to drive innovation, excellence, and growth, blending hands-on experience with a forward-looking strategic vision.",
     image: "/images/team/Sathananthan.jpeg",
     isMain: true,
     socials: {
