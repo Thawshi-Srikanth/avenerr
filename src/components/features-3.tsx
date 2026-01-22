@@ -22,7 +22,7 @@ export default function Features() {
               <CardDecorator>
                 <Image
                   src="/images/icon/pill.png"
-                  alt="Avenir Pharma Logo"
+                  alt="Avenierr Pharma Logo"
                   width={24}
                   height={24}
                 />
@@ -44,7 +44,7 @@ export default function Features() {
               <CardDecorator>
                 <Image
                   src="/images/icon/surgery.png"
-                  alt="Avenir Pharma Logo"
+                  alt="Avenierr Pharma Logo"
                   width={24}
                   height={24}
                 />
@@ -67,7 +67,7 @@ export default function Features() {
               <CardDecorator>
                 <Image
                   src="/images/icon/orthopedics.png"
-                  alt="Avenir Pharma Logo"
+                  alt="Avenierr Pharma Logo"
                   width={24}
                   height={24}
                 />

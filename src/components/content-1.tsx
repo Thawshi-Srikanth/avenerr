@@ -55,8 +55,8 @@ export default function ContentSection() {
 
           <div className="relative space-y-4">
             <p className="text-muted-foreground">
-              Avenir Pharma has grown to become more than just a pharmaceutical
-              company.{" "}
+              Avenierr Pharma has grown to become more than just a
+              pharmaceutical company.{" "}
               <span className="text-accent-foreground font-bold">
                 It is built on a strong global ecosystem
               </span>{" "}
@@ -64,7 +64,7 @@ export default function ContentSection() {
             </p>
 
             <p className="text-muted-foreground">
-              Since 2007, Avenir Pharma has expanded through strategic
+              Since 2007, Avenierr Pharma has expanded through strategic
               collaborations with leading manufacturers in France, Italy, and
               India — enabling the import, branding, marketing, and distribution
               of high-quality medicines, orthopedic appliances, and surgical
@@ -73,7 +73,7 @@ export default function ContentSection() {
             <div className="pt-6 text-muted-foreground">
               <blockquote className="border-l-4 border-primary pl-4">
                 <p>
-                  Partnering with Avenir Pharma has elevated our ability to
+                  Partnering with Avenierr Pharma has elevated our ability to
                   deliver reliable healthcare solutions. Their commitment to
                   quality and global collaboration ensures that every product
                   meets the highest standards of patient care.
