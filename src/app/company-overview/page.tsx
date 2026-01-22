@@ -57,8 +57,48 @@ export default function CompanyOverviewPage() {
       </div>
 
       <div className="max-w-7xl mx-auto px-6 py-16 lg:py-24 space-y-32">
-        {/* Section 1: Management Team */}
+        {/* Section: Vision & Mission */}
         <section className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative">
+          <div className="lg:w-1/4 shrink-0">
+            <div className="sticky top-32">
+              <h2 className="text-4xl font-bold tracking-tight mb-4 text-red-600">
+                Vision & Mission
+              </h2>
+              <p className="text-muted-foreground text-lg">
+                Our guiding principles and commitment to excellence.
+              </p>
+            </div>
+          </div>
+
+          <div className="lg:w-3/4 space-y-12">
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Vision</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                To become the most sought-after pharmaceutical products supplier
+                in Sri Lanka by offering one of the widest portfolios of
+                high-quality pharmaceuticals and surgical instruments, supported
+                by compliant systems, reliable distribution, and trusted
+                partnerships across the healthcare sector.
+              </p>
+            </div>
+            <div>
+              <h3 className="text-2xl font-bold mb-4">Mission</h3>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                To achieve market leadership in the Sri Lankan pharmaceutical
+                industry by delivering safe, effective, and quality-assured
+                products through robust regulatory compliance, efficient
+                logistics, and ethical scientific engagement. We are committed
+                to exceeding customer expectations through service excellence,
+                continuous training, and a people-driven culture, while
+                upholding the highest standards of integrity, professionalism,
+                and ethical conduct.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Section 1: Management Team */}
+        <section className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative border-t pt-32">
           <div className="lg:w-1/4 shrink-0">
             <div className="sticky top-32">
               <h2 className="text-4xl font-bold tracking-tight mb-4 text-red-600">
