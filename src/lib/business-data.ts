@@ -70,11 +70,72 @@ export const businessCategories: BusinessCategory[] = [
         title: "Shoulder",
         slug: "surgicals-shoulder",
         description: "Shoulder replacement solutions.",
-      },
-      {
-        title: "Equinoxe Platform",
-        slug: "surgicals-equinoxe",
-        description: "Platform shoulder system.",
+        products: [
+          {
+            title: "Equinoxe Fracture System",
+            image: "/images/products/Shoulder/Equinoxe Fracture System.png",
+          },
+          {
+            title: "Equinoxe Humeral Reconstruction Prosthesis",
+            image:
+              "/images/products/Shoulder/Equinoxe Humeral Reconstruction Prosthesis.png",
+          },
+          {
+            title: "Equinoxe Platform System",
+            image: "/images/products/Shoulder/Equinoxe Platform System.png",
+          },
+          {
+            title: "Equinoxe Preserve Stem",
+            image: "/images/products/Shoulder/Equinoxe Preserve Stem.png",
+          },
+          {
+            title: "Equinoxe Primary System",
+            image: "/images/products/Shoulder/Equinoxe Primary System.png",
+          },
+          {
+            title: "Equinoxe Resurfacing Head",
+            image: "/images/products/Shoulder/Equinoxe Resurfacing Head.png",
+          },
+          {
+            title: "Equinoxe Reverse System",
+            image: "/images/products/Shoulder/Equinoxe Reverse System.png",
+          },
+          {
+            title: "Equinoxe Shoulder Planning App",
+            image:
+              "/images/products/Shoulder/Equinoxe Shoulder Planning App.png",
+          },
+          {
+            title: "Equinoxe Small Reverse Shoulder",
+            image:
+              "/images/products/Shoulder/Equinoxe Small Reverse Shoulder.png",
+          },
+          {
+            title: "Equinoxe Stemless Shoulder",
+            image: "/images/products/Shoulder/Equinoxe Stemless Shoulder.png",
+          },
+          {
+            title: "ExactechGPS Shoulder Application",
+            image:
+              "/images/products/Shoulder/ExactechGPS Shoulder Application.png",
+          },
+          {
+            title: "InterSpace Shoulder",
+            image: "/images/products/Shoulder/InterSpace Shoulder.png",
+          },
+          {
+            title: "Reverse Shoulder Replacement",
+            image: "/images/products/Shoulder/Reverse Shoulder Replacement.jpg",
+          },
+          {
+            title: "Shoulder Hemiarthroplasty",
+            image: "/images/products/Shoulder/Shoulder Hemiarthroplasty.jpg",
+          },
+          {
+            title: "Total Shoulder Replacement",
+            image: "/images/products/Shoulder/Total Shoulder Replacement.jpg",
+          },
+        ],
       },
       {
         title: "Hip",
