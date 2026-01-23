@@ -8,11 +8,20 @@ export default function CompanyOverviewPage() {
     <div className="min-h-screen bg-background">
       {/* Hero Section */}
       <div className="relative w-full h-[60vh] lg:h-[70vh] overflow-hidden">
+        {/* Background filler image */}
         <Image
-          src="/images/group-pic.jpg"
+          src="/images/group-pic-f.png"
+          alt="Company Overview Background"
+          fill
+          className="object-cover blur-2xl scale-110 opacity-30 grayscale"
+          priority
+        />
+        {/* Main image */}
+        <Image
+          src="/images/group-pic-f.png"
           alt="Company Overview"
           fill
-          className="object-cover grayscale brightness-50"
+          className="object-contain grayscale brightness-75"
           priority
         />
         <div className="absolute inset-0 bg-linear-to-t from-background via-background/40 to-transparent" />

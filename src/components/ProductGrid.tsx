@@ -53,24 +53,24 @@ export default function ProductGrid({ products }: ProductGridProps) {
                 )}
               </div>
 
-              <div className="mt-4 pt-4 border-t flex justify-between items-center">
+              {/* <div className="mt-4 pt-4 border-t flex justify-between items-center">
                 <span className="text-xs font-bold uppercase tracking-wider text-muted-foreground">
                   View Product
                 </span>
                 <div className="h-8 w-8 flex items-center justify-center bg-muted group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
                   <ArrowRight className="h-4 w-4" />
                 </div>
-              </div>
+              </div> */}
 
               {/* Full Card Link overlay */}
-              <Link
+              {/* <Link
                 href={targetLink}
                 className="absolute inset-0 z-10"
                 aria-label={`View ${product.title}`}
                 {...(isExternal
                   ? { target: "_blank", rel: "noopener noreferrer" }
                   : {})}
-              />
+              /> */}
             </div>
           </div>
         );

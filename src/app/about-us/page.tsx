@@ -36,7 +36,7 @@ export default function AboutUsPage() {
                 Company Overview
               </h2>
               <div className="flex items-center gap-4 text-primary">
-                <span className="text-6xl font-bold">14+</span>
+                <span className="text-6xl font-bold">15+</span>
                 <span className="text-lg font-medium leading-tight">
                   Years in
                   <br />
