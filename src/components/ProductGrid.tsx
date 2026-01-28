@@ -1,6 +1,4 @@
-import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import { partners } from "@/lib/partners-data";
 
 interface Product {
@@ -22,8 +20,8 @@ export default function ProductGrid({ products }: ProductGridProps) {
         const supplierData = product.supplier
           ? partners.find((p) => p.name === product.supplier)
           : null;
-        const targetLink = supplierData?.website || product.link || "#";
-        const isExternal = !!supplierData?.website;
+        const _targetLink = supplierData?.website || product.link || "#";
+        const _isExternal = !!supplierData?.website;
 
         return (
           <div

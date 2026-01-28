@@ -1,8 +1,8 @@
-import Link from "next/link";
 import Image from "next/image";
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { FaLinkedinIn } from "react-icons/fa6";
-import { MdEmail, MdArrowBack } from "react-icons/md";
+import { MdArrowBack } from "react-icons/md";
 import { managementTeam } from "@/lib/team-data";
 
 export default async function TeamMemberPage({
@@ -74,17 +74,6 @@ export default async function TeamMemberPage({
                       LinkedIn
                     </span>
                     <FaLinkedinIn className="w-5 h-5 text-muted-foreground group-hover:text-blue-600 transition-colors" />
-                  </Link>
-                )}
-                {member.socials?.email && (
-                  <Link
-                    href={member.socials.email}
-                    className="flex items-center justify-between group py-2 border-t border-border"
-                  >
-                    <span className="text-sm font-medium text-foreground group-hover:text-primary transition-colors">
-                      Email
-                    </span>
-                    <MdEmail className="w-5 h-5 text-muted-foreground group-hover:text-primary transition-colors" />
                   </Link>
                 )}
               </div>

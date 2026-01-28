@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { ArrowRight, Briefcase, Heart, Lightbulb, Users } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 

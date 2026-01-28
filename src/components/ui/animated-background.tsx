@@ -26,7 +26,7 @@ export default function AnimatedBackground({
     // Configuration
     const particleCount = 60;
     const connectionDistance = 150;
-    const mouseDistance = 200;
+    const _mouseDistance = 200;
 
     class Particle {
       x: number;

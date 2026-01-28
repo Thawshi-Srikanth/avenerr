@@ -1,6 +1,5 @@
-import Image from "next/image";
-
 import { CheckCircle2, Heart, ShieldCheck, Star, Users } from "lucide-react";
+import Image from "next/image";
 
 export default function AboutUsPage() {
   return (

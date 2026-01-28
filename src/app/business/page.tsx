@@ -1,8 +1,8 @@
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { businessCategories, type Product } from "@/lib/business-data";
-import { ArrowRight } from "lucide-react";
 import ProductGrid from "@/components/ProductGrid";
+import { businessCategories, type Product } from "@/lib/business-data";
 
 export default async function BusinessSearchPage({
   searchParams,

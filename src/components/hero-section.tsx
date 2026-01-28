@@ -1,8 +1,8 @@
 import { ArrowRight } from "lucide-react";
+import type { Transition, Variants } from "motion/react";
 import Link from "next/link";
 import { AnimatedGroup } from "@/components/ui/animated-group";
 import { TextEffect } from "@/components/ui/text-effect";
-import { Transition, Variants } from "motion/react";
 
 const springTransition: Transition = {
   type: "spring" as const,

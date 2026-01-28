@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
-import { partners } from "@/lib/partners-data";
 import { businessCategories } from "@/lib/business-data";
+import { partners } from "@/lib/partners-data";
 
 export default function PartnersPage() {
   // Get list of suppliers that have products

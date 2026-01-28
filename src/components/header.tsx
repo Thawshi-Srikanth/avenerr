@@ -1,7 +1,7 @@
 "use client";
 
+import { ChevronDown, Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import { Menu, X, ChevronDown } from "lucide-react";
 import Link from "next/link";
 import React, { useState } from "react";
 import {

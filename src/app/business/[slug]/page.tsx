@@ -1,19 +1,19 @@
-import { getPostBySlug, getAllPosts } from "@/lib/mdx";
-import { notFound } from "next/navigation";
-import { MDXRemote } from "next-mdx-remote/rsc";
+import { CheckCircle2, Info } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import ProductGrid from "@/components/ProductGrid";
+import { notFound } from "next/navigation";
+import { MDXRemote } from "next-mdx-remote/rsc";
 import React from "react";
-import { ArrowRight, CheckCircle2, Info } from "lucide-react";
-import { businessCategories, BusinessCategory } from "@/lib/business-data";
+import ProductGrid from "@/components/ProductGrid";
+import { type BusinessCategory, businessCategories } from "@/lib/business-data";
+import { getAllPosts, getPostBySlug } from "@/lib/mdx";
 
 export async function generateStaticParams() {
   const posts = getAllPosts("business");
 
   // Helper to recursively collect all slugs
   const collectSlugs = (categories: BusinessCategory[]): string[] => {
-    let slugs: string[] = [];
+    const slugs: string[] = [];
     for (const cat of categories) {
       slugs.push(cat.slug);
       if (cat.subCategories) {

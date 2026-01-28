@@ -1,9 +1,9 @@
-import { getPostBySlug, getPostSlugs } from "@/lib/mdx";
-import { MDXRemote } from "next-mdx-remote/rsc";
-import { notFound } from "next/navigation";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { notFound } from "next/navigation";
+import { MDXRemote } from "next-mdx-remote/rsc";
+import { getPostBySlug, getPostSlugs } from "@/lib/mdx";
 import { cn } from "@/lib/utils";
 
 export async function generateStaticParams() {

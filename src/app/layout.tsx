@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Geist_Mono, Sora } from "next/font/google";
 import "./globals.css";
 
+import CookieConsent from "@/components/cookie-consent";
 import FooterSection from "@/components/footer";
 import { HeroHeader } from "@/components/header";
-import CookieConsent from "@/components/cookie-consent";
 
 const soraSans = Sora({
   variable: "--font-sora-sans",
