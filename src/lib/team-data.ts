@@ -25,7 +25,7 @@ export const managementTeam = [
     name: "Mr. Sanjaya Kurukulasooriya",
     slug: "sanjaya-kurukulasooriya",
     role: "Director – Surgical",
-    bio: "A seasoned industry professional with a career spanning over two decades, Mr. Sanjaya Kurukulasooriya brings extensive expertise in surgical and pharmaceutical solutions. Having worked with leading organizations such as Harcourts Pharmacy and Dr. Reddy’s Laboratories, he joined Avenierr Pharma in 2009. As Director – Surgical, he plays a pivotal role in driving product innovation, operational excellence, and strategic growth in the surgical segment.",
+    bio: "A seasoned industry professional with a career spanning over two decades, Mr. Sanjaya Kurukulasooriya brings extensive expertise in surgical and pharmaceutical solutions. With a strong background gained through leadership roles in reputed organizations, he joined Avenierr Pharma in 2009. As Director – Surgical, he plays a pivotal role in driving product innovation, operational excellence, and strategic growth within the surgical segment.",
     image: "/images/team/Sanjaya.jpeg",
     socials: {
       linkedin: "#",
