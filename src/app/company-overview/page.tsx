@@ -136,7 +136,7 @@ export default function CompanyOverviewPage() {
         </section>
 
         {/* Section 2: Subsidiaries */}
-        <section className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative border-t pt-32">
+        {/* <section className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative border-t pt-32">
           <div className="lg:w-1/4 shrink-0">
             <div className="sticky top-32">
               <h2 className="text-4xl font-bold tracking-tight mb-4 text-primary">
@@ -177,7 +177,7 @@ export default function CompanyOverviewPage() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   );
