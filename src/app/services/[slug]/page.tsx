@@ -8,9 +8,11 @@ import { cn } from "@/lib/utils";
 
 export async function generateStaticParams() {
   const posts = getPostSlugs();
-  return posts.map((post) => ({
-    slug: post.replace(/\.mdx$/, ""),
-  }));
+  return posts
+    .filter((post) => post.endsWith(".mdx"))
+    .map((post) => ({
+      slug: post.replace(/\.mdx$/, ""),
+    }));
 }
 
 // Custom MDX Components for a premium look

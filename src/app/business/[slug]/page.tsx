@@ -207,6 +207,7 @@ export default async function BusinessDivisionPage({
                 <MDXRemote
                   source={mdxData.content}
                   components={{
+                    ProductGrid,
                     h1: ({ children }) => (
                       <h2 className="text-3xl font-bold mt-8 mb-4">
                         {children}
