@@ -125,85 +125,193 @@ export const HeroHeader = () => {
                       Our Business
                     </NavigationMenuTrigger>
                     <NavigationMenuContent>
-                      <ul className="w-[280px] p-2">
-                        {/* Pharmaceutical */}
-                        <li>
-                          <ListItem
-                            href={`/business/${businessCategories.find((c) => c.slug === "pharmaceutical")?.slug}`}
-                            title={
-                              businessCategories.find(
-                                (c) => c.slug === "pharmaceutical",
-                              )?.title || "Pharmaceutical"
-                            }
-                            className="hover:bg-accent group"
-                          >
-                            <span className="text-muted-foreground group-hover:text-accent-foreground">
-                              {
-                                businessCategories.find(
-                                  (c) => c.slug === "pharmaceutical",
-                                )?.description
-                              }
-                            </span>
-                          </ListItem>
-                        </li>
+                      <ul className="w-[300px] p-2">
+                        {businessCategories.map((category) => {
+                          // Handle Tag Group (Header + children inline)
+                          if (
+                            category.type === "tag" &&
+                            category.subCategories
+                          ) {
+                            return (
+                              <li key={category.slug} className="mb-2">
+                                <div className="px-3 py-2 text-sm font-semibold text-primary/80 uppercase tracking-wider">
+                                  {category.title}
+                                </div>
+                                <ul className="space-y-1">
+                                  {category.subCategories.map((subCat) => (
+                                    <li key={subCat.slug}>
+                                      {/* Check if this subCat needs a Flyout (e.g. Arthroplasty with deeper levels) */}
+                                      {subCat.subCategories &&
+                                      subCat.subCategories.length > 0 ? (
+                                        <FlyoutMenu title={subCat.title}>
+                                          {subCat.subCategories.map((leaf) => (
+                                            <ListItem
+                                              key={leaf.slug}
+                                              href={`/business/${leaf.slug}`}
+                                              title={leaf.title}
+                                              className="py-2"
+                                            />
+                                          ))}
+                                        </FlyoutMenu>
+                                      ) : (
+                                        <ListItem
+                                          href={`/business/${subCat.slug}`}
+                                          title={subCat.title}
+                                          className="py-2"
+                                        />
+                                      )}
+                                    </li>
+                                  ))}
+                                </ul>
+                                <div className="h-px bg-border mt-2 mx-2" />
+                              </li>
+                            );
+                          }
 
-                        <div className="h-px bg-border my-1 mx-2" />
+                          // Check if category has subcategories (Medical Devices - Normal Flyout)
+                          if (
+                            category.subCategories &&
+                            category.subCategories.length > 0
+                          ) {
+                            return (
+                              <li key={category.slug}>
+                                <FlyoutMenu title={category.title}>
+                                  {category.subCategories.map((subCat) => {
+                                    // Handle Tag Group inside a Flyout (e.g. Orthopedic Implants inside Medical Devices)
+                                    if (
+                                      subCat.type === "tag" &&
+                                      subCat.subCategories
+                                    ) {
+                                      return (
+                                        <div
+                                          key={subCat.slug}
+                                          className="mb-2 mt-1"
+                                        >
+                                          <div className="px-3 py-1.5 text-xs font-semibold text-muted-foreground uppercase tracking-wider">
+                                            {subCat.title}
+                                          </div>
+                                          <ul className="space-y-0.5">
+                                            {subCat.subCategories.map(
+                                              (nestedSub) => (
+                                                <li key={nestedSub.slug}>
+                                                  {/* Check if nestedSub has subcategories (Arthroplasty -> Deep Flyout) */}
+                                                  {nestedSub.subCategories &&
+                                                  nestedSub.subCategories
+                                                    .length > 0 ? (
+                                                    // Force left side for deep nesting to avoid clipping
+                                                    <FlyoutMenu
+                                                      title={nestedSub.title}
+                                                      side="right"
+                                                    >
+                                                      {nestedSub.subCategories.map(
+                                                        (leaf) => (
+                                                          <ListItem
+                                                            key={leaf.slug}
+                                                            href={`/business/${leaf.slug}`}
+                                                            title={leaf.title}
+                                                            className="py-2"
+                                                          />
+                                                        ),
+                                                      )}
+                                                    </FlyoutMenu>
+                                                  ) : (
+                                                    <ListItem
+                                                      href={`/business/${nestedSub.slug}`}
+                                                      title={nestedSub.title}
+                                                      className="py-2"
+                                                    />
+                                                  )}
+                                                </li>
+                                              ),
+                                            )}
+                                          </ul>
+                                        </div>
+                                      );
+                                    }
 
-                        {/* SURGICALS Group */}
-                        <li>
-                          <FlyoutMenu title="SURGICALS">
-                            {/* Sub-Category: Arthroplasty */}
-                            <FlyoutMenu title="Arthroplasty">
-                              {businessCategories
-                                .find((c) => c.slug === "arthroplasty")
-                                ?.subCategories?.map((sub) => (
-                                  <ListItem
-                                    key={sub.slug}
-                                    href={`/business/${sub.slug}`}
-                                    title={sub.title}
-                                    className="py-2"
-                                  />
-                                ))}
-                            </FlyoutMenu>
+                                    // Check if subcategory has subcategories (Orthopedic Aids, Implants)
+                                    if (
+                                      subCat.subCategories &&
+                                      subCat.subCategories.length > 0
+                                    ) {
+                                      return (
+                                        <FlyoutMenu
+                                          key={subCat.slug}
+                                          title={subCat.title}
+                                        >
+                                          <div className="max-h-[400px] overflow-y-auto custom-scrollbar pr-1">
+                                            {subCat.subCategories.map(
+                                              (nestedSub) => {
+                                                // Check if nested subcategory has subcategories (Arthroplasty, Trauma)
+                                                if (
+                                                  nestedSub.subCategories &&
+                                                  nestedSub.subCategories
+                                                    .length > 0
+                                                ) {
+                                                  return (
+                                                    <FlyoutMenu
+                                                      key={nestedSub.slug}
+                                                      title={nestedSub.title}
+                                                      side="left"
+                                                    >
+                                                      {nestedSub.subCategories.map(
+                                                        (leaf) => (
+                                                          <ListItem
+                                                            key={leaf.slug}
+                                                            href={`/business/${leaf.slug}`}
+                                                            title={leaf.title}
+                                                            className="py-2"
+                                                          />
+                                                        ),
+                                                      )}
+                                                    </FlyoutMenu>
+                                                  );
+                                                }
+                                                return (
+                                                  <ListItem
+                                                    key={nestedSub.slug}
+                                                    href={`/business/${nestedSub.slug}`}
+                                                    title={nestedSub.title}
+                                                    className="py-2"
+                                                  />
+                                                );
+                                              },
+                                            )}
+                                          </div>
+                                        </FlyoutMenu>
+                                      );
+                                    }
+                                    return (
+                                      <ListItem
+                                        key={subCat.slug}
+                                        href={`/business/${subCat.slug}`}
+                                        title={subCat.title}
+                                        className="py-2"
+                                      />
+                                    );
+                                  })}
+                                </FlyoutMenu>
+                              </li>
+                            );
+                          }
 
-                            {/* Other Surgicals (Trauma, Spine) */}
-                            {businessCategories
-                              .filter((c) =>
-                                [
-                                  "surgicals-trauma",
-                                  "surgicals-spine",
-                                ].includes(c.slug),
-                              )
-                              .map((cat) => (
-                                <ListItem
-                                  key={cat.slug}
-                                  href={`/business/${cat.slug}`}
-                                  title={cat.title}
-                                  className="py-2"
-                                />
-                              ))}
-                          </FlyoutMenu>
-                        </li>
-
-                        <div className="h-px bg-border my-1 mx-2" />
-
-                        {/* Orthopedic Aids Group */}
-                        <li>
-                          <FlyoutMenu title="Orthopedic Aids">
-                            <div className="max-h-[400px] overflow-y-auto custom-scrollbar pr-1">
-                              {businessCategories
-                                .find((c) => c.slug === "orthopedic-aids")
-                                ?.subCategories?.map((sub) => (
-                                  <ListItem
-                                    key={sub.slug}
-                                    href={`/business/${sub.slug}`}
-                                    title={sub.title}
-                                    className="py-2"
-                                  />
-                                ))}
-                            </div>
-                          </FlyoutMenu>
-                        </li>
+                          // Render top-level item without subcategories
+                          return (
+                            <li key={category.slug}>
+                              <ListItem
+                                href={`/business/${category.slug}`}
+                                title={category.title}
+                                className="hover:bg-accent group"
+                              >
+                                {category.description && (
+                                  <span className="text-muted-foreground group-hover:text-accent-foreground">
+                                    {category.description}
+                                  </span>
+                                )}
+                              </ListItem>
+                            </li>
+                          );
+                        })}
                       </ul>
                     </NavigationMenuContent>
                   </NavigationMenuItem>
@@ -264,95 +372,228 @@ export const HeroHeader = () => {
                       {/* Our Business Dropdown */}
                       <MobileDropdown title="Our Business">
                         <ul className="space-y-4 pl-4 border-l my-2">
-                          {/* Pharmaceutical */}
-                          <li>
-                            <Link
-                              href={`/business/${businessCategories.find((c) => c.slug === "pharmaceutical")?.slug}`}
-                              className="text-muted-foreground hover:text-foreground block py-1"
-                              onClick={() => setMenuState(false)}
-                            >
-                              {businessCategories.find(
-                                (c) => c.slug === "pharmaceutical",
-                              )?.title || "Pharmaceutical"}
-                            </Link>
-                          </li>
+                          {businessCategories.map((category) => {
+                            // Check if category has subcategories
+                            if (
+                              category.subCategories &&
+                              category.subCategories.length > 0
+                            ) {
+                              // Handle Tag Group Mobile - No Nested Dropdown, just list
+                              if (category.type === "tag") {
+                                return (
+                                  <li key={category.slug}>
+                                    <div className="py-2 text-sm font-semibold text-primary/70 uppercase">
+                                      {category.title}
+                                    </div>
+                                    <ul className="pl-4 border-l space-y-2">
+                                      {category.subCategories.map((sub) => (
+                                        <li key={sub.slug}>
+                                          <Link
+                                            href={`/business/${sub.slug}`}
+                                            className="text-muted-foreground hover:text-foreground block py-1"
+                                            onClick={() => setMenuState(false)}
+                                          >
+                                            {sub.title}
+                                          </Link>
+                                        </li>
+                                      ))}
+                                    </ul>
+                                  </li>
+                                );
+                              }
 
-                          {/* SURGICALS Section */}
-                          <li className="font-medium text-primary py-1 mt-2">
-                            SURGICALS
-                          </li>
+                              return (
+                                <li key={category.slug}>
+                                  <NestedMobileDropdown title={category.title}>
+                                    <ul className="space-y-2 border-l pl-4 my-1">
+                                      {category.subCategories.map((subCat) => {
+                                        // Handle Tag Group inside Mobile Submenu
+                                        if (
+                                          subCat.type === "tag" &&
+                                          subCat.subCategories
+                                        ) {
+                                          return (
+                                            <li key={subCat.slug}>
+                                              <div className="py-1 text-xs font-semibold text-muted-foreground uppercase tracking-wide">
+                                                {subCat.title}
+                                              </div>
+                                              <ul className="pl-4 border-l space-y-1 mt-1">
+                                                {subCat.subCategories.map(
+                                                  (nestedSub) => {
+                                                    if (
+                                                      nestedSub.subCategories &&
+                                                      nestedSub.subCategories
+                                                        .length > 0
+                                                    ) {
+                                                      return (
+                                                        <li
+                                                          key={nestedSub.slug}
+                                                        >
+                                                          <NestedMobileDropdown
+                                                            title={
+                                                              nestedSub.title
+                                                            }
+                                                          >
+                                                            <ul className="pl-4 border-l space-y-1">
+                                                              {nestedSub.subCategories.map(
+                                                                (leaf) => (
+                                                                  <li
+                                                                    key={
+                                                                      leaf.slug
+                                                                    }
+                                                                  >
+                                                                    <Link
+                                                                      href={`/business/${leaf.slug}`}
+                                                                      className="text-muted-foreground hover:text-foreground block py-1 text-sm"
+                                                                      onClick={() =>
+                                                                        setMenuState(
+                                                                          false,
+                                                                        )
+                                                                      }
+                                                                    >
+                                                                      {
+                                                                        leaf.title
+                                                                      }
+                                                                    </Link>
+                                                                  </li>
+                                                                ),
+                                                              )}
+                                                            </ul>
+                                                          </NestedMobileDropdown>
+                                                        </li>
+                                                      );
+                                                    }
+                                                    return (
+                                                      <li key={nestedSub.slug}>
+                                                        <Link
+                                                          href={`/business/${nestedSub.slug}`}
+                                                          className="text-muted-foreground hover:text-foreground block py-1 text-sm"
+                                                          onClick={() =>
+                                                            setMenuState(false)
+                                                          }
+                                                        >
+                                                          {nestedSub.title}
+                                                        </Link>
+                                                      </li>
+                                                    );
+                                                  },
+                                                )}
+                                              </ul>
+                                            </li>
+                                          );
+                                        }
 
-                          {/* Arthroplasty Nested Dropdown */}
-                          <li>
-                            <NestedMobileDropdown title="Arthroplasty">
-                              <ul className="space-y-2 border-l pl-4 my-1">
-                                {businessCategories
-                                  .find((c) => c.slug === "arthroplasty")
-                                  ?.subCategories?.map((sub) => (
-                                    <li key={sub.slug}>
-                                      <Link
-                                        href={`/business/${sub.slug}`}
-                                        className="text-muted-foreground hover:text-foreground block py-1 text-sm"
-                                        onClick={() => setMenuState(false)}
-                                      >
-                                        {sub.title}
-                                      </Link>
-                                    </li>
-                                  ))}
-                              </ul>
-                            </NestedMobileDropdown>
-                          </li>
-
-                          {/* Trauma */}
-                          {businessCategories
-                            .filter((c) => c.slug === "surgicals-trauma")
-                            .map((cat) => (
-                              <li key={cat.slug}>
+                                        if (
+                                          subCat.subCategories &&
+                                          subCat.subCategories.length > 0
+                                        ) {
+                                          return (
+                                            <li key={subCat.slug}>
+                                              <NestedMobileDropdown
+                                                title={subCat.title}
+                                              >
+                                                <ul className="space-y-2 border-l pl-4 my-1">
+                                                  {subCat.subCategories.map(
+                                                    (nestedSub) => {
+                                                      if (
+                                                        nestedSub.subCategories &&
+                                                        nestedSub.subCategories
+                                                          .length > 0
+                                                      ) {
+                                                        // Trauma / Arthroplasty
+                                                        return (
+                                                          <li
+                                                            key={nestedSub.slug}
+                                                          >
+                                                            <NestedMobileDropdown
+                                                              title={
+                                                                nestedSub.title
+                                                              }
+                                                            >
+                                                              <ul className="pl-4 my-1 border-l space-y-2">
+                                                                {nestedSub.subCategories.map(
+                                                                  (leaf) => (
+                                                                    <li
+                                                                      key={
+                                                                        leaf.slug
+                                                                      }
+                                                                    >
+                                                                      <Link
+                                                                        href={`/business/${leaf.slug}`}
+                                                                        className="text-muted-foreground hover:text-foreground block py-1 text-sm"
+                                                                        onClick={() =>
+                                                                          setMenuState(
+                                                                            false,
+                                                                          )
+                                                                        }
+                                                                      >
+                                                                        {
+                                                                          leaf.title
+                                                                        }
+                                                                      </Link>
+                                                                    </li>
+                                                                  ),
+                                                                )}
+                                                              </ul>
+                                                            </NestedMobileDropdown>
+                                                          </li>
+                                                        );
+                                                      }
+                                                      return (
+                                                        <li
+                                                          key={nestedSub.slug}
+                                                        >
+                                                          <Link
+                                                            href={`/business/${nestedSub.slug}`}
+                                                            className="text-muted-foreground hover:text-foreground block py-1 text-sm"
+                                                            onClick={() =>
+                                                              setMenuState(
+                                                                false,
+                                                              )
+                                                            }
+                                                          >
+                                                            {nestedSub.title}
+                                                          </Link>
+                                                        </li>
+                                                      );
+                                                    },
+                                                  )}
+                                                </ul>
+                                              </NestedMobileDropdown>
+                                            </li>
+                                          );
+                                        }
+                                        return (
+                                          <li key={subCat.slug}>
+                                            <Link
+                                              href={`/business/${subCat.slug}`}
+                                              className="text-muted-foreground hover:text-foreground block py-1"
+                                              onClick={() =>
+                                                setMenuState(false)
+                                              }
+                                            >
+                                              {subCat.title}
+                                            </Link>
+                                          </li>
+                                        );
+                                      })}
+                                    </ul>
+                                  </NestedMobileDropdown>
+                                </li>
+                              );
+                            }
+                            return (
+                              <li key={category.slug}>
                                 <Link
-                                  href={`/business/${cat.slug}`}
+                                  href={`/business/${category.slug}`}
                                   className="text-muted-foreground hover:text-foreground block py-1"
                                   onClick={() => setMenuState(false)}
                                 >
-                                  {cat.title}
+                                  {category.title}
                                 </Link>
                               </li>
-                            ))}
-
-                          {/* Spine */}
-                          {businessCategories
-                            .filter((c) => c.slug === "surgicals-spine")
-                            .map((cat) => (
-                              <li key={cat.slug}>
-                                <Link
-                                  href={`/business/${cat.slug}`}
-                                  className="text-muted-foreground hover:text-foreground block py-1"
-                                  onClick={() => setMenuState(false)}
-                                >
-                                  {cat.title}
-                                </Link>
-                              </li>
-                            ))}
-
-                          {/* Orthopedic Aids Nested Dropdown */}
-                          <li>
-                            <NestedMobileDropdown title="Orthopedic Aids">
-                              <ul className="space-y-2 border-l pl-4 my-1">
-                                {businessCategories
-                                  .find((c) => c.slug === "orthopedic-aids")
-                                  ?.subCategories?.map((sub) => (
-                                    <li key={sub.slug}>
-                                      <Link
-                                        href={`/business/${sub.slug}`}
-                                        className="text-muted-foreground hover:text-foreground block py-1 text-sm"
-                                        onClick={() => setMenuState(false)}
-                                      >
-                                        {sub.title}
-                                      </Link>
-                                    </li>
-                                  ))}
-                              </ul>
-                            </NestedMobileDropdown>
-                          </li>
+                            );
+                          })}
                         </ul>
                       </MobileDropdown>
 
@@ -420,9 +661,11 @@ ListItem.displayName = "ListItem";
 const FlyoutMenu = ({
   title,
   children,
+  side = "right",
 }: {
   title: string;
   children: React.ReactNode;
+  side?: "left" | "right";
 }) => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -449,18 +692,26 @@ const FlyoutMenu = ({
         )}
       >
         <span>{title}</span>
-        <ChevronDown className="h-4 w-4 -rotate-90 text-muted-foreground" />
+        <ChevronDown
+          className={cn(
+            "h-4 w-4 text-muted-foreground transition-transform",
+            side === "left" ? "rotate-90" : "-rotate-90",
+          )}
+        />
       </button>
 
       {/* Flyout Content */}
       <AnimatePresence>
         {isHovered && (
           <motion.div
-            initial={{ opacity: 0, x: -5 }}
+            initial={{ opacity: 0, x: side === "right" ? -5 : 5 }}
             animate={{ opacity: 1, x: 0 }}
-            exit={{ opacity: 0, x: -5 }}
+            exit={{ opacity: 0, x: side === "right" ? -5 : 5 }}
             transition={{ duration: 0.1 }}
-            className="absolute left-full top-0 ml-0.5 min-w-[280px] rounded-md border bg-popover text-popover-foreground shadow-md z-50"
+            className={cn(
+              "absolute top-0 min-w-[280px] rounded-md border bg-popover text-popover-foreground shadow-md z-50",
+              side === "right" ? "left-full ml-0.5" : "right-full mr-0.5",
+            )}
           >
             <div className="p-2 space-y-1">{children}</div>
           </motion.div>

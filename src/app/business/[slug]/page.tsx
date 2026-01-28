@@ -10,14 +10,19 @@ import { businessCategories, BusinessCategory } from "@/lib/business-data";
 export async function generateStaticParams() {
   const posts = getAllPosts("business");
 
-  // Also generate params for dynamic categories from business-data
-  const categorySlugs = businessCategories.flatMap((cat) => {
-    const slugs = [cat.slug];
-    if (cat.subCategories) {
-      slugs.push(...cat.subCategories.map((sub) => sub.slug));
+  // Helper to recursively collect all slugs
+  const collectSlugs = (categories: BusinessCategory[]): string[] => {
+    let slugs: string[] = [];
+    for (const cat of categories) {
+      slugs.push(cat.slug);
+      if (cat.subCategories) {
+        slugs.push(...collectSlugs(cat.subCategories));
+      }
     }
     return slugs;
-  });
+  };
+
+  const categorySlugs = collectSlugs(businessCategories);
 
   const mdxParams = posts.map((post) => ({
     slug: post.slug,
@@ -34,13 +39,16 @@ export async function generateStaticParams() {
   return uniqueParams;
 }
 
-// Helper to find category data
-function findCategoryBySlug(slug: string): BusinessCategory | undefined {
-  for (const cat of businessCategories) {
+// Helper to recursively find category data
+function findCategoryBySlug(
+  slug: string,
+  categories: BusinessCategory[] = businessCategories,
+): BusinessCategory | undefined {
+  for (const cat of categories) {
     if (cat.slug === slug) return cat;
-    if (cat.subCategories) {
-      const sub = cat.subCategories.find((s) => s.slug === slug);
-      if (sub) return sub;
+    if (cat.subCategories && cat.subCategories.length > 0) {
+      const found = findCategoryBySlug(slug, cat.subCategories);
+      if (found) return found;
     }
   }
   return undefined;
