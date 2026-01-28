@@ -47,6 +47,7 @@ export default function PartnersPage() {
 
       <div className="max-w-7xl mx-auto px-6 py-16 lg:py-24 space-y-32">
         {/* Section: Partners */}
+        {/* Section: Partners */}
         <section className="flex flex-col lg:flex-row gap-12 lg:gap-24 relative">
           <div className="lg:w-1/4 shrink-0">
             <div className="sticky top-32">
@@ -59,8 +60,8 @@ export default function PartnersPage() {
             </div>
           </div>
 
-          <div className="lg:w-3/4">
-            <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground mb-12">
+          <div className="lg:w-3/4 space-y-16">
+            <div className="prose prose-lg dark:prose-invert max-w-none text-muted-foreground">
               <p>
                 Management of the supply chain is very critical to ensure the
                 availability of the stocks in the market. This process commences
@@ -72,49 +73,70 @@ export default function PartnersPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {partners.map((partner, i) => (
-                <div
-                  key={i}
-                  className="group bg-background border px-6 py-8 flex flex-col items-center text-center gap-6 hover:border-primary transition-colors"
-                >
-                  <div className="relative h-20 w-40 opacity-80 group-hover:opacity-100 transition-all grayscale group-hover:grayscale-0">
-                    <Image
-                      src={partner.image}
-                      alt={`${partner.name} Logo`}
-                      fill
-                      className="object-contain"
-                    />
-                  </div>
+            {["Pharmaceuticals", "Nutraceuticals", "Medical Devices"].map(
+              (category) => {
+                const categoryPartners = partners.filter(
+                  (p) => p.business_category === category,
+                );
 
-                  <div>
-                    <h3 className="text-lg font-bold">{partner.name}</h3>
-                    <p className="text-sm text-muted-foreground uppercase tracking-wider">
-                      {partner.country}
-                    </p>
-                  </div>
+                if (categoryPartners.length === 0) return null;
 
-                  <div className="flex flex-col w-full gap-3 mt-auto">
-                    {suppliersWithProducts.has(partner.name) && (
-                      <Link
-                        href={`/business?query=${encodeURIComponent(partner.name)}`}
-                        className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground text-sm font-medium h-9 px-4 rounded-md hover:bg-primary/90 transition-colors"
-                      >
-                        View Products
-                      </Link>
-                    )}
-                    <Link
-                      href={partner.website}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full inline-flex items-center justify-center gap-2 bg-muted text-muted-foreground text-sm font-medium h-9 px-4 rounded-md hover:bg-muted/80 hover:text-foreground transition-colors"
-                    >
-                      Visit Website
-                    </Link>
+                return (
+                  <div key={category} className="space-y-8">
+                    <h3 className="text-2xl font-bold text-foreground border-b pb-4">
+                      {category}
+                    </h3>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                      {categoryPartners.map((partner, i) => (
+                        <div
+                          key={i}
+                          className="group bg-background border px-6 py-8 flex flex-col items-center text-center gap-6 hover:border-primary transition-colors"
+                        >
+                          <div className="relative h-20 w-40 opacity-80 group-hover:opacity-100 transition-all grayscale group-hover:grayscale-0">
+                            <Image
+                              src={partner.image}
+                              alt={`${partner.name} Logo`}
+                              fill
+                              className="object-contain"
+                            />
+                          </div>
+
+                          <div>
+                            <h3 className="text-lg font-bold">
+                              {partner.name}
+                            </h3>
+                            <p className="text-sm text-muted-foreground uppercase tracking-wider">
+                              {partner.country}
+                            </p>
+                          </div>
+
+                          <div className="flex flex-col w-full gap-3 mt-auto">
+                            {suppliersWithProducts.has(partner.name) && (
+                              <Link
+                                href={`/business?query=${encodeURIComponent(
+                                  partner.name,
+                                )}`}
+                                className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground text-sm font-medium h-9 px-4 rounded-md hover:bg-primary/90 transition-colors"
+                              >
+                                View Products
+                              </Link>
+                            )}
+                            <Link
+                              href={partner.website}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="w-full inline-flex items-center justify-center gap-2 bg-muted text-muted-foreground text-sm font-medium h-9 px-4 rounded-md hover:bg-muted/80 hover:text-foreground transition-colors"
+                            >
+                              Visit Website
+                            </Link>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
                   </div>
-                </div>
-              ))}
-            </div>
+                );
+              },
+            )}
           </div>
         </section>
       </div>
