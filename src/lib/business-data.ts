@@ -675,7 +675,6 @@ export const businessCategories: BusinessCategory[] = [
               {
                 title: "Knee Prosthesis",
                 slug: "knee-prosthesis",
-                description: "Knee replacement systems.",
                 products: [
                   {
                     title: "ExactechGPS Knee Applications",
@@ -732,12 +731,10 @@ export const businessCategories: BusinessCategory[] = [
               {
                 title: "Hip Prosthesis",
                 slug: "hip-prosthesis",
-                description: "Hip replacement implants.",
               },
               {
                 title: "Shoulder Prosthesis",
                 slug: "shoulder-prosthesis",
-                description: "Shoulder replacement solutions.",
                 products: [
                   {
                     title: "Equinoxe Fracture System",
@@ -833,7 +830,6 @@ export const businessCategories: BusinessCategory[] = [
               {
                 title: "Tumor Prosthesis",
                 slug: "tumor-prosthesis",
-                description: "Limb salvage solutions.",
                 products: [
                   {
                     title: "Distal Femur Megaprosthesis",
@@ -938,7 +934,6 @@ export const businessCategories: BusinessCategory[] = [
           {
             title: "Spine Implants",
             slug: "spine-implants",
-            description: "Cages & Fixation Systems.",
             products: [
               {
                 title: "ACC – Cervical Cage",

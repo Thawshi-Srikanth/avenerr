@@ -8,7 +8,6 @@ export const managementTeam = [
     isMain: true,
     socials: {
       linkedin: "#",
-      email: "mailto:info@avenierr.com",
     },
   },
   {
@@ -20,7 +19,6 @@ export const managementTeam = [
     isWide: true,
     socials: {
       linkedin: "#",
-      email: "mailto:marketing@avenierr.com",
     },
   },
   {
@@ -31,7 +29,6 @@ export const managementTeam = [
     image: "/images/team/Sanjaya.jpeg",
     socials: {
       linkedin: "#",
-      email: "mailto:surgical@avenierr.com",
     },
   },
   {
@@ -42,7 +39,6 @@ export const managementTeam = [
     image: "/images/team/Fernando.jpeg",
     socials: {
       linkedin: "#",
-      email: "mailto:finance@avenierr.com",
     },
   },
   {
@@ -53,7 +49,6 @@ export const managementTeam = [
     image: "/images/team/Heroshana.jpeg",
     socials: {
       linkedin: "#",
-      email: "mailto:corporate@avenierr.com",
     },
   },
   {
@@ -64,7 +59,6 @@ export const managementTeam = [
     image: "/images/team/Vindya.jpeg",
     socials: {
       linkedin: "#",
-      email: "mailto:regulatory@avenierr.com",
     },
   },
   {
@@ -75,7 +69,6 @@ export const managementTeam = [
     image: "/images/team/Dhivya.jpeg",
     socials: {
       linkedin: "#",
-      email: "mailto:hr@avenierr.com",
     },
   },
   {
@@ -86,7 +79,6 @@ export const managementTeam = [
     image: "/images/team/Uday.jpeg",
     socials: {
       linkedin: "#",
-      email: "mailto:stores@avenierr.com",
     },
   },
 ];
