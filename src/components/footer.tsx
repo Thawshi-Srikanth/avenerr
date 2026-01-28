@@ -9,16 +9,28 @@ const links = [
     group: "Business Divisions",
     items: [
       {
-        title: "Pharmaceutical",
-        href: "/business/pharmaceutical",
+        title: "Pharmaceuticals",
+        href: "/business/pharmaceuticals",
       },
       {
-        title: "Orthopedic Aids",
-        href: "/business?query=Orthopedic Aids",
+        title: "Neutraceuticals",
+        href: "/business/neutraceuticals",
       },
       {
-        title: "Surgicals",
-        href: "/business?query=Surgicals",
+        title: "Medical Devices",
+        href: "/business/medical-devices",
+      },
+      {
+        title: "Diagnostics",
+        href: "/business/diagnostics",
+      },
+      {
+        title: "Biological Products",
+        href: "/business/biological-products",
+      },
+      {
+        title: "Medical Technology",
+        href: "/business/medical-technology",
       },
     ],
   },
