@@ -73,10 +73,134 @@ export default function PartnersPage() {
               </p>
             </div>
 
+            {/* Principal Partners Section */}
+            {/* Principal Partners Section */}
+            {partners.some((p) => p.featured) && (
+              <div className="space-y-8">
+                <h3 className="text-2xl font-bold text-foreground border-b pb-4 shadow-sm">
+                  Strategic Partnerships
+                </h3>
+                <div className="grid grid-cols-1 gap-8">
+                  {partners
+                    .filter((p) => p.featured)
+                    .map((partner, i) => (
+                      <div
+                        key={i}
+                        className="group bg-background border rounded-none overflow-hidden shadow-lg hover:shadow-xl hover:border-primary/30 transition-all duration-300"
+                      >
+                        <div className="grid grid-cols-1 lg:grid-cols-5 min-h-[300px]">
+                          {/* Partner Brand Section */}
+                          <div className="lg:col-span-3 p-8 lg:p-12 flex flex-col justify-between relative overflow-hidden">
+                            <div className="absolute top-0 left-0 w-full h-1 bg-linear-to-r from-primary via-primary/50 to-transparent" />
+                            <div className="absolute top-4 right-4 bg-primary/10 text-primary text-xs font-bold px-3 py-1 rounded-none uppercase tracking-widest">
+                              Featured Partner
+                            </div>
+
+                            <div className="flex-1 flex flex-col items-start justify-center gap-6">
+                              <div className="relative h-24 w-56 grayscale group-hover:grayscale-0 transition-all duration-500">
+                                <Image
+                                  src={partner.image}
+                                  alt={`${partner.name} Logo`}
+                                  fill
+                                  className="object-contain object-left"
+                                />
+                              </div>
+                              <div className="space-y-2 max-w-md">
+                                <div className="flex items-center gap-2">
+                                  <span className="h-1.5 w-1.5 rounded-none bg-primary" />
+                                  <p className="text-sm font-semibold uppercase tracking-wider text-muted-foreground">
+                                    Headquartered in {partner.country}
+                                  </p>
+                                </div>
+                                <p className="text-muted-foreground">
+                                  A leading global innovator in medical
+                                  technology, committed to enhancing patient
+                                  care through advanced solutions.
+                                </p>
+                              </div>
+                            </div>
+
+                            <div className="flex flex-wrap gap-4 w-full mt-8">
+                              {(suppliersWithProducts.has(partner.name) ||
+                                partner.product_catalog_url) && (
+                                <Link
+                                  href={
+                                    partner.product_catalog_url ||
+                                    `/business?query=${encodeURIComponent(
+                                      partner.name,
+                                    )}`
+                                  }
+                                  target={
+                                    partner.product_catalog_url
+                                      ? "_blank"
+                                      : undefined
+                                  }
+                                  rel={
+                                    partner.product_catalog_url
+                                      ? "noopener noreferrer"
+                                      : undefined
+                                  }
+                                  className="inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground text-sm font-medium h-11 px-6 rounded-md hover:bg-primary/90 transition-all shadow-md hover:translate-y-[-1px]"
+                                >
+                                  View Product Catalog
+                                </Link>
+                              )}
+                              <Link
+                                href={partner.website}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center justify-center gap-2 bg-background border text-foreground text-sm font-medium h-11 px-6 rounded-md hover:bg-muted transition-colors"
+                              >
+                                Visit Website
+                              </Link>
+                            </div>
+                          </div>
+
+                          {/* Country Manager Section */}
+                          {partner.country_manager && (
+                            <div className="lg:col-span-2 relative bg-muted/30 border-t lg:border-t-0 lg:border-l p-8 lg:p-12 flex flex-col justify-center">
+                              <div className="absolute inset-0 bg-linear-to-br from-primary/5 to-transparent opacity-50" />
+                              <div className="relative flex flex-col items-center text-center gap-6">
+                                <div className="relative group/avatar">
+                                  <div className="relative h-50 w-40 rounded-none overflow-hidden border border-background shadow-xl">
+                                    <Image
+                                      src={partner.country_manager.image}
+                                      alt={partner.country_manager.name}
+                                      fill
+                                      className="object-cover"
+                                    />
+                                  </div>
+                                </div>
+                                <div className="space-y-1.5">
+                                  <div className="inline-block px-3 py-1 bg-primary/10 text-primary text-[10px] font-bold uppercase tracking-widest rounded-none mb-3">
+                                    Leadership
+                                  </div>
+                                  <h4 className="text-2xl font-bold text-foreground">
+                                    {partner.country_manager.name}
+                                  </h4>
+                                  <p className="text-primary font-medium">
+                                    {partner.country_manager.role}
+                                  </p>
+                                  {partner.country_manager.contact_info && (
+                                    <p className="text-muted-foreground text-sm mt-2">
+                                      {partner.country_manager.contact_info}
+                                    </p>
+                                  )}
+                                </div>
+                              </div>
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    ))}
+                </div>
+              </div>
+            )}
+
             {["Pharmaceuticals", "Nutraceuticals", "Medical Devices"].map(
               (category) => {
                 const categoryPartners = partners.filter(
-                  (p) => p.business_category === category,
+                  (p) => p.business_category === category && !p.featured,
                 );
 
                 if (categoryPartners.length === 0) return null;

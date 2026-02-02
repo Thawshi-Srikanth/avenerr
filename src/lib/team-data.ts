@@ -13,7 +13,7 @@ export const managementTeam = [
   {
     name: "Mr. R. Saravanan",
     slug: "r-saravanan",
-    role: "Director – Marketing",
+    role: "Director - Corporate",
     bio: "An accomplished marketing strategist with over 23 years of experience, Mr. R. Saravanan brings a wealth of expertise from global pharmaceutical leaders including Novartis, Abbott, and Torrent Pharmaceuticals. An alumnus of London Business School and IIM Ahmedabad, he joined Avenierr Pharma in 2022 and is instrumental in building market-leading brands that resonate with patients and professionals alike. His deep industry insight and innovative approach continue to drive the company’s growth and brand excellence.",
     image: "/images/team/Saravanan.jpeg",
     isWide: true,

@@ -5,6 +5,13 @@ export interface Partner {
   website: string;
   business_category: "Pharmaceuticals" | "Nutraceuticals" | "Medical Devices";
   product_catalog_url?: string;
+  featured?: boolean;
+  country_manager?: {
+    name: string;
+    role: string;
+    image: string;
+    contact_info?: string;
+  };
 }
 
 export const partners: Partner[] = [
@@ -89,6 +96,14 @@ export const partners: Partner[] = [
     image: "/images/partners/trivitron.png",
     website: "#",
     business_category: "Medical Devices",
+    product_catalog_url:
+      "https://drive.google.com/drive/folders/1pSW0RTy2p7puYhv3qKmbb6AH6K-fI00X?usp=sharing",
+    featured: true,
+    country_manager: {
+      name: "K Chandrashekar",
+      role: "Country Manager - Trivitron Lanka",
+      image: "/images/team/trivitron/K_Chandrashekar.png",
+    },
   },
   {
     name: "Plus orthopedics",
