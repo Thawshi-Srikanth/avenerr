@@ -111,11 +111,25 @@ export default function PartnersPage() {
                           </div>
 
                           <div className="flex flex-col w-full gap-3 mt-auto">
-                            {suppliersWithProducts.has(partner.name) && (
+                            {(suppliersWithProducts.has(partner.name) ||
+                              partner.product_catalog_url) && (
                               <Link
-                                href={`/business?query=${encodeURIComponent(
-                                  partner.name,
-                                )}`}
+                                href={
+                                  partner.product_catalog_url ||
+                                  `/business?query=${encodeURIComponent(
+                                    partner.name,
+                                  )}`
+                                }
+                                target={
+                                  partner.product_catalog_url
+                                    ? "_blank"
+                                    : undefined
+                                }
+                                rel={
+                                  partner.product_catalog_url
+                                    ? "noopener noreferrer"
+                                    : undefined
+                                }
                                 className="w-full inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground text-sm font-medium h-9 px-4 rounded-md hover:bg-primary/90 transition-colors"
                               >
                                 View Products

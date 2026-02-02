@@ -4,6 +4,7 @@ export interface Partner {
   image: string;
   website: string;
   business_category: "Pharmaceuticals" | "Nutraceuticals" | "Medical Devices";
+  product_catalog_url?: string;
 }
 
 export const partners: Partner[] = [
@@ -53,7 +54,7 @@ export const partners: Partner[] = [
   {
     name: "Kniss Laboratary",
     country: "India",
-    image: "/images/partner-placeholder.png",
+    image: "/images/partners/kniss-labs.png",
     website: "#",
     business_category: "Pharmaceuticals",
   },
@@ -85,7 +86,7 @@ export const partners: Partner[] = [
   {
     name: "Trivitron",
     country: "India",
-    image: "/images/partner-placeholder.png",
+    image: "/images/partners/trivitron.png",
     website: "#",
     business_category: "Medical Devices",
   },
@@ -95,6 +96,8 @@ export const partners: Partner[] = [
     image: "/images/partners/Plus Orthopedics.avif",
     website: "https://www.plusorthoindia.com/",
     business_category: "Medical Devices",
+    product_catalog_url:
+      "https://drive.google.com/drive/folders/1XOZ69WBeRFBUNT5NjGPrFh4fGfh2BTtb?usp=drive_link",
   },
   {
     name: "Neo Life",
@@ -141,7 +144,7 @@ export const partners: Partner[] = [
   {
     name: "Bone tech",
     country: "India",
-    image: "/images/partner-placeholder.png",
+    image: "/images/partners/bone-tech.png",
     website: "#",
     business_category: "Medical Devices",
   },
@@ -155,7 +158,7 @@ export const partners: Partner[] = [
   {
     name: "Bio rad",
     country: "India",
-    image: "/images/partner-placeholder.png",
+    image: "/images/partners/bio-rad.svg",
     website: "#",
     business_category: "Medical Devices",
   },
@@ -165,5 +168,14 @@ export const partners: Partner[] = [
     image: "/images/partner-placeholder.png",
     website: "#",
     business_category: "Medical Devices",
+  },
+  {
+    name: "Naviswiss",
+    country: "Switzerland",
+    image: "/images/partners/navi-swiss.svg",
+    website: "https://naviswiss.eu/",
+    business_category: "Medical Devices",
+    product_catalog_url:
+      "https://drive.google.com/drive/folders/1ByTyDMmXtlR0zHoydm59gwWnKFdWnRCV?usp=drive_link",
   },
 ];
