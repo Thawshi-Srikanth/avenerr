@@ -666,7 +666,7 @@ export const businessCategories: BusinessCategory[] = [
       {
         title: "Orthopedic Implants",
         slug: "orthopedic-implants",
-        type: "tag",
+        // type: "tag",
         subCategories: [
           {
             title: "Arthroplasty",
@@ -979,18 +979,65 @@ export const businessCategories: BusinessCategory[] = [
           },
         ],
       },
+      {
+        title: "Bio Surgical Products",
+        slug: "bio-surgical-products",
+        products: [
+          {
+            title: "Hemostat",
+            supplier: "Meril",
+            image: "/images/products/Bio Surgical/Hemostat.png",
+          },
+          {
+            title: "Skin stepler",
+            supplier: "Mirus",
+            image: "/images/products/Bio Surgical/Skin stepler.png",
+          },
+        ],
+      },
+      {
+        title: "Medical Technology",
+        slug: "medical-technology",
+        subCategories: [
+          {
+            title: "Navigation",
+            slug: "navigation",
+            products: [
+              {
+                title: "Hip Navigation",
+                supplier: "Naviswiss",
+                image: "/images/products/Medical Technology/Hip Navigation.png",
+              },
+              {
+                title: "Knee Navigation",
+                supplier: "Naviswiss",
+                image:
+                  "/images/products/Medical Technology/Knee Navigation.png",
+              },
+            ],
+          },
+          {
+            title: "Robotics",
+            slug: "robotics",
+            products: [
+              {
+                title: "Hyalofast",
+                supplier: "Plus orthopedics",
+                image: "/images/products/Medical Technology/Hyalofast.png",
+              },
+              {
+                title: "Miniaturized Handheld Smart Assisted Surgery System",
+                supplier: "Naviswiss",
+                image: "/images/partner-placeholder.png",
+              },
+            ],
+          },
+        ],
+      },
+      {
+        title: "Diagnostics",
+        slug: "diagnostics",
+      },
     ],
-  },
-  {
-    title: "Biological Products",
-    slug: "biological-products",
-  },
-  {
-    title: "Diagnostics",
-    slug: "diagnostics",
-  },
-  {
-    title: "Medical Technology",
-    slug: "medical-technology",
   },
 ];
