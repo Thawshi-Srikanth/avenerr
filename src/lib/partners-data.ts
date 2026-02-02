@@ -94,7 +94,7 @@ export const partners: Partner[] = [
     name: "Trivitron",
     country: "India",
     image: "/images/partners/trivitron.png",
-    website: "#",
+    website: "https://www.trivitron.com/",
     business_category: "Medical Devices",
     product_catalog_url:
       "https://drive.google.com/drive/folders/1pSW0RTy2p7puYhv3qKmbb6AH6K-fI00X?usp=sharing",
