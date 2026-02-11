@@ -57,13 +57,13 @@ export default function Features() {
                 />
               </CardDecorator>
 
-              <h3 className="mt-6 font-medium">Surgical Instruments</h3>
+              <h3 className="mt-6 font-medium">Surgical Implants</h3>
             </CardHeader>
 
             <CardContent className="flex flex-col grow justify-between">
               <p className="mt-3 text-sm mb-6">
                 We provide a comprehensive range of high-quality surgical
-                instruments, ensuring precision and reliability for medical
+                implants, ensuring precision and reliability for medical
                 professionals.
               </p>
               <Link
