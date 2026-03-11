@@ -6,5 +6,5 @@ spec:
       instance_count: 1
       instance_size_slug: apps-s-1vcpu-0.5gb
       git:
-        branch: main
+        branch: master
         repo_clone_url: https://github.com/Thawshi-Srikanth/avenerr.git
