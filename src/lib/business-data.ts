@@ -39,79 +39,79 @@ export const businessCategories: BusinessCategory[] = [
                 title: "Ankle Binder Stripes & Checks AS-1",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Ankle Support/Ankle Binder Stripes & Checks AS-1.jpg",
+                  "/images/products/orthopedic-aids/ankle-support/ankle-binder-stripes-checks-as-1.jpg",
               },
               {
                 title: "Ankle Brace xls",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Ankle Support/Ankle Brace xls.jpg",
+                  "/images/products/orthopedic-aids/ankle-support/ankle-brace-xls.jpg",
               },
               {
                 title: "Ankle Grip Stripes & Checks AS-9",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Ankle Support/Ankle Grip Stripes & Checks AS-9.jpg",
+                  "/images/products/orthopedic-aids/ankle-support/ankle-grip-stripes-checks-as-9.jpg",
               },
               {
                 title: "Ankle Grip Stripes & Checks",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Ankle Support/Ankle Grip Stripes & Checks.jpg",
+                  "/images/products/orthopedic-aids/ankle-support/ankle-grip-stripes-checks.jpg",
               },
               {
                 title: "Ankle Support Stripes & Checks AS-8",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Ankle Support/Ankle Support Stripes & Checks AS-8.jpg",
+                  "/images/products/orthopedic-aids/ankle-support/ankle-support-stripes-checks-as-8.jpg",
               },
               {
                 title: "Bunion Splints",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Ankle Support/Bunion Splints.jpg",
+                  "/images/products/orthopedic-aids/ankle-support/bunion-splints.jpg",
               },
               {
                 title: "Compression Stocking Class II AS_13",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Ankle Support/Compression Stocking Class II AS_13.jpg",
+                  "/images/products/orthopedic-aids/ankle-support/compression-stocking-class-ii-as13.jpg",
               },
               {
                 title: "Compression Stockings AS_05",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Ankle Support/Compression Stockings AS_05.jpg",
+                  "/images/products/orthopedic-aids/ankle-support/compression-stockings-as05.jpg",
               },
               {
                 title: "Tubular Ankle Support",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Ankle Support/Tubular Ankle Support.jpg",
+                  "/images/products/orthopedic-aids/ankle-support/tubular-ankle-support.jpg",
               },
               {
                 title: "Varicose Vein Stockings Below Knee AS-5",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Ankle Support/Varicose Vein Stockings Below Knee AS-5.jpg",
+                  "/images/products/orthopedic-aids/ankle-support/varicose-vein-stockings-below-knee-as-5.jpg",
               },
               {
                 title: "Varicose Vein Stockings Mid Thigh AS-5",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Ankle Support/Varicose Vein Stockings Mid Thigh AS-5.jpg",
+                  "/images/products/orthopedic-aids/ankle-support/varicose-vein-stockings-mid-thigh-as-5.jpg",
               },
               {
                 title: "walker boot long",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Ankle Support/walker boot long.jpg",
+                  "/images/products/orthopedic-aids/ankle-support/walker-boot-long.jpg",
               },
               {
                 title: "walker boot small",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Ankle Support/walker boot small.jpg",
+                  "/images/products/orthopedic-aids/ankle-support/walker-boot-small.jpg",
               },
             ],
           },
@@ -123,103 +123,103 @@ export const businessCategories: BusinessCategory[] = [
                 title: "Abdominal Support 8 BS-1",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/Abdominal Support 8 BS-1.jpg",
+                  "/images/products/orthopedic-aids/body-supports-belts/abdominal-support-8-bs-1.jpg",
               },
               {
                 title: "Ankle Support Stripes & Checks AS-8",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/Ankle Support Stripes & Checks AS-8.jpg",
+                  "/images/products/orthopedic-aids/body-supports-belts/ankle-support-stripes-checks-as-8.jpg",
               },
               {
                 title: "BS-01 ABDOMINAL SUPPORT 8 INCHES",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/BS-01 ABDOMINAL SUPPORT 8 INCHES.JPG",
+                  "/images/products/orthopedic-aids/body-supports-belts/bs-01-abdominal-support-8-inches.jpg",
               },
               {
                 title: "BS-02 ABDOMINAL SUPPORT 10 INCHES",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/BS-02 ABDOMINAL SUPPORT 10 INCHES.JPG",
+                  "/images/products/orthopedic-aids/body-supports-belts/bs-02-abdominal-support-10-inches.jpg",
               },
               {
                 title: "BS-03 LUMBO SACRAL SUPPORT",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/BS-03 LUMBO SACRAL SUPPORT.JPG",
+                  "/images/products/orthopedic-aids/body-supports-belts/bs-03-lumbo-sacral-support.jpg",
               },
               {
                 title: "BS-04 CONTOURED LUMBO SACRAL SUPPORT",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/BS-04 CONTOURED LUMBO SACRAL SUPPORT.JPG",
+                  "/images/products/orthopedic-aids/body-supports-belts/bs-04-contoured-lumbo-sacral-support.jpg",
               },
               {
                 title: "BS-10 CONTOURED LS 12 INCHES",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/BS-10 CONTOURED LS 12 INCHES.JPG",
+                  "/images/products/orthopedic-aids/body-supports-belts/bs-10-contoured-ls-12-inches.jpg",
               },
               {
                 title: "Back rest BS-8",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/Back rest BS-8.jpg",
+                  "/images/products/orthopedic-aids/body-supports-belts/back-rest-bs-8.jpg",
               },
               {
                 title: "Breathable LS with Mesh Fabric BS-18",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/Breathable LS with Mesh Fabric BS-18.jpg",
+                  "/images/products/orthopedic-aids/body-supports-belts/breathable-ls-with-mesh-fabric-bs-18.jpg",
               },
               {
                 title: "Chest Binder BS-15",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/Chest Binder BS-15.jpg",
+                  "/images/products/orthopedic-aids/body-supports-belts/chest-binder-bs-15.jpg",
               },
               {
                 title: "Cocyx Cushion BS-9",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/Cocyx Cushion BS-9.jpg",
+                  "/images/products/orthopedic-aids/body-supports-belts/cocyx-cushion-bs-9.jpg",
               },
               {
                 title: "Hernia Belt BS-6",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/Hernia Belt BS-6.jpg",
+                  "/images/products/orthopedic-aids/body-supports-belts/hernia-belt-bs-6.jpg",
               },
               {
                 title: "Lacepull",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/Lacepull.jpg",
+                  "/images/products/orthopedic-aids/body-supports-belts/lacepull.jpg",
               },
               {
                 title: "Lumbar Support Universal BS-14",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/Lumbar Support Universal BS-14.jpg",
+                  "/images/products/orthopedic-aids/body-supports-belts/lumbar-support-universal-bs-14.jpg",
               },
               {
                 title: "Lumbo Sacral Support BS-3",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/Lumbo Sacral Support BS-3.jpg",
+                  "/images/products/orthopedic-aids/body-supports-belts/lumbo-sacral-support-bs-3.jpg",
               },
               {
                 title: "Pelvic Binder BS-16",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/Pelvic Binder BS-16.jpg",
+                  "/images/products/orthopedic-aids/body-supports-belts/pelvic-binder-bs-16.jpg",
               },
               {
                 title: "Posture Corrector BS-17",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Body Supports & Belts/Posture Corrector BS-17.jpg",
+                  "/images/products/orthopedic-aids/body-supports-belts/posture-corrector-bs-17.jpg",
               },
             ],
           },
@@ -231,43 +231,43 @@ export const businessCategories: BusinessCategory[] = [
                 title: "Boneless Soft Collar CS-5",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Cervical Supports/Boneless Soft Collar CS-5.jpg",
+                  "/images/products/orthopedic-aids/cervical-supports/boneless-soft-collar-cs-5.jpg",
               },
               {
                 title: "Cervical Collar Hard Adjustable CS-1",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Cervical Supports/Cervical Collar Hard Adjustable CS-1.jpg",
+                  "/images/products/orthopedic-aids/cervical-supports/cervical-collar-hard-adjustable-cs-1.jpg",
               },
               {
                 title: "Cervical Collar Soft CS-2",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Cervical Supports/Cervical Collar Soft CS-2.jpg",
+                  "/images/products/orthopedic-aids/cervical-supports/cervical-collar-soft-cs-2.jpg",
               },
               {
                 title: "Cervical Orthosis CS-3",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Cervical Supports/Cervical Orthosis CS-3.jpg",
+                  "/images/products/orthopedic-aids/cervical-supports/cervical-orthosis-cs-3.jpg",
               },
               {
                 title: "Cervical Pillow CS-4",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Cervical Supports/Cervical Pillow CS-4.jpg",
+                  "/images/products/orthopedic-aids/cervical-supports/cervical-pillow-cs-4.jpg",
               },
               {
                 title: "Cervical Pillow Stripes & Checks CS-7",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Cervical Supports/Cervical Pillow Stripes & Checks CS-7.jpg",
+                  "/images/products/orthopedic-aids/cervical-supports/cervical-pillow-stripes-checks-cs-7.jpg",
               },
               {
                 title: "Contoured Cervical Pillow CS-6",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Cervical Supports/Contoured Cervical Pillow CS-6.jpg",
+                  "/images/products/orthopedic-aids/cervical-supports/contoured-cervical-pillow-cs-6.jpg",
               },
             ],
           },
@@ -279,25 +279,25 @@ export const businessCategories: BusinessCategory[] = [
                 title: "Finger Splint FS-1",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Finger Support/Finger Splint FS-1.jpg",
+                  "/images/products/orthopedic-aids/finger-support/finger-splint-fs-1.jpg",
               },
               {
                 title: "Frog Splint FS-2",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Finger Support/Frog Splint FS-2.jpg",
+                  "/images/products/orthopedic-aids/finger-support/frog-splint-fs-2.jpg",
               },
               {
                 title: "Mallet Finger Splint FS-3",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Finger Support/Mallet Finger Splint FS-3.jpg",
+                  "/images/products/orthopedic-aids/finger-support/mallet-finger-splint-fs-3.jpg",
               },
               {
                 title: "WS-10 THUMB SPICA",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Finger Support/WS-10 THUMB SPICA.JPG",
+                  "/images/products/orthopedic-aids/finger-support/ws-10-thumb-spica.jpg",
               },
             ],
           },
@@ -309,73 +309,73 @@ export const businessCategories: BusinessCategory[] = [
                 title: "Arm Strap FA-9",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Fracture Aids/Arm Strap FA-9.jpg",
+                  "/images/products/orthopedic-aids/fracture-aids/arm-strap-fa-9.jpg",
               },
               {
                 title: "CAST SHOE FA-3",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Fracture Aids/CAST SHOE FA-3.jpg",
+                  "/images/products/orthopedic-aids/fracture-aids/cast-shoe-fa-3.jpg",
               },
               {
                 title: "Cuff & Collar Sling FA-10",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Fracture Aids/Cuff & Collar Sling FA-10.jpg",
+                  "/images/products/orthopedic-aids/fracture-aids/cuff-collar-sling-fa-10.jpg",
               },
               {
                 title: "Elastic Shoulder Immobiliser",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Fracture Aids/Elastic Shoulder Immobiliser.JPG",
+                  "/images/products/orthopedic-aids/fracture-aids/elastic-shoulder-immobiliser.jpg",
               },
               {
                 title: "FA-01 ARM SLING",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Fracture Aids/FA-01 ARM SLING.JPG",
+                  "/images/products/orthopedic-aids/fracture-aids/fa-01-arm-sling.jpg",
               },
               {
                 title: "FA-04 CLAVICLE BRACE",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Fracture Aids/FA-04 CLAVICLE BRACE.JPG",
+                  "/images/products/orthopedic-aids/fracture-aids/fa-04-clavicle-brace.jpg",
               },
               {
                 title: "FA-05 ELASTIC SHOULDER IMMOBILISER",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Fracture Aids/FA-05 ELASTIC SHOULDER IMMOBILISER.JPG",
+                  "/images/products/orthopedic-aids/fracture-aids/fa-05-elastic-shoulder-immobiliser.jpg",
               },
               {
                 title: "FA-06 RIB SUPPORT",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Fracture Aids/FA-06 RIB SUPPORT.JPG",
+                  "/images/products/orthopedic-aids/fracture-aids/fa-06-rib-support.jpg",
               },
               {
                 title: "FA-08 UNIVERSAL SHOULDER IMMOBILISER",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Fracture Aids/FA-08 UNIVERSAL SHOULDER IMMOBILISER.JPG",
+                  "/images/products/orthopedic-aids/fracture-aids/fa-08-universal-shoulder-immobiliser.jpg",
               },
               {
                 title: "Sling - Stripes & Checks FA-12",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Fracture Aids/Sling - Stripes & Checks FA-12.jpg",
+                  "/images/products/orthopedic-aids/fracture-aids/sling-stripes-checks-fa-12.jpg",
               },
               {
                 title: "Slings with Pockets FA-13",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Fracture Aids/Slings with Pockets FA-13.jpg",
+                  "/images/products/orthopedic-aids/fracture-aids/slings-with-pockets-fa-13.jpg",
               },
               {
                 title: "Taylor Brace FA-7",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Fracture Aids/Taylor Brace FA-7.jpg",
+                  "/images/products/orthopedic-aids/fracture-aids/taylor-brace-fa-7.jpg",
               },
             ],
           },
@@ -387,85 +387,85 @@ export const businessCategories: BusinessCategory[] = [
                 title: "2-3 Insole with High Arch",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Gel Products/2-3 Insole with High Arch.jpg",
+                  "/images/products/orthopedic-aids/gel-products/2-3-insole-with-high-arch.jpg",
               },
               {
                 title: "Arch Support",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Gel Products/Arch Support.jpg",
+                  "/images/products/orthopedic-aids/gel-products/arch-support.jpg",
               },
               {
                 title: "Diabetic Socks",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Gel Products/Diabetic Socks.jpg",
+                  "/images/products/orthopedic-aids/gel-products/diabetic-socks.jpg",
               },
               {
                 title: "Exercising Gel Ball Blue",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Gel Products/Exercising Gel Ball Blue.jpg",
+                  "/images/products/orthopedic-aids/gel-products/exercising-gel-ball-blue.jpg",
               },
               {
                 title: "Exercising Gel Ball Red",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Gel Products/Exercising Gel Ball Red.jpg",
+                  "/images/products/orthopedic-aids/gel-products/exercising-gel-ball-red.jpg",
               },
               {
                 title: "Heel Cushion Gel",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Gel Products/Heel Cushion Gel.jpg",
+                  "/images/products/orthopedic-aids/gel-products/heel-cushion-gel.jpg",
               },
               {
                 title: "Heel Cushion Silion",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Gel Products/Heel Cushion Silion.jpg",
+                  "/images/products/orthopedic-aids/gel-products/heel-cushion-silion.jpg",
               },
               {
                 title: "Insole Gel wtih Arch",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Gel Products/Insole Gel wtih Arch.jpg",
+                  "/images/products/orthopedic-aids/gel-products/insole-gel-wtih-arch.jpg",
               },
               {
                 title: "Insole with arc Support",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Gel Products/Insole with arc Support.jpg",
+                  "/images/products/orthopedic-aids/gel-products/insole-with-arc-support.jpg",
               },
               {
                 title: "Ladies Heel Cushion",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Gel Products/Ladies Heel Cushion.jpg",
+                  "/images/products/orthopedic-aids/gel-products/ladies-heel-cushion.jpg",
               },
               {
                 title: "Metatarsal Pad",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Gel Products/Metatarsal Pad.jpg",
+                  "/images/products/orthopedic-aids/gel-products/metatarsal-pad.jpg",
               },
               {
                 title: "Strip Heel Cup",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Gel Products/Strip Heel Cup.jpg",
+                  "/images/products/orthopedic-aids/gel-products/strip-heel-cup.jpg",
               },
               {
                 title: "Toe Spreader with Bunion Shield",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Gel Products/Toe Spreader with Bunion Shield.jpg",
+                  "/images/products/orthopedic-aids/gel-products/toe-spreader-with-bunion-shield.jpg",
               },
               {
                 title: "Toe Spreader with Loop",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Gel Products/Toe Spreader with Loop.jpg",
+                  "/images/products/orthopedic-aids/gel-products/toe-spreader-with-loop.jpg",
               },
             ],
           },
@@ -477,109 +477,109 @@ export const businessCategories: BusinessCategory[] = [
                 title: "Compression Stocking Below Knee",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Compression Stocking Below Knee.jpg",
+                  "/images/products/orthopedic-aids/knee-supports/compression-stocking-below-knee.jpg",
               },
               {
                 title: "HINGE KNEE BRACE",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/HINGE KNEE BRACE.JPG",
+                  "/images/products/orthopedic-aids/knee-supports/hinge-knee-brace.jpg",
               },
               {
                 title: "Knee Immobiliser 14",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Knee Immobiliser 14.jpg",
+                  "/images/products/orthopedic-aids/knee-supports/knee-immobiliser-14.jpg",
               },
               {
                 title: "Knee Immobiliser 19",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Knee Immobiliser 19.jpg",
+                  "/images/products/orthopedic-aids/knee-supports/knee-immobiliser-19.jpg",
               },
               {
                 title: "Knee Immobiliser 22",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Knee Immobiliser 22.jpg",
+                  "/images/products/orthopedic-aids/knee-supports/knee-immobiliser-22.jpg",
               },
               {
                 title: "Knee Support KS-4 (3)",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Knee Support KS-4 (3).jpg",
+                  "/images/products/orthopedic-aids/knee-supports/knee-support-ks-4-3.jpg",
               },
               {
                 title: "Knee Support Stripes & Checks KS-14",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Knee Support Stripes & Checks KS-14.jpg",
+                  "/images/products/orthopedic-aids/knee-supports/knee-support-stripes-checks-ks-14.jpg",
               },
               {
                 title: "Motion Control Knee Brace KS-15",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Motion Control Knee Brace KS-15.jpg",
+                  "/images/products/orthopedic-aids/knee-supports/motion-control-knee-brace-ks-15.jpg",
               },
               {
                 title: "Patellar Support KS-12",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Patellar Support KS-12.jpg",
+                  "/images/products/orthopedic-aids/knee-supports/patellar-support-ks-12.jpg",
               },
               {
                 title: "Thigh Support",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Thigh Support.jpg",
+                  "/images/products/orthopedic-aids/knee-supports/thigh-support.jpg",
               },
               {
                 title: "Tub Knee Support Open Patella KS-8",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Tub Knee Support Open Patella KS-8.jpg",
+                  "/images/products/orthopedic-aids/knee-supports/tub-knee-support-open-patella-ks-8.jpg",
               },
               {
                 title: "Tubular Knee Black",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Tubular Knee Black.jpg",
+                  "/images/products/orthopedic-aids/knee-supports/tubular-knee-black.jpg",
               },
               {
                 title: "Tubular Knee Grey",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Tubular Knee Grey.jpg",
+                  "/images/products/orthopedic-aids/knee-supports/tubular-knee-grey.jpg",
               },
               {
                 title: "Tubular Knee Support",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Tubular Knee Support.jpg",
+                  "/images/products/orthopedic-aids/knee-supports/tubular-knee-support.jpg",
               },
               {
                 title: "Tubular Knee Suppot stand Beige",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Tubular Knee Suppot stand Beige.jpg",
+                  "/images/products/orthopedic-aids/knee-supports/tubular-knee-suppot-stand-beige.jpg",
               },
               {
                 title: "Tubular Knee Suppot stand Blue",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Tubular Knee Suppot stand Blue.jpg",
+                  "/images/products/orthopedic-aids/knee-supports/tubular-knee-suppot-stand-blue.jpg",
               },
               {
                 title: "Varicose Vein Below Knee",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Varicose Vein Below Knee.jpg",
+                  "/images/products/orthopedic-aids/knee-supports/varicose-vein-below-knee.jpg",
               },
               {
                 title: "Varicose Vein Stockings",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Knee Supports/Varicose Vein Stockings.jpg",
+                  "/images/products/orthopedic-aids/knee-supports/varicose-vein-stockings.jpg",
               },
             ],
           },
@@ -591,73 +591,73 @@ export const businessCategories: BusinessCategory[] = [
                 title: "Elastic Wrist Splint WS-7",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Wrist & Forearm  Support/Elastic Wrist Splint WS-7.jpg",
+                  "/images/products/orthopedic-aids/wrist-forearm-support/elastic-wrist-splint-ws-7.jpg",
               },
               {
                 title: "Elbow Support Stripes & Checks WS-12",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Wrist & Forearm  Support/Elbow Support Stripes & Checks WS-12.jpg",
+                  "/images/products/orthopedic-aids/wrist-forearm-support/elbow-support-stripes-checks-ws-12.jpg",
               },
               {
                 title: "Elbow Support WS-2",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Wrist & Forearm  Support/Elbow Support WS-2.jpg",
+                  "/images/products/orthopedic-aids/wrist-forearm-support/elbow-support-ws-2.jpg",
               },
               {
                 title: "NP-02 NEOPRENE WRIST BINDER DOUBLE LOCK",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Wrist & Forearm  Support/NP-02 NEOPRENE WRIST BINDER DOUBLE LOCK.JPG",
+                  "/images/products/orthopedic-aids/wrist-forearm-support/np-02-neoprene-wrist-binder-double-lock.jpg",
               },
               {
                 title: "Neoprene tennis Elbow  WS-3",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Wrist & Forearm  Support/Neoprene tennis Elbow  WS-3.jpg",
+                  "/images/products/orthopedic-aids/wrist-forearm-support/neoprene-tennis-elbow-ws-3.jpg",
               },
               {
                 title: "Thumb Support Stripes & Checks WS-6",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Wrist & Forearm  Support/Thumb Support Stripes & Checks WS-6.jpg",
+                  "/images/products/orthopedic-aids/wrist-forearm-support/thumb-support-stripes-checks-ws-6.jpg",
               },
               {
                 title: "WS-01 COCKUP SPLINT",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Wrist & Forearm  Support/WS-01 COCKUP SPLINT.JPG",
+                  "/images/products/orthopedic-aids/wrist-forearm-support/ws-01-cockup-splint.jpg",
               },
               {
                 title: "WS-03 NEOPRENE TENNIS ELBOW",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Wrist & Forearm  Support/WS-03 NEOPRENE TENNIS ELBOW.JPG",
+                  "/images/products/orthopedic-aids/wrist-forearm-support/ws-03-neoprene-tennis-elbow.jpg",
               },
               {
                 title: "WS-06 THUMB SUPPORT",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Wrist & Forearm  Support/WS-06 THUMB SUPPORT.JPG",
+                  "/images/products/orthopedic-aids/wrist-forearm-support/ws-06-thumb-support.jpg",
               },
               {
                 title: "Wrist & Forearm Brace WS-11",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Wrist & Forearm  Support/Wrist & Forearm Brace WS-11.jpg",
+                  "/images/products/orthopedic-aids/wrist-forearm-support/wrist-forearm-brace-ws-11.jpg",
               },
               {
                 title: "Wrist Wrap - Stripes & Checks WS-5",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Wrist & Forearm  Support/Wrist Wrap - Stripes & Checks WS-5.jpg",
+                  "/images/products/orthopedic-aids/wrist-forearm-support/wrist-wrap-stripes-checks-ws-5.jpg",
               },
               {
                 title: "Wrist binder Stripes & Checks - WS-4",
                 supplier: "Neo Life",
                 image:
-                  "/images/products/Orthopedic Aids/Wrist & Forearm  Support/Wrist binder Stripes & Checks - WS-4.jpg",
+                  "/images/products/orthopedic-aids/wrist-forearm-support/wrist-binder-stripes-checks-ws-4.jpg",
               },
             ],
           },
@@ -680,51 +680,51 @@ export const businessCategories: BusinessCategory[] = [
                     title: "ExactechGPS Knee Applications",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Knee/ExactechGPS Knee Applications.jpg",
+                      "/images/products/knee/exactechgps-knee-applications.jpg",
                   },
                   {
                     title: "InterSpace Trust the Science",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Knee/InterSpace Trust the Science.jpg",
+                      "/images/products/knee/interspace-trust-the-science.jpg",
                   },
                   {
                     title: "Optetrak Logic CC Revision System",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Knee/Optetrak Logic CC Revision System.png",
+                      "/images/products/knee/optetrak-logic-cc-revision-system.png",
                   },
                   {
                     title: "Optetrak Logic Primary System",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Knee/Optetrak Logic Primary System.png",
+                      "/images/products/knee/optetrak-logic-primary-system.png",
                   },
                   {
                     title: "Optetrak Revision System",
                     supplier: "Exactech",
-                    image: "/images/products/Knee/Optetrak revision System.png",
+                    image: "/images/products/knee/optetrak-revision-system.png",
                   },
                   {
                     title: "Truliant Knee System",
                     supplier: "Exactech",
-                    image: "/images/products/Knee/Truliant Knee System.jpg",
+                    image: "/images/products/knee/truliant-knee-system.jpg",
                   },
                   {
                     title: "Truliant Porous Knee",
                     supplier: "Exactech",
-                    image: "/images/products/Knee/Truliant Porous Knee.png",
+                    image: "/images/products/knee/truliant-porous-knee.png",
                   },
                   {
                     title: "Truliant Primary Knee",
                     supplier: "Exactech",
-                    image: "/images/products/Knee/Truliant Primary Knee.jpg",
+                    image: "/images/products/knee/truliant-primary-knee.jpg",
                   },
                   {
                     title: "Truliant Revision Knee System",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Knee/Truliant Revision Knee System.png",
+                      "/images/products/knee/truliant-revision-knee-system.png",
                   },
                 ],
               },
@@ -740,90 +740,90 @@ export const businessCategories: BusinessCategory[] = [
                     title: "Equinoxe Fracture System",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Shoulder/Equinoxe Fracture System.png",
+                      "/images/products/shoulder/equinoxe-fracture-system.png",
                   },
                   {
                     title: "Equinoxe Humeral Reconstruction Prosthesis",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Shoulder/Equinoxe Humeral Reconstruction Prosthesis.png",
+                      "/images/products/shoulder/equinoxe-humeral-reconstruction-prosthesis.png",
                   },
                   {
                     title: "Equinoxe Platform System",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Shoulder/Equinoxe Platform System.png",
+                      "/images/products/shoulder/equinoxe-platform-system.png",
                   },
                   {
                     title: "Equinoxe Preserve Stem",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Shoulder/Equinoxe Preserve Stem.png",
+                      "/images/products/shoulder/equinoxe-preserve-stem.png",
                   },
                   {
                     title: "Equinoxe Primary System",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Shoulder/Equinoxe Primary System.png",
+                      "/images/products/shoulder/equinoxe-primary-system.png",
                   },
                   {
                     title: "Equinoxe Resurfacing Head",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Shoulder/Equinoxe Resurfacing Head.png",
+                      "/images/products/shoulder/equinoxe-resurfacing-head.png",
                   },
                   {
                     title: "Equinoxe Reverse System",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Shoulder/Equinoxe Reverse System.png",
+                      "/images/products/shoulder/equinoxe-reverse-system.png",
                   },
                   {
                     title: "Equinoxe Shoulder Planning App",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Shoulder/Equinoxe Shoulder Planning App.png",
+                      "/images/products/shoulder/equinoxe-shoulder-planning-app.png",
                   },
                   {
                     title: "Equinoxe Small Reverse Shoulder",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Shoulder/Equinoxe Small Reverse Shoulder.png",
+                      "/images/products/shoulder/equinoxe-small-reverse-shoulder.png",
                   },
                   {
                     title: "Equinoxe Stemless Shoulder",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Shoulder/Equinoxe Stemless Shoulder.png",
+                      "/images/products/shoulder/equinoxe-stemless-shoulder.png",
                   },
                   {
                     title: "ExactechGPS Shoulder Application",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Shoulder/ExactechGPS Shoulder Application.png",
+                      "/images/products/shoulder/exactechgps-shoulder-application.png",
                   },
                   {
                     title: "InterSpace Shoulder",
                     supplier: "Exactech",
-                    image: "/images/products/Shoulder/InterSpace Shoulder.png",
+                    image: "/images/products/shoulder/interspace-shoulder.png",
                   },
                   {
                     title: "Reverse Shoulder Replacement",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Shoulder/Reverse Shoulder Replacement.jpg",
+                      "/images/products/shoulder/reverse-shoulder-replacement.jpg",
                   },
                   {
                     title: "Shoulder Hemiarthroplasty",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Shoulder/Shoulder Hemiarthroplasty.jpg",
+                      "/images/products/shoulder/shoulder-hemiarthroplasty.jpg",
                   },
                   {
                     title: "Total Shoulder Replacement",
                     supplier: "Exactech",
                     image:
-                      "/images/products/Shoulder/Total Shoulder Replacement.jpg",
+                      "/images/products/shoulder/total-shoulder-replacement.jpg",
                   },
                 ],
               },
@@ -834,17 +834,17 @@ export const businessCategories: BusinessCategory[] = [
                   {
                     title: "Distal Femur Megaprosthesis",
                     image:
-                      "/images/products/Tumour Prosthesis/Distal Femur Megaprosthesis.jpg",
+                      "/images/products/tumour-prosthesis/distal-femur-megaprosthesis.jpg",
                   },
                   {
                     title: "Proximal Femur Megaprosthesis",
                     image:
-                      "/images/products/Tumour Prosthesis/Proximal Femur Megaprosthesis.jpg",
+                      "/images/products/tumour-prosthesis/proximal-femur-megaprosthesis.jpg",
                   },
                   {
                     title: "Proximal Tibia Megaprosthesis",
                     image:
-                      "/images/products/Tumour Prosthesis/Proximal Tibia Megaprosthesis.jpg",
+                      "/images/products/tumour-prosthesis/proximal-tibia-megaprosthesis.jpg",
                   },
                 ],
               },
@@ -861,28 +861,28 @@ export const businessCategories: BusinessCategory[] = [
                   {
                     title: "ASLP System",
                     supplier: "Miraculous",
-                    image: "/images/products/Trauma/aslp system.jpg",
+                    image: "/images/products/trauma/aslp-system.jpg",
                   },
                   {
                     title: "DVR 2.4 System",
                     supplier: "Miraculous",
-                    image: "/images/products/Trauma/dvr 2.4 system.jpg",
+                    image: "/images/products/trauma/dvr-24-system.jpg",
                   },
                   {
                     title: "Elbow Plating System",
                     supplier: "Miraculous",
-                    image: "/images/products/Trauma/elbow plating system.jpg",
+                    image: "/images/products/trauma/elbow-plating-system.jpg",
                   },
                   {
                     title: "LVM Plates",
                     supplier: "Miraculous",
-                    image: "/images/products/Trauma/lvm plates.jpg",
+                    image: "/images/products/trauma/lvm-plates.jpg",
                   },
                   {
                     title: "Valp – Distal Radius System",
                     supplier: "Miraculous",
                     image:
-                      "/images/products/Trauma/valp – distal radius system.jpg",
+                      "/images/products/trauma/valp-distal-radius-system.jpg",
                   },
                 ],
               },
@@ -893,13 +893,13 @@ export const businessCategories: BusinessCategory[] = [
                   {
                     title: "4.5 & 6.5 cc",
                     supplier: "Miraculous",
-                    image: "/images/products/Trauma/4.5 & 6.5 cc.jpg",
+                    image: "/images/products/trauma/45-65-cc.jpg",
                   },
                   {
                     title: "Headless Compression Screw",
                     supplier: "Miraculous",
                     image:
-                      "/images/products/Trauma/headless compression screw.jpg",
+                      "/images/products/trauma/headless-compression-screw.jpg",
                   },
                 ],
               },
@@ -910,22 +910,22 @@ export const businessCategories: BusinessCategory[] = [
                   {
                     title: "ML-Tibia Nail",
                     supplier: "Miraculous",
-                    image: "/images/products/Trauma/ml-tibia nail.jpg",
+                    image: "/images/products/trauma/ml-tibia-nail.jpg",
                   },
                   {
                     title: "PFAN System",
                     supplier: "Miraculous",
-                    image: "/images/products/Trauma/pfan-system.jpg",
+                    image: "/images/products/trauma/pfan-system.jpg",
                   },
                   {
                     title: "SL-Femur Nail",
                     supplier: "Miraculous",
-                    image: "/images/products/Trauma/sl-femur nail.jpg",
+                    image: "/images/products/trauma/sl-femur-nail.jpg",
                   },
                   {
                     title: "SL-Tibia Nail",
                     supplier: "Miraculous",
-                    image: "/images/products/Trauma/sl-tibia nail.jpg",
+                    image: "/images/products/trauma/sl-tibia-nail.jpg",
                   },
                 ],
               },
@@ -938,38 +938,38 @@ export const businessCategories: BusinessCategory[] = [
               {
                 title: "ACC – Cervical Cage",
                 supplier: "Miraculous",
-                image: "/images/products/Spine/acc – cervical cage.png",
+                image: "/images/products/spine/acc-cervical-cage.png",
               },
               {
                 title: "ACC – Stand Alone Cage",
                 supplier: "Miraculous",
-                image: "/images/products/Spine/acc – stand alone cage.png",
+                image: "/images/products/spine/acc-stand-alone-cage.png",
               },
               {
                 title: "ACP – Cervical Plate",
                 supplier: "Miraculous",
-                image: "/images/products/Spine/acp – cervical plate.png",
+                image: "/images/products/spine/acp-cervical-plate.png",
               },
               {
                 title: "ALC – PLIF Lumber Cage",
                 supplier: "Miraculous",
-                image: "/images/products/Spine/alc – plif lumber cage.png",
+                image: "/images/products/spine/alc-plif-lumber-cage.png",
               },
               {
                 title: "ALC – TLIF Lumber Cage",
                 supplier: "Miraculous",
-                image: "/images/products/Spine/alc – tlif lumber cage.png",
+                image: "/images/products/spine/alc-tlif-lumber-cage.png",
               },
               {
                 title: "MS – I Spinal Fixation System",
                 supplier: "Miraculous",
                 image:
-                  "/images/products/Spine/ms – i spinal fixation system.png",
+                  "/images/products/spine/ms-i-spinal-fixation-system.png",
               },
               {
                 title: "PCF – Lateral Mass Screw",
                 supplier: "Miraculous",
-                image: "/images/products/Spine/pcf – lateral mass screw.png",
+                image: "/images/products/spine/pcf-lateral-mass-screw.png",
               },
             ],
           },
@@ -986,12 +986,12 @@ export const businessCategories: BusinessCategory[] = [
           {
             title: "Hemostat",
             supplier: "Meril",
-            image: "/images/products/Bio Surgical/Hemostat.png",
+            image: "/images/products/bio-surgical/hemostat.png",
           },
           {
             title: "Skin stepler",
             supplier: "Mirus",
-            image: "/images/products/Bio Surgical/Skin stepler.png",
+            image: "/images/products/bio-surgical/skin-stepler.png",
           },
         ],
       },
@@ -1006,13 +1006,13 @@ export const businessCategories: BusinessCategory[] = [
               {
                 title: "Hip Navigation",
                 supplier: "Naviswiss",
-                image: "/images/products/Medical Technology/Hip Navigation.png",
+                image: "/images/products/medical-technology/hip-navigation.png",
               },
               {
                 title: "Knee Navigation",
                 supplier: "Naviswiss",
                 image:
-                  "/images/products/Medical Technology/Knee Navigation.png",
+                  "/images/products/medical-technology/knee-navigation.png",
               },
             ],
           },
@@ -1023,7 +1023,7 @@ export const businessCategories: BusinessCategory[] = [
               {
                 title: "Hyalofast",
                 supplier: "Plus orthopedics",
-                image: "/images/products/Medical Technology/Hyalofast.png",
+                image: "/images/products/medical-technology/hyalofast.png",
               },
               {
                 title: "Miniaturized Handheld Smart Assisted Surgery System",
