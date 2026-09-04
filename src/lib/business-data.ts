@@ -963,8 +963,7 @@ export const businessCategories: BusinessCategory[] = [
               {
                 title: "MS – I Spinal Fixation System",
                 supplier: "Miraculous",
-                image:
-                  "/images/products/spine/ms-i-spinal-fixation-system.png",
+                image: "/images/products/spine/ms-i-spinal-fixation-system.png",
               },
               {
                 title: "PCF – Lateral Mass Screw",

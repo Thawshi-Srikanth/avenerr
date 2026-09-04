@@ -1,4 +1,4 @@
-import { Building2, Mail, MapPin, Phone } from "lucide-react";
+import { Building2, Mail, MapPin, Phone, Printer } from "lucide-react";
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -62,10 +62,24 @@ export default function ContactPage() {
           <div className="grid gap-8 sm:grid-cols-2">
             <div className="space-y-4 border-l-2 border-primary/20 pl-6 transition-colors hover:border-primary">
               <h3 className="flex items-center gap-2 font-bold uppercase tracking-wider text-primary">
-                <Phone className="h-4 w-4" /> Phone
+                <Phone className="h-4 w-4" /> Phone & Fax
               </h3>
-              <p className="text-muted-foreground">+94 11 271 2712</p>
-              <p className="text-muted-foreground">+94 77 777 7777</p>
+              <div className="space-y-1">
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+                  General Line
+                </p>
+                <p className="text-muted-foreground font-medium text-foreground">
+                  +94 11 276 5186
+                </p>
+              </div>
+              <div className="space-y-1">
+                <p className="text-xs font-semibold uppercase tracking-wider text-muted-foreground flex items-center gap-1">
+                  <Printer className="h-3 w-3" /> Fax Line
+                </p>
+                <p className="text-muted-foreground font-medium text-foreground">
+                  +94 11 276 4987
+                </p>
+              </div>
             </div>
             <div className="space-y-4 border-l-2 border-primary/20 pl-6 transition-colors hover:border-primary">
               <h3 className="flex items-center gap-2 font-bold uppercase tracking-wider text-primary">
